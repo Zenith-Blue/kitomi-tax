@@ -165,6 +165,12 @@ main {
   font-feature-settings: "vert" 1;
   text-align: center;
   display: inline-block;
+  padding: 8px 14px;
+  transition: opacity 0.2s ease;
+}
+
+.side-nav__link:hover {
+  opacity: 0.6;
 }
 
 .side-nav__entry {
