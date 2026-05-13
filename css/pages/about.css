@@ -248,18 +248,18 @@
 
 .strength {
   position: relative;
-  padding: 0;
+  padding: 130px 0 0;
   overflow: hidden;
 }
 
 .strength__title {
-  padding: 130px 0 0 120px;
+  padding: 0 0 0 120px;
   position: relative;
   z-index: 2;
 }
 
 .strength__lead {
-  padding: 40px 0 0 120px;
+  padding: 44px 0 0 120px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -271,7 +271,7 @@
 
 .strength__bg {
   position: absolute;
-  top: 282px;
+  top: 412px;
   left: 0;
   width: 1200px;
   height: 1380px;
@@ -289,13 +289,13 @@
 }
 
 .strength-item--01 {
-  padding-top: 160px;
+  padding-top: 24px;
   padding-left: 120px;
   gap: 100px;
 }
 
 .strength-item--02 {
-  padding-top: 110px;
+  padding-top: 60px;
   gap: 120px;
 }
 
