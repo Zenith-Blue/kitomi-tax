@@ -290,6 +290,7 @@
 
 .strength-item--01 {
   padding-top: 160px;
+  padding-left: 120px;
   gap: 100px;
 }
 
@@ -300,18 +301,11 @@
 
 .strength-item__txt {
   position: relative;
+  flex: 0 0 560px;
   width: 560px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-}
-
-.strength-item--01 .strength-item__txt {
-  padding-left: 120px;
-}
-
-.strength-item--02 .strength-item__txt {
-  flex: 1;
+  gap: 20px;
 }
 
 .strength-item__num {
@@ -320,7 +314,7 @@
   font-size: 64px;
   color: var(--color-orange);
   line-height: 1;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .strength-item__title {
@@ -329,6 +323,7 @@
   line-height: 1.4;
   letter-spacing: 0.72px;
   color: var(--color-black);
+  margin-bottom: 10px;
 }
 
 .strength-item__body {
@@ -346,6 +341,7 @@
 }
 
 .strength-item__img {
+  flex: 0 0 560px;
   width: 560px;
   height: 720px;
   overflow: hidden;
