@@ -1,0 +1,295 @@
+/* ==========================================================================
+   MV (REQUIREMENTS)
+   ========================================================================== */
+
+.req-mv {
+  position: relative;
+  height: 480px;
+  border-bottom: 1px solid var(--color-gray-100);
+  overflow: hidden;
+}
+
+.req-mv__logo {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 3;
+}
+
+.req-mv__title {
+  position: absolute;
+  top: 180px;
+  left: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 2;
+}
+
+.req-mv__title-en {
+  font-family: var(--font-en);
+  font-weight: 500;
+  font-size: 64px;
+  letter-spacing: 2.56px;
+  line-height: 1;
+  color: var(--color-black);
+}
+
+.req-mv__title-jp {
+  font-family: var(--font-jp);
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  color: var(--color-black);
+}
+
+/* Blobs */
+.req-mv__blob--1 {
+  /* small green 80x65 */
+  top: 360px;
+  left: 560px;
+  width: 80px;
+  height: 65px;
+  z-index: 0;
+}
+
+.req-mv__blob--2 {
+  /* orange 240x196, rotated -scaleY rotate-180 */
+  top: 280px;
+  left: 1180px;
+  width: 240px;
+  height: 196px;
+  transform: scaleX(-1);
+  z-index: 0;
+}
+
+.req-mv__blob--3 {
+  /* gray 160x131 */
+  top: 0;
+  left: 720px;
+  width: 160px;
+  height: 131px;
+  z-index: 0;
+}
+
+/* ==========================================================================
+   Lead
+   ========================================================================== */
+
+.req-lead {
+  padding: 80px var(--section-padding-x) 80px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 0.4px;
+  color: var(--color-black);
+}
+
+.req-lead p {
+  margin: 0 0 36px;
+}
+
+.req-lead p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Recruit Section
+   ========================================================================== */
+
+.recruit-page {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 0 0 0 120px;
+}
+
+.recruit-anchor {
+  position: sticky;
+  top: 80px;
+  flex: 0 0 183px;
+  width: 183px;
+  display: flex;
+  flex-direction: column;
+}
+
+.recruit-anchor__link {
+  font-family: var(--font-jp);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: 0.28px;
+  color: var(--color-black);
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+
+.recruit-anchor__link:hover {
+  opacity: 0.7;
+}
+
+.recruit-anchor__link.is-active {
+  font-weight: 700;
+  color: var(--color-red);
+  opacity: 1;
+}
+
+.recruit-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding-right: 0;
+}
+
+.job-card {
+  background-color: var(--color-gray-200);
+  border-top-left-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-md);
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.job-card__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.4;
+  letter-spacing: 0.72px;
+  color: var(--color-black);
+}
+
+.job-table {
+  border-top: 1px solid var(--color-gray-300);
+}
+
+.job-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--color-gray-300);
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.32px;
+}
+
+.job-row dt {
+  flex: 0 0 160px;
+  width: 160px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.job-row dd {
+  flex: 0 0 560px;
+  width: 560px;
+  font-weight: 400;
+  color: var(--color-black);
+}
+
+.job-list {
+  list-style: disc;
+  padding-left: 24px;
+  margin: 0;
+}
+
+.job-list li {
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.job-note {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.24px;
+  margin-top: 10px;
+}
+
+.recruit-dots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.recruit-dots span {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-black);
+  border-radius: 50%;
+}
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+
+.faq {
+  border-top: 1px solid var(--color-gray-300);
+  padding: 120px var(--section-padding-x) 120px;
+}
+
+.faq__title {
+  margin-bottom: 60px;
+}
+
+.faq__list {
+  max-width: 960px;
+  margin: 0 auto;
+  border-top: 1px solid var(--color-gray-300);
+  list-style: none;
+  padding: 0;
+}
+
+.faq-item {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--color-gray-300);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-item__q,
+.faq-item__a {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.faq-item__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-family: var(--font-en);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-white);
+}
+
+.faq-item__badge--q {
+  background-color: var(--color-orange);
+}
+
+.faq-item__badge--a {
+  background-color: var(--color-green);
+}
+
+.faq-item__text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.32px;
+  color: var(--color-black);
+}
+
+.faq-item__text--q {
+  font-weight: 700;
+}
