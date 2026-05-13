@@ -1,0 +1,416 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body {
+  font-family: var(--font-jp);
+  font-size: 16px;
+  line-height: 1.875;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  font-feature-settings: "palt" 1;
+}
+
+/* メインコンテンツは右側のナビ分の余白を確保 */
+main {
+  margin-right: var(--nav-width);
+  position: relative;
+  overflow: hidden;
+}
+
+.section {
+  position: relative;
+  padding: 0 var(--section-padding-x);
+}
+
+.container {
+  max-width: var(--content-inner);
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Section Title (英＋日)
+   ========================================================================== */
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.section-title--center {
+  align-items: center;
+  text-align: center;
+}
+
+.section-title__en {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-en);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.32px;
+  color: var(--color-black);
+}
+
+.section-title__en::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-orange);
+}
+
+.section-title__en--white {
+  color: var(--color-white);
+}
+
+.section-title__jp {
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  letter-spacing: 1.6px;
+  color: var(--color-black);
+}
+
+.section-title__jp--white {
+  color: var(--color-white);
+}
+
+.section-title__jp--lg {
+  font-size: 32px;
+  line-height: 50px;
+  letter-spacing: 1.28px;
+}
+
+/* ==========================================================================
+   Buttons / CTA
+   ========================================================================== */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  max-width: 100%;
+  height: 70px;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.32px;
+  color: var(--color-white);
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+.button--orange {
+  background-color: var(--color-orange);
+}
+
+.button--gradient {
+  background: var(--gradient-cta);
+  box-shadow: var(--shadow-cta);
+}
+
+.button--wide {
+  width: 340px;
+}
+
+/* ==========================================================================
+   Sidebar Nav (右側固定縦書きナビ)
+   ========================================================================== */
+
+.side-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: var(--nav-width);
+  height: 100vh;
+  background-color: var(--color-white);
+  border-left: 1px solid var(--color-gray-100);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 110px;
+}
+
+.side-nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.side-nav__item {
+  position: relative;
+}
+
+.side-nav__link {
+  writing-mode: vertical-rl;
+  font-family: var(--font-jp);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--color-black);
+  font-feature-settings: "vert" 1;
+  text-align: center;
+  display: inline-block;
+}
+
+.side-nav__entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  padding: 20px 10px;
+  background-color: var(--color-red);
+  border-radius: var(--radius-lg);
+}
+
+.side-nav__entry-link {
+  writing-mode: vertical-rl;
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--color-white);
+  font-feature-settings: "vert" 1;
+}
+
+.side-nav__indicator {
+  position: absolute;
+  top: 110px;
+  right: var(--nav-width);
+  width: 5px;
+  height: 48px;
+  background-color: var(--color-red);
+  z-index: 101;
+}
+
+/* ==========================================================================
+   Header Logo (左上)
+   ========================================================================== */
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-logo__img {
+  width: 254px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.site-logo__sub {
+  font-family: var(--font-en);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.24px;
+  color: var(--color-black);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Footer (ENTRY エリア・全ページ共通)
+   ========================================================================== */
+
+.footer {
+  position: relative;
+  padding: 0;
+}
+
+.footer__inner {
+  position: relative;
+  height: 660px;
+  max-width: var(--content-inner);
+  margin: 0 auto 0 0;
+  background-color: #464840;
+  border-top-right-radius: var(--radius-xl);
+  padding: 100px var(--section-padding-x) 60px;
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.footer__title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__catch {
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 50px;
+  letter-spacing: 1.28px;
+  color: var(--color-white);
+}
+
+.footer__cta {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 400px;
+}
+
+.footer__tel-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.footer__tel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__tel-icon {
+  width: 32px;
+  height: 32px;
+  fill: var(--color-white);
+}
+
+.footer__tel-num {
+  font-family: var(--font-en);
+  font-weight: 500;
+  font-size: 36px;
+  letter-spacing: 0.72px;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+.footer__tel-hours {
+  font-size: 12px;
+  letter-spacing: 0.24px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.footer__divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-white);
+  opacity: 0.1;
+}
+
+.footer__divider--mid {
+  position: absolute;
+  top: 442px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.footer__bottom {
+  position: absolute;
+  bottom: 60px;
+  left: var(--section-padding-x);
+  right: var(--section-padding-x);
+}
+
+.footer__logo {
+  width: 280px;
+  height: 44px;
+  margin-bottom: 20px;
+}
+
+.footer__address {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.28px;
+}
+
+.footer__copyright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  letter-spacing: 0.24px;
+  text-align: right;
+}
+
+.footer__policy {
+  position: absolute;
+  top: 428px;
+  left: var(--section-padding-x);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 0.24px;
+  color: var(--color-white);
+}
+
+.footer__policy-arrow {
+  width: 12px;
+  height: 8px;
+  fill: var(--color-white);
+}
+
+.footer__pagetop {
+  position: absolute;
+  top: 570px;
+  right: 75px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: opacity 0.2s ease;
+}
+
+.footer__pagetop:hover {
+  opacity: 0.7;
+}
+
+.footer__pagetop-arrow {
+  width: 12px;
+  height: 8px;
+  transform: rotate(-90deg);
+  fill: var(--color-white);
+}
+
+/* ==========================================================================
+   Utility / Decoration
+   ========================================================================== */
+
+.blob {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.deco-bg-text {
+  position: absolute;
+  font-family: var(--font-en);
+  font-weight: 700;
+  color: var(--color-gray-200);
+  letter-spacing: 5.12px;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}

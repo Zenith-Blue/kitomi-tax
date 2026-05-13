@@ -1,0 +1,47 @@
+:root {
+  /* === Colors (Figma変数) === */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-orange: #ffa431;
+  --color-red: #ac322a;
+  --color-green: #a0b93e;
+  --color-beige: #f6f3ea;
+  --color-gray-100: #e8e8e8;
+  --color-gray-200: #f0f3f6;
+  --color-gray-300: #e0e0e0;
+  --color-text: #1a1a1a;
+
+  /* グラデーション */
+  --gradient-cta: linear-gradient(90deg, #ffa431 0%, #ac322a 100%);
+
+  /* === Typography === */
+  --font-jp: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    sans-serif;
+  --font-en: "Outfit", "Helvetica Neue", Arial, sans-serif;
+
+  /* === Spacing === */
+  --space-xs: 8px;
+  --space-sm: 10px;
+  --space-md: 20px;
+  --space-lg: 30px;
+  --space-xl: 50px;
+  --space-2xl: 80px;
+  --space-3xl: 120px;
+
+  /* === Layout === */
+  --nav-width: 100px;
+  --content-max: 1440px;
+  --content-inner: 1240px;
+  --section-padding-x: 120px;
+  --col-1: 1120px;
+  --col-3: 340px;
+
+  /* === Radius === */
+  --radius-sm: 8px;
+  --radius-md: 20px;
+  --radius-lg: 50px;
+  --radius-xl: 80px;
+
+  /* === Shadow === */
+  --shadow-cta: 5px 15px 15px rgba(0, 0, 0, 0.12);
+}
