@@ -248,7 +248,7 @@
 
 .strength {
   position: relative;
-  padding: 130px 0 0;
+  padding: 80px 0 0;
   overflow: hidden;
 }
 
@@ -271,7 +271,7 @@
 
 .strength__bg {
   position: absolute;
-  top: 412px;
+  top: 360px;
   left: 0;
   width: 1200px;
   height: 1380px;
