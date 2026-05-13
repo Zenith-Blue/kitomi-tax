@@ -128,8 +128,8 @@
 
 .greeting {
   position: relative;
-  padding: 120px 0 100px;
-  min-height: 1227px;
+  padding: 0;
+  min-height: 1430px;
   overflow: hidden;
 }
 
