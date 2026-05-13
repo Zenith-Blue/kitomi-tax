@@ -231,10 +231,8 @@
 
 .about__deco-text {
   position: absolute;
-  top: 50%;
+  top: 80px;
   left: 90px;
-  transform: translate(-50%, -50%) rotate(90deg);
-  transform-origin: center center;
   font-family: var(--font-en);
   font-weight: 700;
   font-size: 128px;
@@ -245,6 +243,8 @@
   z-index: 0;
   margin: 0;
   line-height: 1;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
 .about__title {
@@ -255,19 +255,19 @@
 }
 
 .about__blob--1 {
-  top: 740px;
-  left: 160px;
-  width: 240px;
-  height: 196px;
-  z-index: 0;
-}
-
-.about__blob--2 {
-  top: 960px;
+  top: 1100px;
   left: 450px;
   width: 160px;
   height: 131px;
   transform: rotate(180deg);
+  z-index: 0;
+}
+
+.about__blob--2 {
+  top: 900px;
+  left: 160px;
+  width: 280px;
+  height: 230px;
   z-index: 0;
 }
 
@@ -293,6 +293,8 @@
   position: relative;
   flex: 0 0 600px;
   width: 600px;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-slider__img {
@@ -311,9 +313,9 @@
 }
 
 .about-slider__num {
-  position: absolute;
-  top: 380px;
-  left: 20px;
+  display: block;
+  margin-top: 10px;
+  padding-left: 20px;
   font-family: var(--font-en);
   font-weight: 500;
   font-size: 64px;
@@ -323,7 +325,7 @@
 }
 
 .about-slider__txt {
-  padding: 90px 20px 0;
+  padding: 10px 20px 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
