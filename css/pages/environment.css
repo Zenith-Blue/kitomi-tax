@@ -1,0 +1,403 @@
+/* ==========================================================================
+   MV (ENVIRONMENT)
+   ========================================================================== */
+
+.env-mv {
+  position: relative;
+  height: 1040px;
+  overflow: hidden;
+}
+
+.env-mv__logo {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 3;
+}
+
+.env-mv__title {
+  position: absolute;
+  top: 260px;
+  left: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 2;
+}
+
+.env-mv__title-en {
+  font-family: var(--font-en);
+  font-weight: 500;
+  font-size: 64px;
+  letter-spacing: 2.56px;
+  line-height: 1;
+  color: var(--color-black);
+}
+
+.env-mv__title-jp {
+  font-family: var(--font-jp);
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  color: var(--color-black);
+}
+
+.env-mv__photo {
+  position: absolute;
+  top: 480px;
+  left: 0;
+  width: 1240px;
+  height: 560px;
+  border-top-right-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.env-mv__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.env-mv__blob--1 {
+  /* 240x196 orange at top left=720 top=-20 */
+  top: -20px;
+  left: 720px;
+  width: 240px;
+  height: 196px;
+  z-index: 0;
+}
+
+.env-mv__blob--2 {
+  /* 80x65 red rotated, left=980 top=330 */
+  top: 330px;
+  left: 980px;
+  width: 80px;
+  height: 65px;
+  transform: rotate(180deg);
+  z-index: 0;
+}
+
+/* ==========================================================================
+   Advantage
+   ========================================================================== */
+
+.advantage {
+  position: relative;
+  padding: 220px 0 0;
+  overflow: hidden;
+}
+
+.advantage__title {
+  position: relative;
+  margin-bottom: 30px;
+  z-index: 2;
+}
+
+.advantage__lead {
+  position: relative;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 0.4px;
+  color: var(--color-black);
+  margin-bottom: 100px;
+  z-index: 2;
+}
+
+.advantage__blob--1 {
+  /* 160x131 at left=680 top=1270 (relative to section), rotated -scale-y-100 */
+  top: 1270px;
+  left: 680px;
+  width: 160px;
+  height: 131px;
+  transform: scaleY(-1) rotate(180deg);
+  z-index: 0;
+}
+
+.advantage__blob--2 {
+  /* 400x327 at left=1050 top=940 */
+  top: 940px;
+  left: 1050px;
+  width: 400px;
+  height: 327px;
+  z-index: 0;
+}
+
+/* ==========================================================================
+   Adv Item (3 cards)
+   ========================================================================== */
+
+.adv-item {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 0 0 0 120px;
+  border-top-left-radius: var(--radius-xl);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.adv-item--beige {
+  background-color: var(--color-beige);
+}
+
+.adv-item--white {
+  background-color: var(--color-white);
+}
+
+.adv-item:last-of-type {
+  height: 720px;
+}
+
+.adv-item__img {
+  flex: 0 0 520px;
+  width: 520px;
+  height: 520px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.adv-item__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.adv-item__content {
+  flex: 0 0 520px;
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.adv-item__icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0;
+}
+
+.adv-item__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.4;
+  letter-spacing: 1.44px;
+  color: var(--color-black);
+  margin-bottom: 10px;
+}
+
+.adv-item__body p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.32px;
+  color: var(--color-black);
+  margin: 0 0 30px;
+}
+
+.adv-item__body p:last-child {
+  margin-bottom: 0;
+}
+
+.adv-item__list {
+  list-style: disc;
+  padding-left: 24px;
+  margin: 0;
+}
+
+.adv-item__list li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.32px;
+  color: var(--color-black);
+}
+
+/* ==========================================================================
+   Benefit (福利厚生)
+   ========================================================================== */
+
+.benefit {
+  position: relative;
+  padding: 120px var(--section-padding-x) 120px;
+  text-align: center;
+  z-index: 1;
+}
+
+.benefit__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.4;
+  letter-spacing: 1.44px;
+  color: var(--color-black);
+  margin-bottom: 60px;
+}
+
+.benefit__list {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefit__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 180px;
+}
+
+.benefit__icon {
+  width: 80px;
+  height: 80px;
+}
+
+.benefit__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  color: var(--color-black);
+  text-align: center;
+}
+
+/* ==========================================================================
+   Evaluation
+   ========================================================================== */
+
+.evaluation {
+  position: relative;
+  background-color: var(--color-gray-200);
+  padding: 120px 0 150px;
+  overflow: hidden;
+}
+
+.evaluation__title {
+  margin-bottom: 80px;
+}
+
+.eval-wide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 60px;
+  max-width: 1120px;
+  margin: 0 auto 50px;
+}
+
+.eval-wide__txt {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.eval-wide__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: 0.48px;
+  color: var(--color-black);
+}
+
+.eval-wide__body {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.eval-wide__body p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.32px;
+  color: var(--color-black);
+  margin: 0;
+}
+
+.eval-wide__figures {
+  display: flex;
+  gap: 40px;
+  flex: 0 0 460px;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.eval-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 200px;
+  text-align: center;
+}
+
+.eval-figure__img {
+  width: auto;
+  max-width: 100%;
+  height: 160px;
+  object-fit: contain;
+}
+
+.eval-figure__label {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  color: var(--color-black);
+}
+
+.eval-figure__desc {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.28px;
+  color: var(--color-black);
+}
+
+.eval-cards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+}
+
+.eval-card {
+  flex: 0 0 540px;
+  width: 540px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.eval-card__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.48px;
+  color: var(--color-black);
+}
+
+.eval-card__body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.32px;
+  color: var(--color-black);
+}

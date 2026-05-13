@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="img">
+<mask id="mask0_0_72" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="80">
+<rect id="_mask" width="80" height="80" fill="var(--fill-0, #00FFFF)"/>
+</mask>
+<g mask="url(#mask0_0_72)">
+<path id="Vector" d="M42.6667 26H34.6667L32 15.3333H45.3333L42.6667 26ZM41.3333 57.3333C41.3333 52.6 43.2467 48.3 46.3333 45.1667L42.6667 28.6667H34.6667L28 58.6667L38.6667 68.6667L42.9533 64.6467C41.9133 62.4267 41.3333 59.9467 41.3333 57.3333ZM73.3333 57.3333C73.3333 65.42 66.7533 72 58.6667 72C50.58 72 44 65.42 44 57.3333C44 49.2467 50.58 42.6667 58.6667 42.6667C66.7533 42.6667 73.3333 49.2467 73.3333 57.3333ZM70.6667 57.3333C70.6667 50.72 65.2867 45.3333 58.6667 45.3333C52.0467 45.3333 46.6667 50.72 46.6667 57.3333C46.6667 63.9467 52.0467 69.3333 58.6667 69.3333C65.2867 69.3333 70.6667 63.9467 70.6667 57.3333ZM61.0667 50.36L58.68 56.1667L56.2867 50.36H53.4467L56.7067 57.3533H54.2533V58.9067H57.2933V60.1933H54.2533V61.7333H57.2933V64.5733H59.9667V61.7333H62.8667V60.1933H59.9667V58.9067H62.8667V57.3533H60.6267L63.8733 50.36H61.06H61.0667Z" fill="url(#paint0_linear_0_72)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_72" x1="28" y1="15.3333" x2="73.3333" y2="15.3333" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFA431"/>
+<stop offset="1" stop-color="#AC322A"/>
+</linearGradient>
+</defs>
+</svg>
