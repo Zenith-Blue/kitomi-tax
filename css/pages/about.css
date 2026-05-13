@@ -294,9 +294,17 @@
   gap: 100px;
 }
 
+.strength-item--01 .strength-item__txt {
+  margin-top: 50px;
+}
+
 .strength-item--02 {
   padding-top: 60px;
   gap: 120px;
+}
+
+.strength-item--02 .strength-item__txt {
+  margin-top: 50px;
 }
 
 .strength-item__txt {
