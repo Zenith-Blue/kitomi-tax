@@ -91,13 +91,14 @@
 
 .advantage__title {
   position: relative;
+  padding-left: 120px;
   margin-bottom: 30px;
   z-index: 2;
 }
 
 .advantage__lead {
   position: relative;
-  text-align: center;
+  padding-left: 120px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -108,18 +109,18 @@
 }
 
 .advantage__blob--1 {
-  /* 160x131 at left=680 top=1270 (relative to section), rotated -scale-y-100 */
-  top: 1270px;
+  /* Small gray blob below lead */
+  top: 330px;
   left: 680px;
   width: 160px;
   height: 131px;
-  transform: scaleY(-1) rotate(180deg);
+  transform: scaleX(-1);
   z-index: 0;
 }
 
 .advantage__blob--2 {
-  /* 400x327 at left=1050 top=940 */
-  top: 940px;
+  /* Big green blob top-right of section */
+  top: 0;
   left: 1050px;
   width: 400px;
   height: 327px;
