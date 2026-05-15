@@ -1005,153 +1005,444 @@
 }
 
 /* ==========================================================================
-   Responsive: Mobile (max 767px)
+   Responsive: Mobile (max 767px) - SP version per Figma 93:597
    ========================================================================== */
 
 @media (max-width: 767px) {
-  /* MV */
+  /* MV - photo at top, red title overlapping, lead below (Figma SP) */
   .mv {
-    min-height: 540px;
+    height: 800px;
+    min-height: 0;
   }
 
-  .mv__title {
-    top: 140px;
-    left: 16px;
-    right: 16px;
+  .mv__logo {
+    top: 14px;
+    left: 20px;
   }
 
-  .mv__title-line {
-    font-size: 28px;
-    letter-spacing: 1px;
-    padding: 4px 10px;
+  .mv__logo .site-logo__img {
+    width: 200px;
+    height: auto;
   }
 
-  .mv__lead {
-    top: 280px;
-    left: 16px;
-    right: 16px;
-    font-size: 12px;
-    line-height: 20px;
-    padding: 6px 8px;
+  .site-logo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 
   .mv__photo {
-    height: 540px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: auto;
+    width: 100%;
+    height: 355px;
+  }
+
+  .mv__title {
+    position: absolute;
+    top: 415px;
+    left: 20px;
+    right: auto;
+    align-items: flex-start;
+  }
+
+  .mv__title-line {
+    font-size: 36px;
+    letter-spacing: 0.72px;
+    padding: 5px;
+    line-height: 1.2;
+  }
+
+  .mv__lead {
+    position: absolute;
+    top: 541px;
+    left: 20px;
+    right: 20px;
+    margin-top: 0;
+    background: transparent;
+    padding: 0;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0;
+  }
+
+  .mv__scroll {
+    display: none;
   }
 
   /* Information bar */
+  .information {
+    padding: 40px 20px;
+  }
+
   .information__row {
-    font-size: 12px;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 14px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .information__row span {
+    width: 100%;
+    line-height: 26px;
   }
 
   /* Message */
   .message {
-    padding: 60px 16px;
+    padding: 100px 0 0;
+    min-height: auto;
+  }
+
+  .message__bg {
+    width: calc(100% - 20px);
+    height: 892px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    top: 40px;
+    inset: 40px 0 0 0;
+  }
+
+  .message__inner {
+    padding: 0;
   }
 
   .message__heading {
     font-size: 24px;
-    line-height: 1.4;
-    margin-bottom: 32px;
+    line-height: 40px;
+    letter-spacing: 0.48px;
+    text-align: center;
+    margin: 0 20px 50px;
   }
 
   .message__card {
-    padding: 24px 16px;
+    padding: 30px;
+    margin: 0 0 0 20px;
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    gap: 20px;
   }
 
   .message__card-title {
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.4px;
+    text-align: center;
   }
 
   .message__card-body p {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 26px;
     margin-bottom: 16px;
   }
 
-  /* Decorative blobs - hide some on mobile */
-  .message__blob,
-  .about__blob,
-  .environment__blob,
-  .interview__blob,
-  .recruit__blob {
+  /* Hide decorative blobs on mobile or scale down */
+  .message__blob--1,
+  .message__blob--4 {
+    display: none;
+  }
+
+  .message__blob--2 {
+    transform: rotate(180deg) scale(0.6);
+    transform-origin: top left;
+  }
+
+  .message__blob--3 {
     transform: scale(0.5);
     transform-origin: top left;
   }
 
   /* About */
+  .about {
+    padding: 60px 0 80px;
+  }
+
   .about__deco-text {
-    font-size: 48px;
-    left: 8px;
+    font-size: 120px;
+    left: 0;
+    letter-spacing: 4.8px;
+    top: 0;
+    height: 778px;
   }
 
   .about__title {
-    padding-left: 16px;
+    padding-left: 0;
+    margin-bottom: 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about__title .section-title__jp {
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.48px;
   }
 
   .about-slider__viewport {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 50px;
+    padding-right: 50px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .about-slider__viewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  .about-slider__track {
+    gap: 30px;
+    transform: none !important;
   }
 
   .about-slider__item {
-    flex: 0 0 calc(100vw - 32px);
-    width: calc(100vw - 32px);
+    flex: 0 0 290px;
+    width: 290px;
+  }
+
+  .about-slider__img {
+    width: 290px;
+    height: 290px;
+    border-radius: 12px;
+  }
+
+  .about-slider__num {
+    margin-top: 5px;
+    padding-left: 0;
+    font-size: 48px;
+  }
+
+  .about-slider__txt {
+    padding: 0;
+    max-width: 290px;
+    gap: 10px;
   }
 
   .about-slider__title {
     font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.4px;
   }
 
   .about-slider__body {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 26px;
+  }
+
+  .about-slider__dots {
+    margin-top: 40px;
+  }
+
+  .about-slider__arrows {
+    display: none;
+  }
+
+  .about__cta {
+    margin: 40px auto 0;
+  }
+
+  .about__blob--1,
+  .about__blob--2 {
+    transform: scale(0.6);
+    transform-origin: bottom right;
   }
 
   /* Environment */
+  .environment {
+    padding: 60px 0 80px;
+  }
+
   .environment__title {
     padding: 0 20px;
+    margin-bottom: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .environment__title .section-title__jp {
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0.48px;
+    text-align: center;
   }
 
   .environment__photo {
-    height: 200px;
+    width: 100%;
+    height: 320px;
+    border-radius: 0;
+    margin-bottom: 30px;
   }
 
   .environment__lead {
     padding: 0 20px;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 26px;
+    margin-bottom: 40px;
   }
 
   .environment__pickup {
     padding: 0 20px;
-    gap: 24px;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .env-card {
+    gap: 15px;
+  }
+
+  .env-card__img-wrap {
+    width: 160px;
+    height: 160px;
   }
 
   .env-card__title {
     font-size: 20px;
+    letter-spacing: 0.4px;
   }
 
   .env-card__body {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 26px;
+    text-align: left;
   }
 
-  /* Interview */
+  .environment__blob--1,
+  .environment__blob--2 {
+    transform: scale(0.5);
+    transform-origin: top right;
+  }
+
+  /* Interview - horizontal scroll slider */
+  .interview {
+    padding: 60px 0;
+  }
+
+  .interview__title {
+    margin-bottom: 30px;
+    align-items: center;
+  }
+
+  .interview__title .section-title__jp {
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0.48px;
+    text-align: center;
+  }
+
   .interview__list {
-    padding: 0 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding: 0 0 0 50px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    align-items: flex-start;
+  }
+
+  .interview__list::-webkit-scrollbar {
+    display: none;
   }
 
   .interview-card {
-    height: 440px;
+    flex: 0 0 290px;
+    width: 290px;
+    max-width: 290px;
+    height: 420px;
+    border-radius: 12px;
   }
 
-  /* Recruit */
-  .recruit__content {
-    padding: 32px 20px;
+  .interview-card__txt {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .interview-card__label {
+    font-size: 18px;
+  }
+
+  .interview__blob {
+    transform: scale(0.5);
+    transform-origin: top left;
+  }
+
+  /* Recruit - photo on top, content below */
+  .recruit {
+    padding: 0 0 60px;
   }
 
   .recruit__photo {
-    height: 240px;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 390px;
+  }
+
+  .recruit__bg {
+    top: 390px;
+    height: 940px;
+  }
+
+  .recruit__content {
+    padding: 60px 20px 0;
+    min-height: auto;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .recruit__title {
+    align-items: center;
+  }
+
+  .recruit__title .section-title__jp {
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0.48px;
+    text-align: center;
+  }
+
+  .recruit__lead {
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+  }
+
+  .recruit__list {
+    width: 100%;
+  }
+
+  .recruit__job {
+    font-size: 14px;
+  }
+
+  .recruit__arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  .recruit__arrow svg {
+    width: 9px;
+    height: 6px;
+  }
+
+  .recruit__cta {
+    align-self: center;
+    margin-top: 30px;
+  }
+
+  .recruit__blob--1,
+  .recruit__blob--2,
+  .recruit__blob--3 {
+    transform: scale(0.5);
+    transform-origin: top left;
   }
 }
