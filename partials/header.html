@@ -1,4 +1,10 @@
-<nav class="side-nav" aria-label="グローバルナビゲーション">
+<button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="side-nav">
+  <span class="hamburger__line"></span>
+  <span class="hamburger__line"></span>
+  <span class="hamburger__line"></span>
+</button>
+
+<nav class="side-nav" id="side-nav" aria-label="グローバルナビゲーション">
   <ul class="side-nav__list">
     <li class="side-nav__item">
       <a href="index.html" class="side-nav__link">ホーム</a>
@@ -18,3 +24,4 @@
   </ul>
 </nav>
 <span class="side-nav__indicator" aria-hidden="true"></span>
+<div class="side-nav__overlay" aria-hidden="true"></div>
