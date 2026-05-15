@@ -1263,10 +1263,28 @@
     margin: 40px auto 0;
   }
 
-  .about__blob--1,
+  /* green blob: right of CTA / bottom of About */
   .about__blob--2 {
-    transform: scale(0.6);
-    transform-origin: bottom right;
+    top: auto;
+    bottom: 40px;
+    left: auto;
+    right: -40px;
+    width: 160px;
+    height: 131px;
+    transform: none;
+    z-index: 0;
+  }
+
+  /* orange blob: below CTA, slightly left of center */
+  .about__blob--1 {
+    top: auto;
+    bottom: -30px;
+    left: 50%;
+    right: auto;
+    width: 120px;
+    height: 98px;
+    transform: translateX(-90px) rotate(180deg);
+    z-index: 0;
   }
 
   /* Environment */
@@ -1328,10 +1346,26 @@
     text-align: left;
   }
 
-  .environment__blob--1,
+  /* red blob: top-right of ENVIRONMENT, overlapping boundary */
   .environment__blob--2 {
-    transform: scale(0.5);
-    transform-origin: top right;
+    top: 30px;
+    left: auto;
+    right: -20px;
+    width: 120px;
+    height: 98px;
+    transform: none;
+    z-index: 1;
+  }
+
+  /* small green blob near ENVIRONMENT label */
+  .environment__blob--1 {
+    top: 55px;
+    left: auto;
+    right: 30px;
+    width: 60px;
+    height: 49px;
+    transform: scaleY(-1);
+    z-index: 0;
   }
 
   /* Interview - dot-switch slider (same as ABOUT) */
