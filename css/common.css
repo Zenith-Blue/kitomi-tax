@@ -655,30 +655,117 @@ main {
     height: auto;
   }
 
-  /* Footer */
+  /* Footer - SP version per Figma 93:1030 */
   .footer__inner {
     padding: 60px 20px 40px;
-    border-top-right-radius: 40px;
+    border-top-right-radius: 60px;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__title {
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    order: 1;
   }
 
   .footer__catch {
-    font-size: 22px;
-    line-height: 1.5;
-    letter-spacing: 1px;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.4px;
+    text-align: left;
+  }
+
+  .footer__cta {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 310px;
+    gap: 24px;
+    order: 2;
   }
 
   .footer__tel-num {
-    font-size: 28px;
+    font-size: 30px;
+    letter-spacing: 0;
+  }
+
+  .footer__tel-hours {
+    font-size: 12px;
+  }
+
+  .footer__cta .button {
+    width: 100%;
+    max-width: 310px;
+    height: 60px;
+  }
+
+  /* Hide internal divider in CTA block on SP */
+  .footer__cta .footer__divider {
+    display: none;
+  }
+
+  .footer__policy {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 24px auto 0;
+    justify-content: center;
+    order: 3;
+  }
+
+  .footer__divider--mid {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    margin: 50px 0 40px;
+    width: 100%;
+    order: 4;
+  }
+
+  .footer__bottom {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 5;
   }
 
   .footer__logo {
-    width: 220px;
+    width: 240px;
     height: auto;
+    margin-bottom: 24px;
   }
 
   .footer__address {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .footer__copyright {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 60px;
+    text-align: center;
+    width: 100%;
+    order: 6;
+  }
+
+  .footer__pagetop {
+    display: none;
   }
 }
 
