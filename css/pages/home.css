@@ -788,3 +788,370 @@
   transform: rotate(180deg);
   z-index: 0;
 }
+
+/* ==========================================================================
+   Responsive: Tablet (max 1023px)
+   ========================================================================== */
+
+@media (max-width: 1023px) {
+  /* MV */
+  .mv {
+    height: auto;
+    min-height: 600px;
+  }
+
+  .mv__logo {
+    top: 24px;
+    left: 24px;
+  }
+
+  .mv__title {
+    top: 180px;
+    left: 32px;
+    right: 32px;
+  }
+
+  .mv__title-line {
+    font-size: 42px;
+    letter-spacing: 1.5px;
+  }
+
+  .mv__lead {
+    top: 380px;
+    left: 32px;
+    right: 32px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .mv__scroll {
+    display: none;
+  }
+
+  .mv__photo {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: 600px;
+  }
+
+  /* Information bar */
+  .information {
+    padding: 24px 16px;
+  }
+
+  .information__row {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  /* Message */
+  .message {
+    padding: 80px 24px;
+    min-height: auto;
+  }
+
+  .message__bg {
+    width: 80%;
+  }
+
+  .message__heading {
+    font-size: 32px;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+  }
+
+  .message__card {
+    padding: 32px 24px;
+  }
+
+  .message__card-title {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .message__card-body p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  /* About */
+  .about {
+    padding: 80px 0 60px;
+  }
+
+  .about__deco-text {
+    font-size: 64px;
+    left: 16px;
+  }
+
+  .about__title {
+    padding-left: 32px;
+    margin-bottom: 60px;
+  }
+
+  .about-slider__viewport {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .about-slider__item {
+    flex: 0 0 calc(100vw - 64px);
+    width: calc(100vw - 64px);
+    max-width: 600px;
+  }
+
+  .about-slider__img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 600/400;
+  }
+
+  .about-slider__num {
+    top: auto;
+    bottom: -50px;
+    font-size: 48px;
+  }
+
+  .about-slider__title {
+    font-size: 24px;
+  }
+
+  /* Environment */
+  .environment {
+    padding: 80px 0;
+  }
+
+  .environment__title {
+    padding: 0 32px;
+    margin-bottom: 40px;
+  }
+
+  .environment__photo {
+    width: 100%;
+    height: 280px;
+    margin-bottom: 32px;
+  }
+
+  .environment__lead {
+    padding: 0 32px;
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+
+  .environment__pickup {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 32px;
+    margin-bottom: 60px;
+  }
+
+  .env-card {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  /* Interview */
+  .interview {
+    padding: 80px 0;
+  }
+
+  .interview__title {
+    margin-bottom: 40px;
+  }
+
+  .interview__list {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 32px;
+    align-items: center;
+  }
+
+  .interview-card {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  /* Recruit */
+  .recruit {
+    padding: 40px 0 60px;
+  }
+
+  .recruit__photo {
+    position: relative;
+    top: auto;
+    width: 100%;
+    height: 300px;
+  }
+
+  .recruit__bg {
+    top: 240px;
+    height: auto;
+    bottom: 0;
+  }
+
+  .recruit__content {
+    padding: 40px 32px;
+    min-height: auto;
+  }
+
+  .recruit__list {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Mobile (max 767px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  /* MV */
+  .mv {
+    min-height: 540px;
+  }
+
+  .mv__title {
+    top: 140px;
+    left: 16px;
+    right: 16px;
+  }
+
+  .mv__title-line {
+    font-size: 28px;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+  }
+
+  .mv__lead {
+    top: 280px;
+    left: 16px;
+    right: 16px;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 6px 8px;
+  }
+
+  .mv__photo {
+    height: 540px;
+  }
+
+  /* Information bar */
+  .information__row {
+    font-size: 12px;
+  }
+
+  /* Message */
+  .message {
+    padding: 60px 16px;
+  }
+
+  .message__heading {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 32px;
+  }
+
+  .message__card {
+    padding: 24px 16px;
+  }
+
+  .message__card-title {
+    font-size: 18px;
+  }
+
+  .message__card-body p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  /* Decorative blobs - hide some on mobile */
+  .message__blob,
+  .about__blob,
+  .environment__blob,
+  .interview__blob,
+  .recruit__blob {
+    transform: scale(0.5);
+    transform-origin: top left;
+  }
+
+  /* About */
+  .about__deco-text {
+    font-size: 48px;
+    left: 8px;
+  }
+
+  .about__title {
+    padding-left: 16px;
+  }
+
+  .about-slider__viewport {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about-slider__item {
+    flex: 0 0 calc(100vw - 32px);
+    width: calc(100vw - 32px);
+  }
+
+  .about-slider__title {
+    font-size: 20px;
+  }
+
+  .about-slider__body {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  /* Environment */
+  .environment__title {
+    padding: 0 20px;
+  }
+
+  .environment__photo {
+    height: 200px;
+  }
+
+  .environment__lead {
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .environment__pickup {
+    padding: 0 20px;
+    gap: 24px;
+  }
+
+  .env-card__title {
+    font-size: 20px;
+  }
+
+  .env-card__body {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  /* Interview */
+  .interview__list {
+    padding: 0 20px;
+  }
+
+  .interview-card {
+    height: 440px;
+  }
+
+  /* Recruit */
+  .recruit__content {
+    padding: 32px 20px;
+  }
+
+  .recruit__photo {
+    height: 240px;
+  }
+}
