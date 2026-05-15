@@ -92,8 +92,8 @@
 
       <div class="about-slider" data-slider>
         <div class="about-slider__viewport">
-          <div class="about-slider__track">
-            <article class="about-slider__item">
+          <div class="about-slider__track" data-slider-track>
+            <article class="about-slider__item" data-slider-item>
               <div class="about-slider__img">
                 <img src="images/pages/home/about-01.jpg" alt="クライアントと対話する税理士" width="600" height="400">
               </div>
@@ -104,7 +104,7 @@
               </div>
             </article>
 
-            <article class="about-slider__item">
+            <article class="about-slider__item" data-slider-item>
               <div class="about-slider__img">
                 <img src="images/pages/home/about-02.jpg" alt="未来志向の業務" width="600" height="400">
               </div>
@@ -115,7 +115,7 @@
               </div>
             </article>
 
-            <article class="about-slider__item">
+            <article class="about-slider__item" data-slider-item>
               <div class="about-slider__img">
                 <img src="images/pages/home/about-03.jpg" alt="柔軟な働き方" width="600" height="400">
               </div>
@@ -207,53 +207,61 @@
         <h2 class="section-title__jp">きとみ税理士法人を選んだ理由</h2>
       </div>
 
-      <div class="interview__list">
-        <article class="interview-card">
-          <div class="interview-card__img-wrap">
-            <img src="images/pages/home/interview-01.jpg" alt="" class="interview-card__img" width="360" height="520">
-            <div class="interview-card__overlay"></div>
-            <div class="interview-card__gradient"></div>
-          </div>
-          <div class="interview-card__txt">
-            <div class="interview-card__labels">
-              <span class="interview-card__label">独立して事務所を開設</span>
+      <div class="interview-slider" data-slider>
+        <div class="interview__list" data-slider-track>
+          <article class="interview-card" data-slider-item>
+            <div class="interview-card__img-wrap">
+              <img src="images/pages/home/interview-01.jpg" alt="" class="interview-card__img" width="360" height="520">
+              <div class="interview-card__overlay"></div>
+              <div class="interview-card__gradient"></div>
             </div>
-            <p class="interview-card__name">氏名が入ります</p>
-            <p class="interview-card__role">役職が入ります</p>
-          </div>
-        </article>
+            <div class="interview-card__txt">
+              <div class="interview-card__labels">
+                <span class="interview-card__label">独立して事務所を開設</span>
+              </div>
+              <p class="interview-card__name">氏名が入ります</p>
+              <p class="interview-card__role">役職が入ります</p>
+            </div>
+          </article>
 
-        <article class="interview-card">
-          <div class="interview-card__img-wrap">
-            <img src="images/pages/home/interview-02.jpg" alt="" class="interview-card__img" width="360" height="520">
-            <div class="interview-card__overlay"></div>
-            <div class="interview-card__gradient"></div>
-          </div>
-          <div class="interview-card__txt">
-            <div class="interview-card__labels">
-              <span class="interview-card__label">子育てや介護と両立できる</span>
-              <span class="interview-card__label">それが決め手でした</span>
+          <article class="interview-card" data-slider-item>
+            <div class="interview-card__img-wrap">
+              <img src="images/pages/home/interview-02.jpg" alt="" class="interview-card__img" width="360" height="520">
+              <div class="interview-card__overlay"></div>
+              <div class="interview-card__gradient"></div>
             </div>
-            <p class="interview-card__name">氏名が入ります</p>
-            <p class="interview-card__role">役職が入ります</p>
-          </div>
-        </article>
+            <div class="interview-card__txt">
+              <div class="interview-card__labels">
+                <span class="interview-card__label">子育てや介護と両立できる</span>
+                <span class="interview-card__label">それが決め手でした</span>
+              </div>
+              <p class="interview-card__name">氏名が入ります</p>
+              <p class="interview-card__role">役職が入ります</p>
+            </div>
+          </article>
 
-        <article class="interview-card">
-          <div class="interview-card__img-wrap">
-            <img src="images/pages/home/interview-03.jpg" alt="" class="interview-card__img" width="360" height="520">
-            <div class="interview-card__overlay"></div>
-            <div class="interview-card__gradient"></div>
-          </div>
-          <div class="interview-card__txt">
-            <div class="interview-card__labels">
-              <span class="interview-card__label">パートから職員への移行も</span>
-              <span class="interview-card__label">不安はありませんでした</span>
+          <article class="interview-card" data-slider-item>
+            <div class="interview-card__img-wrap">
+              <img src="images/pages/home/interview-03.jpg" alt="" class="interview-card__img" width="360" height="520">
+              <div class="interview-card__overlay"></div>
+              <div class="interview-card__gradient"></div>
             </div>
-            <p class="interview-card__name">氏名が入ります</p>
-            <p class="interview-card__role">役職が入ります</p>
-          </div>
-        </article>
+            <div class="interview-card__txt">
+              <div class="interview-card__labels">
+                <span class="interview-card__label">パートから職員への移行も</span>
+                <span class="interview-card__label">不安はありませんでした</span>
+              </div>
+              <p class="interview-card__name">氏名が入ります</p>
+              <p class="interview-card__role">役職が入ります</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="interview-slider__dots">
+          <button class="about-slider__dot is-active" data-slider-dot type="button" aria-label="スライド1"></button>
+          <button class="about-slider__dot" data-slider-dot type="button" aria-label="スライド2"></button>
+          <button class="about-slider__dot" data-slider-dot type="button" aria-label="スライド3"></button>
+        </div>
       </div>
     </section>
 
