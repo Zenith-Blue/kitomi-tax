@@ -682,6 +682,41 @@ main {
   }
 }
 
+/* SP専用要素はPC/タブレットで非表示 */
+br.sp-only {
+  display: none;
+}
+
+/* PC専用の改行はSPで無効化 */
+@media (max-width: 767px) {
+  br.pc-only {
+    display: none;
+  }
+
+  br.sp-only {
+    display: inline;
+  }
+
+  /* 日本語の文節単位できれいに折り返す（対応ブラウザのみ／非対応は通常折返し） */
+  p,
+  li,
+  dd,
+  h1,
+  h2,
+  h3,
+  .section-title__jp,
+  .mv__lead,
+  .message__card-body,
+  .message__heading,
+  .about-slider__body,
+  .environment__lead,
+  .env-card__body,
+  .recruit__lead {
+    line-break: strict;
+    word-break: auto-phrase;
+  }
+}
+
 /* Prevent horizontal scroll globally */
 html,
 body {
