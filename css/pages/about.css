@@ -693,3 +693,361 @@
   font-weight: 400;
   line-height: 30px;
 }
+
+/* ==========================================================================
+   Responsive: Tablet (max 1023px)
+   ========================================================================== */
+
+@media (max-width: 1023px) {
+  /* MV */
+  .about-mv {
+    height: auto;
+    min-height: 480px;
+    padding: 120px 32px 60px;
+  }
+
+  .about-mv__logo {
+    top: 24px;
+    left: 24px;
+  }
+
+  .about-mv__title {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .about-mv__title-en {
+    font-size: 48px;
+    letter-spacing: 1.5px;
+  }
+
+  /* Lead */
+  .about-lead {
+    padding: 60px 0;
+  }
+
+  .about-lead__inner {
+    padding: 0 32px;
+  }
+
+  .about-lead__catch {
+    font-size: 28px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+
+  .about-lead__symbol {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 32px auto 0;
+    display: block;
+    max-width: 240px;
+  }
+
+  /* Greeting */
+  .greeting {
+    padding: 80px 0;
+    min-height: auto;
+  }
+
+  .greeting__bg {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .greeting__photo {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 400px;
+    border-radius: 0;
+    margin-bottom: 32px;
+  }
+
+  .greeting__title,
+  .greeting__body,
+  .greeting__profile,
+  .greeting__books {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: auto;
+    padding: 0 32px;
+  }
+
+  .greeting__title {
+    margin-bottom: 24px;
+  }
+
+  .greeting__body {
+    margin-bottom: 40px;
+  }
+
+  .greeting__profile {
+    margin-bottom: 40px;
+  }
+
+  .greeting__books {
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  /* Strength */
+  .strength {
+    padding: 80px 0 0;
+  }
+
+  .strength__title,
+  .strength__lead {
+    padding: 0 32px;
+  }
+
+  .strength__bg {
+    width: 100%;
+    top: 200px;
+    border-radius: 0;
+  }
+
+  .strength-item {
+    flex-direction: column !important;
+    padding: 60px 32px !important;
+    gap: 32px !important;
+  }
+
+  .strength-item--01 .strength-item__txt,
+  .strength-item--02 .strength-item__txt {
+    margin-top: 0;
+  }
+
+  .strength-item__txt,
+  .strength-item__img {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .strength-item__img {
+    height: auto;
+    aspect-ratio: 560/720;
+    border-radius: 20px !important;
+  }
+
+  .strength-item__title {
+    font-size: 26px;
+  }
+
+  /* Outlook */
+  .outlook {
+    padding: 100px 0 80px;
+  }
+
+  .outlook__deco-text {
+    font-size: 80px;
+  }
+
+  .outlook__title {
+    padding-left: 32px;
+  }
+
+  .outlook__diagram img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+  }
+
+  .outlook__intro {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 32px;
+  }
+
+  .outlook__intro p {
+    width: 100%;
+  }
+
+  /* I/O Cards */
+  .io-card {
+    height: auto;
+    flex-direction: column;
+    padding: 60px 32px;
+    gap: 32px;
+  }
+
+  .io-card--input {
+    height: auto;
+  }
+
+  .io-card__img,
+  .io-card__txt {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .io-card__img {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .io-card__title {
+    font-size: 26px;
+  }
+
+  /* Summary */
+  .summary {
+    padding: 60px 0 80px;
+  }
+
+  .summary__deco {
+    width: 60%;
+    height: auto;
+  }
+
+  .summary__txt {
+    padding: 0 32px;
+    width: 100%;
+  }
+
+  .summary__catch {
+    font-size: 32px;
+    line-height: 1.4;
+  }
+
+  .summary__photos {
+    position: relative;
+    right: auto;
+    top: auto;
+    flex-direction: row;
+    margin: 40px 32px 0;
+    height: auto;
+    justify-content: center;
+  }
+
+  .summary__photo {
+    width: 45%;
+    max-width: 240px;
+    height: auto;
+    aspect-ratio: 240/400;
+  }
+
+  .summary__photo--1 {
+    margin-bottom: 0;
+  }
+
+  /* Company */
+  .company {
+    padding: 80px 32px;
+    gap: 60px;
+  }
+
+  .company__block {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .company__heading {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .company__table {
+    width: 100%;
+  }
+
+  .company__row {
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 0;
+  }
+
+  .company__row dt {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .company__row dd {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Mobile (max 767px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .about-mv {
+    min-height: 360px;
+    padding: 100px 20px 40px;
+  }
+
+  .about-mv__title-en {
+    font-size: 36px;
+  }
+
+  .about-lead {
+    padding: 48px 0;
+  }
+
+  .about-lead__inner {
+    padding: 0 20px;
+  }
+
+  .about-lead__catch {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .greeting,
+  .strength,
+  .outlook,
+  .io-card,
+  .summary {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .greeting__photo {
+    height: 280px;
+  }
+
+  .greeting__title,
+  .greeting__body,
+  .greeting__profile,
+  .greeting__books,
+  .strength__title,
+  .strength__lead,
+  .outlook__title,
+  .outlook__intro,
+  .summary__txt {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .strength-item,
+  .io-card,
+  .company {
+    padding: 48px 20px !important;
+  }
+
+  .strength-item__title,
+  .io-card__title {
+    font-size: 22px;
+  }
+
+  .outlook__deco-text {
+    font-size: 56px;
+  }
+
+  .summary__catch {
+    font-size: 24px;
+  }
+}

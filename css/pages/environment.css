@@ -408,3 +408,230 @@
   letter-spacing: 0.32px;
   color: var(--color-black);
 }
+
+/* ==========================================================================
+   Responsive: Tablet (max 1023px)
+   ========================================================================== */
+
+@media (max-width: 1023px) {
+  /* MV */
+  .env-mv {
+    height: auto;
+    min-height: 700px;
+    padding-bottom: 40px;
+  }
+
+  .env-mv__logo {
+    top: 24px;
+    left: 24px;
+  }
+
+  .env-mv__title {
+    position: relative;
+    top: auto;
+    left: auto;
+    padding: 140px 32px 32px;
+  }
+
+  .env-mv__title-en {
+    font-size: 48px;
+    letter-spacing: 1.5px;
+  }
+
+  .env-mv__photo {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 320px;
+    border-radius: 0;
+  }
+
+  /* Advantage */
+  .advantage {
+    padding: 80px 0 0;
+  }
+
+  .advantage__title,
+  .advantage__lead {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  /* Adv Item Cards */
+  .adv-item {
+    flex-direction: column;
+    padding: 60px 32px;
+    gap: 32px;
+  }
+
+  .adv-item__img,
+  .adv-item__content {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .adv-item__img {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .adv-item__content {
+    gap: 32px;
+  }
+
+  .adv-item__title {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  /* Benefit */
+  .benefit {
+    padding: 80px 32px;
+  }
+
+  .benefit__title {
+    font-size: 28px;
+  }
+
+  .benefit__list {
+    flex-wrap: wrap;
+    gap: 20px 8px;
+    justify-content: center;
+  }
+
+  .benefit__item {
+    width: calc(50% - 8px);
+    max-width: 180px;
+  }
+
+  /* Evaluation */
+  .evaluation {
+    padding: 80px 0 100px;
+  }
+
+  .eval-wide {
+    flex-direction: column;
+    gap: 32px;
+    padding: 40px 32px;
+    margin: 0 32px 32px;
+    max-width: 100%;
+  }
+
+  .eval-wide__figures {
+    flex: 0 0 auto;
+  }
+
+  .eval-cards {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 32px;
+    max-width: 100%;
+  }
+
+  .eval-card {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 40px 32px;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Mobile (max 767px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .env-mv {
+    min-height: 540px;
+  }
+
+  .env-mv__title {
+    padding: 120px 20px 24px;
+  }
+
+  .env-mv__title-en {
+    font-size: 36px;
+  }
+
+  .env-mv__photo {
+    height: 220px;
+  }
+
+  .advantage__title,
+  .advantage__lead {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .advantage__lead {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .adv-item {
+    padding: 48px 20px;
+  }
+
+  .adv-item__title {
+    font-size: 22px;
+  }
+
+  .adv-item__icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .benefit {
+    padding: 60px 20px;
+  }
+
+  .benefit__title {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .benefit__icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .benefit__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .eval-wide {
+    margin: 0 20px 24px;
+    padding: 32px 24px;
+  }
+
+  .eval-wide__title {
+    font-size: 20px;
+  }
+
+  .eval-wide__figures {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .eval-figure {
+    width: 45%;
+  }
+
+  .eval-cards {
+    padding: 0 20px;
+  }
+
+  .eval-card {
+    padding: 32px 24px;
+  }
+
+  .eval-card__title {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}

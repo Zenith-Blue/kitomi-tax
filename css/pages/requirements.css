@@ -302,3 +302,158 @@
 .faq-item__text--q {
   font-weight: 700;
 }
+
+/* ==========================================================================
+   Responsive: Tablet (max 1023px)
+   ========================================================================== */
+
+@media (max-width: 1023px) {
+  .req-mv {
+    height: auto;
+    min-height: 360px;
+    padding: 120px 32px 60px;
+  }
+
+  .req-mv__logo {
+    top: 24px;
+    left: 24px;
+  }
+
+  .req-mv__title {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .req-mv__title-en {
+    font-size: 48px;
+    letter-spacing: 1.5px;
+  }
+
+  .req-lead {
+    padding: 48px 32px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  /* Recruit */
+  .recruit-page {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 32px;
+  }
+
+  .recruit-anchor {
+    position: relative;
+    top: auto;
+    flex: 0 0 auto;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+  .recruit-anchor__link {
+    line-height: 1.5;
+    padding: 8px 0;
+  }
+
+  .recruit-content {
+    width: 100%;
+  }
+
+  .job-card {
+    padding: 40px 32px;
+    border-radius: 20px;
+  }
+
+  .job-card__title {
+    font-size: 28px;
+  }
+
+  .job-row {
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 0;
+  }
+
+  .job-row dt {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .job-row dd {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  /* FAQ */
+  .faq {
+    padding: 80px 32px;
+  }
+
+  .faq__list {
+    max-width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Mobile (max 767px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .req-mv {
+    min-height: 300px;
+    padding: 100px 20px 40px;
+  }
+
+  .req-mv__title-en {
+    font-size: 36px;
+  }
+
+  .req-lead {
+    padding: 40px 20px;
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .recruit-page {
+    padding: 0 20px;
+  }
+
+  .recruit-anchor {
+    gap: 4px 12px;
+  }
+
+  .job-card {
+    padding: 32px 20px;
+  }
+
+  .job-card__title {
+    font-size: 22px;
+  }
+
+  .job-row dt,
+  .job-row dd {
+    font-size: 15px;
+  }
+
+  .faq {
+    padding: 60px 20px;
+  }
+
+  .faq-item {
+    padding: 24px 0;
+  }
+
+  .faq-item__badge {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .faq-item__text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
