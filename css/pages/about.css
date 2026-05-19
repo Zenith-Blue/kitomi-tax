@@ -1167,6 +1167,10 @@
     padding: 56px 0 0;
   }
 
+  .strength__bg {
+    top: 0;
+  }
+
   .strength__lead {
     font-size: 14px;
     line-height: 26px;
