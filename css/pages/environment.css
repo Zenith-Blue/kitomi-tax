@@ -587,19 +587,19 @@
   }
 
   .env-mv__blob--1 {
-    /* orange ellipse 上部中央 */
-    top: 56px;
-    left: 130px;
-    width: 130px;
-    height: 106px;
+    /* orange ellipse: 上端〜ENVIRONMENT上部に重なる中央やや右 */
+    top: -6px;
+    left: 148px;
+    width: 124px;
+    height: 140px;
   }
 
   .env-mv__blob--2 {
-    /* red ellipse 右側 */
-    top: 235px;
+    /* red ellipse: 働く環境の右下・右端寄り */
+    top: 178px;
     left: auto;
     right: 28px;
-    width: 64px;
+    width: 60px;
     height: 52px;
   }
 
