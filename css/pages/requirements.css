@@ -402,48 +402,179 @@
    ========================================================================== */
 
 @media (max-width: 767px) {
+  /* MV (Figma 100:969) */
   .req-mv {
-    min-height: 300px;
-    padding: 100px 20px 40px;
+    min-height: 280px;
+    padding: 90px 20px 32px;
+  }
+
+  .req-mv__logo {
+    top: 14px;
+    left: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .req-mv__logo .site-logo__img {
+    width: 180px;
+    height: auto;
+  }
+
+  .req-mv__logo .site-logo__sub {
+    font-size: 11px;
+  }
+
+  .req-mv__title {
+    gap: 10px;
   }
 
   .req-mv__title-en {
     font-size: 36px;
+    letter-spacing: 1.5px;
   }
 
+  .req-mv__title-jp {
+    font-size: 16px;
+  }
+
+  /* MV blobs: Figma SP配置（楕円） */
+  .req-mv__blob--1 {
+    top: 30px;
+    left: auto;
+    right: 64px;
+    width: 92px;
+    height: 75px;
+  }
+
+  .req-mv__blob--2 {
+    top: auto;
+    bottom: -16px;
+    left: auto;
+    right: -36px;
+    width: 150px;
+    height: 123px;
+  }
+
+  .req-mv__blob--3 {
+    top: auto;
+    bottom: 4px;
+    left: 48px;
+    width: 68px;
+    height: 56px;
+  }
+
+  /* Lead */
   .req-lead {
-    padding: 40px 20px;
+    padding: 32px 20px;
     font-size: 15px;
-    line-height: 26px;
+    line-height: 28px;
   }
 
+  .req-lead p {
+    margin-bottom: 24px;
+  }
+
+  /* Recruit: SPはアンカー/ドット非表示、カードは全幅 */
   .recruit-page {
-    padding: 0 20px;
+    padding: 0;
+    gap: 0;
   }
 
   .recruit-anchor {
-    gap: 4px 12px;
+    display: none;
+  }
+
+  .recruit-content {
+    gap: 20px;
+  }
+
+  .recruit-dots {
+    display: none;
   }
 
   .job-card {
-    padding: 32px 20px;
+    padding: 40px 20px;
+    border-radius: var(--radius-md);
+    gap: 0;
   }
 
   .job-card__title {
-    font-size: 22px;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0.48px;
+    text-align: center;
+    font-feature-settings: "palt";
+  }
+
+  .job-table {
+    margin-top: 30px;
+  }
+
+  .job-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 30px 0;
+  }
+
+  .job-row:last-child {
+    border-bottom: none;
   }
 
   .job-row dt,
   .job-row dd {
-    font-size: 15px;
+    width: 100%;
   }
 
+  .job-row dt {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+
+  .job-row dd {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .job-list {
+    padding-left: 21px;
+  }
+
+  .job-list li {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .job-note {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .job-sublabel {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  /* FAQ (Figma 101:1264) */
   .faq {
     padding: 60px 20px;
   }
 
+  .faq__title {
+    margin-bottom: 40px;
+  }
+
   .faq-item {
-    padding: 24px 0;
+    padding: 30px 0;
+    gap: 16px;
+  }
+
+  .faq-item__q,
+  .faq-item__a {
+    gap: 15px;
+    align-items: flex-start;
   }
 
   .faq-item__badge {
@@ -454,6 +585,6 @@
 
   .faq-item__text {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 26px;
   }
 }
