@@ -667,7 +667,6 @@
   background: transparent;
   border: none;
   padding: 0;
-  cursor: pointer;
   text-align: left;
   font: inherit;
   color: inherit;
@@ -675,8 +674,12 @@
   transition: transform 0.3s ease;
 }
 
-.interview-card:hover,
-.interview-card:focus-visible {
+button.interview-card {
+  cursor: pointer;
+}
+
+button.interview-card:hover,
+button.interview-card:focus-visible {
   transform: translateY(-4px);
 }
 
@@ -1815,6 +1818,10 @@ body.is-popup-open {
   .interview-popup__close {
     width: 32px;
     height: 32px;
+  }
+
+  .interview-popup__container {
+    background-image: url("../../images/pages/home/popup-bg-sp.webp");
   }
 
   .interview-popup__body {
