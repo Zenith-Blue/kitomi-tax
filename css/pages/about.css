@@ -984,70 +984,342 @@
    ========================================================================== */
 
 @media (max-width: 767px) {
+  /* ===== MV (Figma 99:824) ===== */
   .about-mv {
-    min-height: 360px;
-    padding: 100px 20px 40px;
+    min-height: auto;
+    padding: 0;
+  }
+
+  .about-mv__logo {
+    top: 14px;
+    left: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .about-mv__logo .site-logo__img {
+    width: 180px;
+    height: auto;
+  }
+
+  .about-mv__logo .site-logo__sub {
+    font-size: 11px;
+  }
+
+  .about-mv__title {
+    padding: 110px 20px 28px;
+    gap: 10px;
   }
 
   .about-mv__title-en {
     font-size: 36px;
+    letter-spacing: 1.5px;
   }
 
+  .about-mv__title-jp {
+    font-size: 16px;
+  }
+
+  .about-mv__blob--1 {
+    top: 70px;
+    left: auto;
+    right: -86px;
+    width: 220px;
+    height: 180px;
+    transform: none;
+  }
+
+  .about-mv__blob--2 {
+    top: 250px;
+    left: 168px;
+    width: 100px;
+    height: 82px;
+    transform: none;
+  }
+
+  .about-mv__blob--3 {
+    top: 300px;
+    left: 40px;
+    width: 80px;
+    height: 65px;
+    transform: none;
+  }
+
+  .about-mv__blob--4 {
+    display: none;
+  }
+
+  /* ===== Lead: シンボルを上に・中央寄せ ===== */
   .about-lead {
-    padding: 48px 0;
+    padding: 40px 0 48px;
   }
 
   .about-lead__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 0 20px;
   }
 
+  .about-lead__symbol {
+    position: relative;
+    top: auto;
+    right: auto;
+    order: -1;
+    width: 160px;
+    height: auto;
+    margin: 0 auto 20px;
+  }
+
   .about-lead__catch {
-    font-size: 22px;
-    line-height: 1.5;
+    font-size: 24px;
+    line-height: 1.6;
+    letter-spacing: 0.96px;
+    margin-bottom: 20px;
   }
 
-  .greeting,
-  .strength,
-  .outlook,
-  .io-card,
-  .summary {
-    padding-left: 0;
-    padding-right: 0;
+  .about-lead__text {
+    font-size: 14px;
+    line-height: 26px;
   }
 
-  .greeting__photo {
-    height: 280px;
-  }
-
+  /* ===== 共通: SPセクションタイトル中央寄せ ===== */
   .greeting__title,
-  .greeting__body,
-  .greeting__profile,
-  .greeting__books,
   .strength__title,
-  .strength__lead,
-  .outlook__title,
-  .outlook__intro,
-  .summary__txt {
+  .outlook__title {
+    align-items: center;
+    text-align: center;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .strength-item,
-  .io-card,
-  .company {
-    padding: 48px 20px !important;
+  .greeting__title .section-title__jp,
+  .strength__title .section-title__jp,
+  .outlook__title .section-title__jp {
+    font-size: 24px;
+    line-height: 1.6;
+    letter-spacing: 0.96px;
   }
 
-  .strength-item__title,
+  /* ===== Greeting: 順序 タイトル→本文→写真→プロフィール→書籍 ===== */
+  .greeting {
+    display: flex;
+    flex-direction: column;
+    padding: 56px 0 64px;
+  }
+
+  .greeting__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+  }
+
+  .greeting__title { order: 1; margin-bottom: 20px; }
+  .greeting__body { order: 2; margin-bottom: 28px; }
+  .greeting__photo { order: 3; }
+  .greeting__profile { order: 4; }
+  .greeting__books { order: 5; }
+
+  .greeting__photo {
+    width: auto;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin: 0 20px 28px;
+    border-radius: var(--radius-md);
+  }
+
+  .greeting__body,
+  .greeting__profile,
+  .greeting__books {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .greeting__body p {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .greeting__profile {
+    margin-bottom: 28px;
+  }
+
+  .greeting__bio {
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  .greeting__books {
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .greeting__books img {
+    width: calc(25% - 8px);
+    height: auto;
+  }
+
+  /* ===== Strength ===== */
+  .strength {
+    padding: 56px 0 0;
+  }
+
+  .strength__bg {
+    top: 0;
+  }
+
+  .strength__lead {
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .strength-item {
+    padding: 0 0 48px !important;
+    gap: 20px !important;
+  }
+
+  .strength-item--01 .strength-item__img {
+    order: -1;
+  }
+
+  .strength-item__img {
+    max-width: none;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 0 !important;
+    margin: 0;
+  }
+
+  .strength-item__txt {
+    max-width: none;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .strength-item__num {
+    font-size: 28px;
+  }
+
+  .strength-item__title {
+    font-size: 22px;
+  }
+
+  .strength-item__body p {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  /* ===== Outlook ===== */
+  .outlook {
+    padding: 64px 0 56px;
+  }
+
+  .outlook__deco-text {
+    font-size: 52px;
+  }
+
+  .outlook__intro {
+    padding: 0 20px;
+  }
+
+  .outlook__intro p {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  /* ===== I/O cards ===== */
+  .io-card {
+    padding: 0 0 48px !important;
+    gap: 20px;
+  }
+
+  .io-card__img {
+    max-width: none;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .io-card__txt {
+    max-width: none;
+    width: 100%;
+    padding: 0 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .io-card__title-block {
+    align-items: center;
+  }
+
   .io-card__title {
     font-size: 22px;
   }
 
-  .outlook__deco-text {
-    font-size: 56px;
+  .io-card__body {
+    text-align: left;
+  }
+
+  .io-card__body p {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  /* ===== Summary ===== */
+  .summary {
+    padding: 56px 0 64px;
+  }
+
+  .summary__txt {
+    padding: 0 20px;
+    text-align: center;
   }
 
   .summary__catch {
     font-size: 24px;
+    line-height: 1.6;
+  }
+
+  .summary__body p {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .summary__photos {
+    margin: 28px 20px 0;
+    gap: 16px;
+  }
+
+  /* ===== Company ===== */
+  .company {
+    padding: 56px 20px !important;
+    gap: 40px;
+  }
+
+  .company__heading {
+    font-size: 22px;
+  }
+
+  .company__row {
+    padding: 24px 0;
+  }
+
+  .company__row dt {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .company__row dd {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .company__note {
+    font-size: 12px;
   }
 }

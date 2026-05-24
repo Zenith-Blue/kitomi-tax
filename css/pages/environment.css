@@ -227,6 +227,10 @@
   color: var(--color-black);
 }
 
+.adv-item__list li + li {
+  margin-top: 5px;
+}
+
 /* ==========================================================================
    Benefit (福利厚生)
    ========================================================================== */
@@ -545,93 +549,264 @@
    ========================================================================== */
 
 @media (max-width: 767px) {
+  /* ===== MV (Figma 100:825) ===== */
   .env-mv {
-    min-height: 540px;
+    min-height: auto;
+  }
+
+  .env-mv__logo {
+    top: 14px;
+    left: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .env-mv__logo .site-logo__img {
+    width: 180px;
+    height: auto;
+  }
+
+  .env-mv__logo .site-logo__sub {
+    font-size: 11px;
   }
 
   .env-mv__title {
-    padding: 120px 20px 24px;
+    padding: 96px 20px 30px;
+    gap: 10px;
   }
 
   .env-mv__title-en {
     font-size: 36px;
+    letter-spacing: 1.5px;
+  }
+
+  .env-mv__title-jp {
+    font-size: 16px;
   }
 
   .env-mv__photo {
-    height: 220px;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 
-  .advantage__title,
+  .env-mv__blob--1 {
+    /* orange ellipse: 上端〜ENVIRONMENT上部に重なる中央やや右、右に90度回転 */
+    top: -6px;
+    left: 148px;
+    width: 124px;
+    height: 140px;
+    transform: rotate(90deg);
+  }
+
+  .env-mv__blob--2 {
+    /* red ellipse: 働く環境の右下・右端寄り、右に75度回転 */
+    top: 178px;
+    left: auto;
+    right: 28px;
+    width: 60px;
+    height: 52px;
+    transform: rotate(75deg);
+  }
+
+  /* ===== Advantage ===== */
+  .advantage {
+    padding: 64px 0 0;
+  }
+
+  .advantage__title {
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 16px;
+  }
+
   .advantage__lead {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
+    margin-bottom: 48px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
   }
 
-  .advantage__lead {
-    font-size: 16px;
-    line-height: 28px;
-  }
-
+  /* Adv item: SPは背景なし・縦積み・中央寄せ */
   .adv-item {
-    padding: 48px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 20px;
+    border-radius: 0;
+  }
+
+  .adv-item--beige,
+  .adv-item--white {
+    background-color: transparent;
+  }
+
+  .adv-item__img {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius-md);
+    margin: 0 auto;
+  }
+
+  .adv-item__content {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .adv-item__head {
+    align-items: center;
+    gap: 16px;
+  }
+
+  .adv-item__icon {
+    width: 60px;
+    height: 60px;
   }
 
   .adv-item__title {
     font-size: 22px;
+    letter-spacing: 0.88px;
+    text-align: center;
   }
 
-  .adv-item__icon {
-    width: 64px;
-    height: 64px;
+  .adv-item__body,
+  .adv-item__list {
+    width: 100%;
   }
 
+  .adv-item__body p,
+  .adv-item__list li {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .adv-item__body p {
+    margin-bottom: 24px;
+  }
+
+  .adv-item__list {
+    padding-left: 21px;
+  }
+
+  /* Benefit: SPは3カラム */
   .benefit {
-    padding: 60px 20px;
+    padding: 56px 20px 64px;
   }
 
   .benefit__title {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.5;
+    letter-spacing: 0.8px;
+    margin-bottom: 32px;
+  }
+
+  .benefit__list {
+    flex-wrap: wrap;
+    gap: 24px 0;
+  }
+
+  .benefit__item {
+    width: 33.333%;
+    max-width: none;
+    gap: 12px;
   }
 
   .benefit__icon {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
   }
 
   .benefit__text {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+  }
+
+  /* ===== Evaluation ===== */
+  .evaluation {
+    padding: 56px 0 64px;
+  }
+
+  .evaluation__title {
+    margin-bottom: 40px;
   }
 
   .eval-wide {
-    margin: 0 20px 24px;
-    padding: 32px 24px;
+    flex-direction: column;
+    gap: 28px;
+    margin: 0 20px 20px;
+    padding: 32px 20px;
   }
 
   .eval-wide__title {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
   }
 
-  .eval-wide__figures {
-    flex-wrap: wrap;
+  .eval-wide__body {
     gap: 20px;
   }
 
+  .eval-wide__body p {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .eval-wide__figures {
+    flex: 0 0 auto;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+
   .eval-figure {
-    width: 45%;
+    width: 50%;
+    gap: 10px;
+  }
+
+  .eval-figure__img {
+    height: 140px;
+  }
+
+  .eval-figure__label {
+    font-size: 16px;
+  }
+
+  .eval-figure__desc {
+    font-size: 13px;
+    line-height: 22px;
   }
 
   .eval-cards {
+    flex-direction: column;
+    gap: 20px;
     padding: 0 20px;
   }
 
   .eval-card {
-    padding: 32px 24px;
+    width: 100%;
+    max-width: none;
+    padding: 32px 20px;
   }
 
   .eval-card__title {
-    font-size: 20px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .eval-card__body {
+    font-size: 14px;
+    line-height: 26px;
   }
 }
