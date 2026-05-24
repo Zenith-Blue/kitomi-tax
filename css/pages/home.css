@@ -1835,9 +1835,10 @@ body.is-popup-open {
   }
 
   .interview-popup__intro-img {
+    order: 1;
     aspect-ratio: 1 / 1;
-    max-width: 280px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
   }
 
   .interview-popup__intro-txt {
@@ -1885,10 +1886,7 @@ body.is-popup-open {
     gap: 16px;
   }
 
-  .interview-popup__qa--img-left .interview-popup__qa-img {
-    order: 0;
-  }
-
+  .interview-popup__qa--img-left .interview-popup__qa-img,
   .interview-popup__qa--img-right .interview-popup__qa-img {
     order: 1;
   }
