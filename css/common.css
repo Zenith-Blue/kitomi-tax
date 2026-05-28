@@ -117,7 +117,7 @@ main {
 }
 
 .button--gradient {
-  background: var(--gradient-cta);
+  background-color: var(--color-orange);
   box-shadow: var(--shadow-cta);
 }
 
@@ -180,7 +180,7 @@ main {
   justify-content: center;
   width: 40px;
   padding: 20px 10px;
-  background-color: var(--color-red);
+  background-color: var(--color-orange);
   border-radius: var(--radius-lg);
 }
 
@@ -594,7 +594,7 @@ main {
     width: 310px;
     height: 60px;
     border-radius: 50px;
-    background: var(--gradient-cta);
+    background-color: var(--color-orange);
     box-shadow: var(--shadow-cta);
     font-family: var(--font-jp);
     font-weight: 700;
