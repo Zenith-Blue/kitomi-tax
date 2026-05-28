@@ -277,10 +277,10 @@
 }
 
 .about__blob--2 {
-  top: 900px;
-  left: 160px;
-  width: 280px;
-  height: 230px;
+  top: 880px;
+  left: 140px;
+  width: 260px;
+  height: 210px;
   z-index: 0;
 }
 
@@ -985,7 +985,7 @@ body.is-popup-open {
 
 .recruit {
   position: relative;
-  padding: 60px 0 100px;
+  padding: 60px 0 200px;
   overflow: hidden;
 }
 
@@ -1104,20 +1104,21 @@ body.is-popup-open {
 }
 
 .recruit__blob--1 {
-  top: 968px;
+  top: 970px;
   left: 50%;
-  transform: translateX(50px) rotate(180deg);
+  transform: translateX(-50px) rotate(180deg);
   width: 100px;
   height: 82px;
   z-index: 2;
 }
 
 .recruit__blob--2 {
-  top: 821px;
-  left: 910px;
+  top: 870px;
+  left: auto;
+  right: 180px;
   width: 180px;
   height: 147px;
-  z-index: 0;
+  z-index: 2;
 }
 
 .recruit__blob--3 {
