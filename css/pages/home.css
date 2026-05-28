@@ -556,14 +556,14 @@
 .interview__title {
   position: relative;
   z-index: 2;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
 
 .interview-slider {
   position: relative;
   z-index: 2;
   overflow: hidden;
-  padding: 0 var(--section-padding-x);
+  padding: 10px var(--section-padding-x) 0;
 }
 
 .interview__list {
