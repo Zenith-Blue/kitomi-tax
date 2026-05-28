@@ -283,15 +283,15 @@
   left: 450px;
   width: 160px;
   height: 131px;
-  transform: rotate(180deg);
+  transform: scaleY(-1);
   z-index: 1;
 }
 
 .about__blob--2 {
   top: 870px;
   left: 140px;
-  width: 260px;
-  height: 210px;
+  width: 250px;
+  height: 200px;
   z-index: 0;
 }
 
