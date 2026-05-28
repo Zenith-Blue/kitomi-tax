@@ -202,14 +202,14 @@
 /* Decorative blobs */
 .message__blob--1 {
   top: 0;
-  right: 0;
+  right: -30px;
   width: 340px;
   height: 280px;
-  transform: rotate(-40deg);
+  transform: rotate(-25deg);
   z-index: 0;
 }
 .message__blob--2 {
-  top: 740px;
+  top: 745px;
   left: 80px;
   width: 154px;
   height: 126px;
