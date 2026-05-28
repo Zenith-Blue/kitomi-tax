@@ -202,9 +202,10 @@
 /* Decorative blobs */
 .message__blob--1 {
   top: 0;
-  right: 30px;
+  right: 0;
   width: 340px;
   height: 280px;
+  transform: rotate(-40deg);
   z-index: 0;
 }
 .message__blob--2 {
