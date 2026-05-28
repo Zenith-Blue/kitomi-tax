@@ -15,6 +15,17 @@
   z-index: 3;
 }
 
+@keyframes mvSlideIn {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .mv__title {
   position: absolute;
   top: 290px;
@@ -23,6 +34,7 @@
   flex-direction: column;
   align-items: flex-start;
   z-index: 2;
+  animation: mvSlideIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .mv__title-line {
@@ -49,6 +61,7 @@
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.6);
   padding: 4px 0;
+  animation: mvSlideIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
 }
 
 .mv__scroll {
@@ -201,8 +214,8 @@
 
 /* Decorative blobs */
 .message__blob--1 {
-  top: 0;
-  right: -30px;
+  top: 20px;
+  right: -45px;
   width: 340px;
   height: 280px;
   transform: rotate(-25deg);
@@ -239,7 +252,7 @@
 .about {
   position: relative;
   padding: 120px 0 100px;
-  overflow: hidden;
+  z-index: 1;
 }
 
 .about__deco-text {
