@@ -1117,7 +1117,7 @@ body.is-popup-open {
 .recruit__blob--1 {
   top: 970px;
   left: 50%;
-  transform: translateX(-35px) rotate(180deg);
+  transform: translateX(65px) rotate(180deg);
   width: 100px;
   height: 82px;
   z-index: 2;
