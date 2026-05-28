@@ -109,8 +109,20 @@
 }
 
 .information__en {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
   font-family: var(--font-en);
   font-weight: 500;
+}
+
+.information__en::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-orange);
 }
 
 /* ==========================================================================
