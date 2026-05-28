@@ -264,7 +264,7 @@
   position: relative;
   z-index: 2;
   padding-left: 280px;
-  margin-bottom: 140px;
+  margin-bottom: 50px;
 }
 
 .about__blob--1 {
@@ -294,7 +294,6 @@
   overflow: hidden;
   padding-left: 280px;
   padding-right: 120px;
-  margin-top: -30px;
 }
 
 .about-slider__track {
