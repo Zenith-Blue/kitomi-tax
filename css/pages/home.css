@@ -328,7 +328,8 @@
 
 .about-slider__num {
   display: block;
-  margin-top: 10px;
+  position: relative;
+  margin-top: -32px;
   padding-left: 20px;
   font-family: var(--font-en);
   font-weight: 500;
