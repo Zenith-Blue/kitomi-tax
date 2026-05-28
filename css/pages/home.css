@@ -292,6 +292,7 @@
 .about-slider__viewport {
   overflow: hidden;
   padding-left: 280px;
+  padding-right: 120px;
 }
 
 .about-slider__track {
@@ -1221,13 +1222,17 @@ body.is-popup-open {
   }
 
   .about-slider__viewport {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 24px;
+    padding-right: 0;
+  }
+
+  .about-slider__track {
+    gap: 16px;
   }
 
   .about-slider__item {
-    flex: 0 0 calc(100vw - 64px);
-    width: calc(100vw - 64px);
+    flex: 0 0 calc(100vw - 80px);
+    width: calc(100vw - 80px);
     max-width: 600px;
   }
 
@@ -1290,17 +1295,24 @@ body.is-popup-open {
     margin-bottom: 40px;
   }
 
+  .interview-slider {
+    padding: 10px 0 0;
+  }
+
   .interview__list {
-    flex-direction: column;
-    gap: 24px;
-    padding: 0 32px;
-    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+    padding: 0 0 0 24px;
+    align-items: stretch;
+    justify-content: flex-start;
   }
 
   .interview-card {
-    flex: 0 0 100%;
-    width: 100%;
-    max-width: 360px;
+    flex: 0 0 calc(100vw - 80px);
+    width: calc(100vw - 80px);
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 360 / 520;
   }
 
   /* Recruit */
