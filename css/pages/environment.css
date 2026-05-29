@@ -120,7 +120,7 @@
 
 .advantage__blob--2 {
   /* Big green blob top-right of section */
-  top: 0;
+  top: -50px;
   left: 1050px;
   width: 400px;
   height: 327px;
