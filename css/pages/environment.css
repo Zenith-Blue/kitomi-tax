@@ -167,18 +167,6 @@
   object-position: center;
 }
 
-.adv-item:nth-of-type(1) .adv-item__img img {
-  object-position: 44% 61%;
-}
-
-.adv-item:nth-of-type(2) .adv-item__img img {
-  object-position: 31% 53%;
-}
-
-.adv-item:nth-of-type(3) .adv-item__img img {
-  object-position: 50% 44%;
-}
-
 .adv-item__content {
   flex: 0 0 520px;
   width: 520px;
