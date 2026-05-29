@@ -26,11 +26,13 @@
     };
 
     const next = () => {
-      current = (current + 1) % total;
+      if (current >= total - 1) return;
+      current++;
       update();
     };
     const prev = () => {
-      current = (current - 1 + total) % total;
+      if (current <= 0) return;
+      current--;
       update();
     };
 
