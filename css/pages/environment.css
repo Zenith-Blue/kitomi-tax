@@ -151,6 +151,8 @@
 
 .adv-item--white {
   background-color: var(--color-white);
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .adv-item__img {
