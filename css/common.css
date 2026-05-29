@@ -915,7 +915,7 @@ br.sp-only {
 /* Prevent horizontal scroll globally */
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body.is-menu-open {
