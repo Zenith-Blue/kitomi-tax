@@ -25,6 +25,7 @@ document.addEventListener("partials:loaded", () => {
         const rect = activeLink.getBoundingClientRect();
         const top = rect.top + (rect.height - indicator.offsetHeight) / 2;
         indicator.style.top = `${top}px`;
+        indicator.classList.add("is-ready");
       };
       positionIndicator();
       window.addEventListener("resize", positionIndicator);

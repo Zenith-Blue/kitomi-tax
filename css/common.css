@@ -208,7 +208,11 @@ main {
   height: 48px;
   background-color: var(--color-red);
   z-index: 101;
-  transition: top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.side-nav__indicator.is-ready {
+  opacity: 1;
 }
 
 /* ==========================================================================
