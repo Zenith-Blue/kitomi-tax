@@ -70,7 +70,7 @@
       const dx = x - startX;
       const dy = y - startY;
       if (Math.abs(dx) >= SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy)) {
-        if (dx < 0) next();
+        if (dx > 0) next();
         else prev();
       }
     };
@@ -106,6 +106,19 @@
         dragged = false;
       }
     }, true);
+
+    // Horizontal wheel (trackpad/mouse horizontal scroll) → advance slide
+    let wheelLock = false;
+    track.addEventListener("wheel", (e) => {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      e.preventDefault();
+      if (wheelLock) return;
+      if (Math.abs(e.deltaX) < 10) return;
+      wheelLock = true;
+      if (e.deltaX > 0) next();
+      else prev();
+      setTimeout(() => { wheelLock = false; }, 500);
+    }, { passive: false });
 
     window.addEventListener("resize", update);
     update();
