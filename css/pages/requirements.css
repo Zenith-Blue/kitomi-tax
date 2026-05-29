@@ -150,7 +150,7 @@
   padding: 60px 80px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 30px;
 }
 
 .job-card__title {
