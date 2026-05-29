@@ -145,6 +145,8 @@
 
 .adv-item--beige {
   background-color: var(--color-beige);
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .adv-item--white {
