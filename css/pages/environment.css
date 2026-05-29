@@ -6,7 +6,6 @@
   position: relative;
   height: 1040px;
   overflow: hidden;
-  z-index: 2;
 }
 
 .env-mv__logo {
@@ -88,7 +87,6 @@
   position: relative;
   padding: 120px 0 0;
   overflow: hidden;
-  z-index: 1;
 }
 
 .advantage__title {
