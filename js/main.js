@@ -7,6 +7,30 @@ document.addEventListener("partials:loaded", () => {
     });
   }
 
+  // Side-nav indicator: 現在ページに対応する .side-nav__link に位置を合わせる
+  const indicator = document.querySelector(".side-nav__indicator");
+  const navLinks = document.querySelectorAll(".side-nav__link");
+  if (indicator && navLinks.length > 0) {
+    const path = location.pathname.split("/").pop() || "index.html";
+    const currentPage = path === "" ? "index.html" : path;
+    let activeLink = null;
+    navLinks.forEach((link) => {
+      if (link.getAttribute("href") === currentPage) activeLink = link;
+    });
+
+    if (!activeLink) {
+      indicator.style.display = "none";
+    } else {
+      const positionIndicator = () => {
+        const rect = activeLink.getBoundingClientRect();
+        const top = rect.top + (rect.height - indicator.offsetHeight) / 2;
+        indicator.style.top = `${top}px`;
+      };
+      positionIndicator();
+      window.addEventListener("resize", positionIndicator);
+    }
+  }
+
   // Hamburger menu
   const hamburger = document.querySelector(".hamburger");
   const sideNav = document.querySelector(".side-nav");
