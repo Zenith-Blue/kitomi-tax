@@ -15,7 +15,7 @@ body {
 main {
   margin-right: var(--nav-width);
   position: relative;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .section {
