@@ -45,7 +45,7 @@
 .env-mv__photo {
   position: absolute;
   top: 480px;
-  left: 0;
+  left: -50px;
   width: 1210px;
   height: 560px;
   border-top-right-radius: var(--radius-md);
@@ -209,7 +209,7 @@
   line-height: 30px;
   letter-spacing: 0.32px;
   color: var(--color-black);
-  margin: 0 0 30px;
+  margin: 0;
 }
 
 .adv-item__body p:last-child {
