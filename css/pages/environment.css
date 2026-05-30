@@ -6,6 +6,7 @@
   position: relative;
   height: 1040px;
   overflow: hidden;
+  z-index: 2;
 }
 
 .env-mv__logo {
@@ -45,7 +46,7 @@
 .env-mv__photo {
   position: absolute;
   top: 480px;
-  left: -50px;
+  left: -20px;
   width: 1210px;
   height: 560px;
   border-top-right-radius: var(--radius-md);
