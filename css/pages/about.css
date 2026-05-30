@@ -566,6 +566,7 @@
   letter-spacing: 1.92px;
   color: var(--color-black);
   margin-bottom: 30px;
+  white-space: nowrap;
 }
 
 .summary__body {
@@ -1283,6 +1284,7 @@
   .summary__catch {
     font-size: 24px;
     line-height: 1.6;
+    white-space: normal;
   }
 
   .summary__body p {
