@@ -385,15 +385,31 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.outlook__deco-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: outlookMarquee 30s linear infinite;
+  will-change: transform;
+}
+
+.outlook__deco-item {
   font-family: var(--font-en);
   font-weight: 600;
   font-size: 204px;
   line-height: 1;
   color: var(--color-gray-200);
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 0;
   letter-spacing: -2px;
+}
+
+@keyframes outlookMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .outlook__title {
