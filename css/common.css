@@ -346,10 +346,24 @@ main {
   right: var(--section-padding-x);
 }
 
-.footer__logo {
-  width: 280px;
-  height: 44px;
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   margin-bottom: 20px;
+}
+
+.footer__logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 0;
+}
+
+.footer__brand-name {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 .footer__address {
