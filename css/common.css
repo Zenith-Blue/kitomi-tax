@@ -349,21 +349,21 @@ main {
 .footer__brand {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 20px;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
 .footer__logo {
-  width: 60px;
-  height: auto;
+  width: auto;
+  height: 56px;
   margin-bottom: 0;
 }
 
 .footer__brand-name {
   color: #fff;
-  font-size: 18px;
+  font-size: 26px;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.12em;
 }
 
 .footer__address {
