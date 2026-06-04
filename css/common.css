@@ -382,7 +382,7 @@ main {
 
 .footer__policy {
   position: absolute;
-  top: 378px;
+  top: 328px;
   left: var(--section-padding-x);
   display: inline-flex;
   align-items: center;
