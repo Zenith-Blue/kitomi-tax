@@ -1647,7 +1647,7 @@ body.is-popup-open {
   }
 
   .about-slider__num {
-    margin-top: 5px;
+    margin-top: -45px;
     padding-left: 0;
     font-size: 48px;
   }
