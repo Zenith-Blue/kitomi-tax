@@ -1564,11 +1564,11 @@ body.is-popup-open {
   }
 
   .message__blob--2 {
-    top: -10px;
+    top: -15px;
     right: 0;
     left: auto;
-    width: 150px;
-    height: 120px;
+    width: 140px;
+    height: 110px;
     transform: rotate(180deg) scale(1);
     transform-origin: center;
     z-index: 3;
@@ -1579,8 +1579,8 @@ body.is-popup-open {
 
   .message__blob--4 {
     display: block;
-    top: 230px;
-    left: 10px;
+    top: 180px;
+    left: 40px;
     right: auto;
     width: 88px;
     height: 72px;
