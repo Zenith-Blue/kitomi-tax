@@ -88,4 +88,26 @@ document.addEventListener("partials:loaded", () => {
       }
     }, 100);
   });
+
+  // Message section の装飾ブロブをスクロールで「ふわっと」表示
+  const messageBlobs = document.querySelectorAll(".message__blob");
+  if (messageBlobs.length > 0 && "IntersectionObserver" in window) {
+    const messageSection = document.querySelector(".message");
+    if (messageSection) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              messageBlobs.forEach((b) => b.classList.add("is-revealed"));
+              io.disconnect();
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      io.observe(messageSection);
+    }
+  } else {
+    messageBlobs.forEach((b) => b.classList.add("is-revealed"));
+  }
 });
