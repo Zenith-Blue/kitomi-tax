@@ -1599,7 +1599,7 @@ body.is-popup-open {
 
   .about__deco-text {
     font-size: 120px;
-    left: 0;
+    left: -20px;
     letter-spacing: 4.8px;
     top: 0;
     height: 778px;
