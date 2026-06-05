@@ -809,12 +809,20 @@ main {
     position: relative;
     top: auto;
     left: auto;
+    right: auto;
     transform: none;
     margin: 0 auto;
     width: 100%;
     max-width: 310px;
     gap: 24px;
     order: 2;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__tel-block {
+    align-items: center;
+    text-align: center;
   }
 
   .footer__tel-num {
@@ -868,10 +876,23 @@ main {
     order: 5;
   }
 
+  .footer__brand {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
   .footer__logo {
-    width: 240px;
-    height: auto;
-    margin-bottom: 24px;
+    width: auto;
+    height: 24px;
+    margin-bottom: 0;
+  }
+
+  .footer__brand-name {
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
   }
 
   .footer__address {
