@@ -1571,7 +1571,7 @@ body.is-popup-open {
     height: 130px;
     transform: rotate(180deg) scale(1);
     transform-origin: center;
-    z-index: 0;
+    z-index: 3;
   }
   .message__blob--2.is-revealed {
     transform: rotate(180deg) scale(1);
@@ -1579,14 +1579,14 @@ body.is-popup-open {
 
   .message__blob--4 {
     display: block;
-    top: 280px;
-    left: -20px;
+    top: 230px;
+    left: 10px;
     right: auto;
-    width: 110px;
-    height: 90px;
+    width: 88px;
+    height: 72px;
     transform: rotate(180deg) scale(1);
     transform-origin: center;
-    z-index: 1;
+    z-index: 3;
   }
   .message__blob--4.is-revealed {
     transform: rotate(180deg) scale(1);
