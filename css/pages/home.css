@@ -1702,9 +1702,9 @@ body.is-popup-open {
     bottom: -30px;
     left: 50%;
     right: auto;
-    width: 120px;
-    height: 98px;
-    transform: translateX(-90px) rotate(180deg);
+    width: 80px;
+    height: 66px;
+    transform: translateX(-70px) rotate(180deg);
     z-index: 0;
   }
 
@@ -1772,8 +1772,8 @@ body.is-popup-open {
     top: 30px;
     left: auto;
     right: -20px;
-    width: 120px;
-    height: 98px;
+    width: 80px;
+    height: 66px;
     transform: none;
     z-index: 1;
   }
