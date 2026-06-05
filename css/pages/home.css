@@ -1557,20 +1557,39 @@ body.is-popup-open {
     margin-bottom: 16px;
   }
 
-  /* Hide decorative blobs on mobile or scale down */
+  /* SP: 緑(blob-2) を右上、赤(blob-4) をカード左上に。残り blob-1/blob-3 は非表示 */
   .message__blob--1,
-  .message__blob--4 {
+  .message__blob--3 {
     display: none;
   }
 
   .message__blob--2 {
-    transform: rotate(180deg) scale(0.6);
-    transform-origin: top left;
+    top: -10px;
+    right: -30px;
+    left: auto;
+    width: 160px;
+    height: 130px;
+    transform: rotate(180deg) scale(1);
+    transform-origin: center;
+    z-index: 0;
+  }
+  .message__blob--2.is-revealed {
+    transform: rotate(180deg) scale(1);
   }
 
-  .message__blob--3 {
-    transform: scale(0.5);
-    transform-origin: top left;
+  .message__blob--4 {
+    display: block;
+    top: 280px;
+    left: -20px;
+    right: auto;
+    width: 110px;
+    height: 90px;
+    transform: rotate(180deg) scale(1);
+    transform-origin: center;
+    z-index: 1;
+  }
+  .message__blob--4.is-revealed {
+    transform: rotate(180deg) scale(1);
   }
 
   /* About */
