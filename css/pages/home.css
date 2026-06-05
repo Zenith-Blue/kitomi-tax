@@ -216,6 +216,31 @@
 .message__blob.is-revealed {
   opacity: 1;
 }
+/* Message セクション本文をふわっと表示 */
+.message__heading,
+.message__card-title,
+.message__card-body > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+.message.is-revealed .message__heading { opacity: 1; transform: translateY(0); }
+.message.is-revealed .message__card-title { opacity: 1; transform: translateY(0); transition-delay: 0.15s; }
+.message.is-revealed .message__card-body > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+.message.is-revealed .message__card-body > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.45s; }
+.message.is-revealed .message__card-body > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.6s; }
+.message.is-revealed .message__card-body > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.75s; }
+
+/* Environment タイトル: 左→右にスライドイン */
+.environment__title .section-title__en,
+.environment__title .section-title__jp {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.environment.is-revealed .section-title__en { opacity: 1; transform: translateX(0); }
+.environment.is-revealed .section-title__jp { opacity: 1; transform: translateX(0); transition-delay: 0.2s; }
+
 /* 表示順は画面右側から左側へ順に: blob1 (右上) → blob4 (右寄り) → blob2 (左下) → blob3 (左寄り) */
 .message__blob--1 {
   top: 50px;
@@ -293,22 +318,33 @@
   margin-bottom: 50px;
 }
 
+/* About 装飾blob: 右→左の順にふわっと出現 */
+.about__blob {
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.about__blob.is-revealed { opacity: 1; }
 .about__blob--1 {
   top: 1090px;
   left: 450px;
   width: 160px;
   height: 131px;
-  transform: scaleY(-1);
+  transform: scaleY(-1) scale(0.9);
   z-index: 1;
+  transition-delay: 0s;
 }
+.about__blob--1.is-revealed { transform: scaleY(-1) scale(1); }
 
 .about__blob--2 {
   top: 870px;
   left: 140px;
   width: 250px;
   height: 200px;
+  transform: scale(0.9);
   z-index: 0;
+  transition-delay: 0.2s;
 }
+.about__blob--2.is-revealed { transform: scale(1); }
 
 .about-slider {
   position: relative;

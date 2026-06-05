@@ -89,25 +89,37 @@ document.addEventListener("partials:loaded", () => {
     }, 100);
   });
 
-  // Message section の装飾ブロブをスクロールで「ふわっと」表示
-  const messageBlobs = document.querySelectorAll(".message__blob");
-  if (messageBlobs.length > 0 && "IntersectionObserver" in window) {
-    const messageSection = document.querySelector(".message");
-    if (messageSection) {
+  // スクロール時のふわっと表示: 指定セクションが画面に入ったら is-revealed を付ける
+  const revealTargets = [
+    { section: ".message", blobs: ".message__blob" },
+    { section: ".about", blobs: ".about__blob" },
+    { section: ".environment", blobs: null },
+  ];
+
+  if ("IntersectionObserver" in window) {
+    revealTargets.forEach(({ section, blobs }) => {
+      const sec = document.querySelector(section);
+      if (!sec) return;
+      const blobEls = blobs ? document.querySelectorAll(blobs) : null;
       const io = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              messageBlobs.forEach((b) => b.classList.add("is-revealed"));
+              sec.classList.add("is-revealed");
+              if (blobEls) blobEls.forEach((b) => b.classList.add("is-revealed"));
               io.disconnect();
             }
           });
         },
         { threshold: 0.15 }
       );
-      io.observe(messageSection);
-    }
+      io.observe(sec);
+    });
   } else {
-    messageBlobs.forEach((b) => b.classList.add("is-revealed"));
+    revealTargets.forEach(({ section, blobs }) => {
+      const sec = document.querySelector(section);
+      if (sec) sec.classList.add("is-revealed");
+      if (blobs) document.querySelectorAll(blobs).forEach((b) => b.classList.add("is-revealed"));
+    });
   }
 });
