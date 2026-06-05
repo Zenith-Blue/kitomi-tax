@@ -216,6 +216,7 @@
 .message__blob.is-revealed {
   opacity: 1;
 }
+/* 表示順は画面右側から左側へ順に: blob1 (右上) → blob4 (右寄り) → blob2 (左下) → blob3 (左寄り) */
 .message__blob--1 {
   top: 50px;
   right: -45px;
@@ -223,8 +224,19 @@
   height: 280px;
   transform: rotate(-25deg) scale(0.9);
   z-index: 0;
+  transition-delay: 0s;
 }
 .message__blob--1.is-revealed { transform: rotate(-25deg) scale(1); }
+.message__blob--4 {
+  top: 170px;
+  left: 780px;
+  width: 110px;
+  height: 90px;
+  transform: rotate(180deg) scale(0.9);
+  z-index: 1;
+  transition-delay: 0.2s;
+}
+.message__blob--4.is-revealed { transform: rotate(180deg) scale(1); }
 .message__blob--2 {
   top: 745px;
   left: 80px;
@@ -232,7 +244,7 @@
   height: 126px;
   transform: rotate(180deg) scale(0.9);
   z-index: 1;
-  transition-delay: 0.3s;
+  transition-delay: 0.4s;
 }
 .message__blob--2.is-revealed { transform: rotate(180deg) scale(1); }
 .message__blob--3 {
@@ -242,19 +254,9 @@
   height: 146px;
   transform: scale(0.9);
   z-index: 1;
-  transition-delay: 0.15s;
+  transition-delay: 0.6s;
 }
 .message__blob--3.is-revealed { transform: scale(1); }
-.message__blob--4 {
-  top: 170px;
-  left: 780px;
-  width: 110px;
-  height: 90px;
-  transform: rotate(180deg) scale(0.9);
-  z-index: 1;
-  transition-delay: 0.45s;
-}
-.message__blob--4.is-revealed { transform: rotate(180deg) scale(1); }
 
 /* ==========================================================================
    About / Why Kitomi
