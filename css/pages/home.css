@@ -1565,21 +1565,21 @@ body.is-popup-open {
 
   .message__blob--2 {
     top: -15px;
-    right: 0;
+    right: -10px;
     left: auto;
     width: 140px;
     height: 110px;
-    transform: rotate(180deg) scale(1);
+    transform: scaleY(-1);
     transform-origin: center;
     z-index: 3;
   }
   .message__blob--2.is-revealed {
-    transform: rotate(180deg) scale(1);
+    transform: scaleY(-1);
   }
 
   .message__blob--4 {
     display: block;
-    top: 180px;
+    top: 190px;
     left: 40px;
     right: auto;
     width: 88px;
