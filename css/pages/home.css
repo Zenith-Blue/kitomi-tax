@@ -1427,7 +1427,7 @@ body.is-popup-open {
 @media (max-width: 767px) {
   /* MV - photo at top, red title overlapping, lead below (Figma SP) */
   .mv {
-    height: 800px;
+    height: 700px;
     min-height: 0;
   }
 
@@ -1490,12 +1490,12 @@ body.is-popup-open {
 
   /* Information bar */
   .information {
-    padding: 40px 20px;
+    padding: 20px;
   }
 
   .information__row {
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     font-size: 14px;
     text-align: center;
     white-space: normal;
