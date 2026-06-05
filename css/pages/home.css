@@ -1567,8 +1567,8 @@ body.is-popup-open {
     top: -10px;
     right: 0;
     left: auto;
-    width: 160px;
-    height: 130px;
+    width: 150px;
+    height: 120px;
     transform: rotate(180deg) scale(1);
     transform-origin: center;
     z-index: 3;
@@ -1586,7 +1586,7 @@ body.is-popup-open {
     height: 72px;
     transform: rotate(180deg) scale(1);
     transform-origin: center;
-    z-index: 3;
+    z-index: 1;
   }
   .message__blob--4.is-revealed {
     transform: rotate(180deg) scale(1);
