@@ -1842,6 +1842,8 @@ body.is-popup-open {
   }
 
   .interview__blob {
+    top: -40px;
+    left: -60px;
     transform: scale(0.5);
     transform-origin: top left;
   }
