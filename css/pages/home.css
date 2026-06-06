@@ -1627,6 +1627,7 @@ body.is-popup-open {
 
   .about-slider {
     overflow: hidden;
+    padding-bottom: 5px;
   }
 
   .about-slider__viewport {
@@ -1847,7 +1848,7 @@ body.is-popup-open {
   }
 
   .interview__blob {
-    top: 0;
+    top: -30px;
     left: -80px;
     width: 200px;
     height: 164px;
