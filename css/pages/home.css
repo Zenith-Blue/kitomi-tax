@@ -1515,7 +1515,7 @@ body.is-popup-open {
 
   /* Message */
   .message {
-    padding: 100px 0 0;
+    padding: 100px 0 30px;
     min-height: auto;
   }
 
@@ -1601,7 +1601,7 @@ body.is-popup-open {
 
   /* About */
   .about {
-    padding: 60px 0 80px;
+    padding: 20px 0 80px;
   }
 
   .about__deco-text {
