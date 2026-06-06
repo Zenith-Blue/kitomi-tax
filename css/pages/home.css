@@ -1932,7 +1932,7 @@ body.is-popup-open {
 
   .recruit__blob--2 {
     top: auto;
-    bottom: 20px;
+    bottom: 10px;
     right: -20px;
     left: auto;
     width: 110px;
@@ -1944,7 +1944,7 @@ body.is-popup-open {
   .recruit__blob--1 {
     top: auto;
     bottom: -70px;
-    left: 190px;
+    left: 200px;
     right: auto;
     width: 90px;
     height: 74px;
