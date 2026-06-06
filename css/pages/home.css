@@ -1942,7 +1942,7 @@ body.is-popup-open {
 
   .recruit__blob--1 {
     top: auto;
-    bottom: 0;
+    bottom: -70px;
     left: 190px;
     right: auto;
     width: 90px;
