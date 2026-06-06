@@ -1857,7 +1857,7 @@ body.is-popup-open {
 
   /* Recruit - photo on top, content below */
   .recruit {
-    padding: 0 0 110px;
+    padding: 0 0 80px;
     background: var(--color-white);
   }
 
