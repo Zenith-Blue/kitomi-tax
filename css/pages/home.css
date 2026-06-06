@@ -1855,7 +1855,8 @@ body.is-popup-open {
 
   /* Recruit - photo on top, content below */
   .recruit {
-    padding: 0 0 30px;
+    padding: 0 0 60px;
+    background: var(--color-white);
   }
 
   .recruit__photo {
@@ -1866,17 +1867,18 @@ body.is-popup-open {
     height: 390px;
   }
 
+  /* グレー背景は absolute では制御しづらいので SP では非表示にし、
+     content の背景色で「content+30px」の範囲のみグレーにする */
   .recruit__bg {
-    top: 390px;
-    bottom: 0;
-    height: auto;
+    display: none;
   }
 
   .recruit__content {
-    padding: 60px 20px 0;
+    padding: 60px 20px 30px;
     min-height: auto;
     gap: 30px;
     align-items: center;
+    background: var(--color-gray-200);
   }
 
   .recruit__title {
