@@ -1789,15 +1789,9 @@ body.is-popup-open {
     z-index: 1;
   }
 
-  /* small green blob near ENVIRONMENT label */
+  /* small white blob near ENVIRONMENT label — SPでは画像下から覗いて見えるので非表示 */
   .environment__blob--1 {
-    top: 55px;
-    left: auto;
-    right: 30px;
-    width: 60px;
-    height: 49px;
-    transform: scaleY(-1);
-    z-index: 0;
+    display: none;
   }
 
   /* Interview - dot-switch slider (same as ABOUT) */
