@@ -1874,7 +1874,7 @@ body.is-popup-open {
   }
 
   .recruit__content {
-    padding: 60px 20px 30px;
+    padding: 60px 20px 60px;
     min-height: auto;
     gap: 30px;
     align-items: center;
