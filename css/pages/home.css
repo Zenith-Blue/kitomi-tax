@@ -1859,6 +1859,7 @@ body.is-popup-open {
   .recruit {
     padding: 0 0 80px;
     background: var(--color-white);
+    overflow: visible;
   }
 
   .recruit__photo {
