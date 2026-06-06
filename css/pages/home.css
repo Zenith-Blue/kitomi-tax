@@ -1521,12 +1521,11 @@ body.is-popup-open {
 
   .message__bg {
     width: calc(100% - 20px);
-    height: 892px;
+    height: auto;
     border-top-right-radius: 60px;
     border-bottom-right-radius: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    top: 40px;
     inset: 40px 0 0 0;
   }
 
