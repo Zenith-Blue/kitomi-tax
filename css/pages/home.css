@@ -1497,13 +1497,20 @@ body.is-popup-open {
     flex-direction: column;
     gap: 10px;
     font-size: 14px;
-    text-align: center;
     white-space: normal;
   }
 
   .information__row span {
     width: 100%;
     line-height: 26px;
+  }
+
+  .information__en {
+    text-align: center;
+  }
+
+  .information__text {
+    text-align: left;
   }
 
   /* Message */
