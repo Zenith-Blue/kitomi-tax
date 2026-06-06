@@ -1857,7 +1857,7 @@ body.is-popup-open {
 
   /* Recruit - photo on top, content below */
   .recruit {
-    padding: 0 0 140px;
+    padding: 0 0 110px;
     background: var(--color-white);
   }
 
@@ -1931,7 +1931,7 @@ body.is-popup-open {
 
   .recruit__blob--2 {
     top: auto;
-    bottom: 40px;
+    bottom: 70px;
     right: -20px;
     left: auto;
     width: 110px;
