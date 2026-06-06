@@ -1812,7 +1812,7 @@ body.is-popup-open {
   }
 
   .interview-slider {
-    padding: 0 50px;
+    padding: 0 50px 5px;
   }
 
   .interview__list {
