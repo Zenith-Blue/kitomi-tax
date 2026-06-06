@@ -291,7 +291,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 0;
   width: 100%;
 }
 
@@ -304,7 +304,7 @@ main {
 .footer__tel-icon {
   width: 32px;
   height: 32px;
-  fill: var(--color-white);
+  object-fit: contain;
 }
 
 .footer__tel-num {
