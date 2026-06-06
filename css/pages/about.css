@@ -1290,11 +1290,15 @@
   /* ===== Summary ===== */
   .summary {
     padding: 56px 0 64px;
+    display: flex;
+    flex-direction: column;
   }
 
   .summary__txt {
     padding: 0 20px;
     text-align: center;
+    order: 2;
+    margin-top: 32px;
   }
 
   .summary__catch {
@@ -1309,8 +1313,9 @@
   }
 
   .summary__photos {
-    margin: 28px 20px 0;
+    margin: 0 20px;
     gap: 16px;
+    order: 1;
   }
 
   /* ===== Company ===== */
