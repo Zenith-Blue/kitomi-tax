@@ -783,7 +783,8 @@
 
   /* ===== Evaluation ===== */
   .evaluation {
-    padding: 56px 0 64px;
+    padding: 56px 0 94px;
+    background-color: var(--color-white);
   }
 
   .evaluation__title {
