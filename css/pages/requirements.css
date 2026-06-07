@@ -423,12 +423,15 @@
   }
 
   /* MV blobs: Figma SP配置（楕円） */
+  /* 白(blob--1) と 緑(blob--3) の位置を入れ替え */
   .req-mv__blob--1 {
-    top: 30px;
-    left: auto;
-    right: 64px;
-    width: 92px;
-    height: 75px;
+    /* 白: 旧 blob--3 の位置 */
+    top: auto;
+    bottom: 4px;
+    left: 48px;
+    right: auto;
+    width: 68px;
+    height: 56px;
   }
 
   .req-mv__blob--2 {
@@ -441,11 +444,13 @@
   }
 
   .req-mv__blob--3 {
-    top: auto;
-    bottom: 4px;
-    left: 48px;
-    width: 68px;
-    height: 56px;
+    /* 緑: 旧 blob--1 の位置 */
+    top: 30px;
+    left: auto;
+    right: 64px;
+    bottom: auto;
+    width: 92px;
+    height: 75px;
   }
 
   /* Lead */
