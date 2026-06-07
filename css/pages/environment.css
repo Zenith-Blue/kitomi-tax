@@ -295,7 +295,7 @@
 
 .evaluation {
   position: relative;
-  background-color: var(--color-beige);
+  background-color: var(--color-gray-200);
   padding: 120px 0 150px;
   overflow: hidden;
 }
