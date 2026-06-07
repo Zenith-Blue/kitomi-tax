@@ -1029,6 +1029,11 @@
     gap: 10px;
   }
 
+  /* SP: .about-mv の overflow を解除して blob を下まで表示 */
+  .about-mv {
+    overflow: visible;
+  }
+
   .about-mv__title-en {
     font-size: 36px;
     letter-spacing: 1.5px;
@@ -1056,8 +1061,9 @@
   }
 
   .about-mv__blob--3 {
+    /* オレンジ: 一番左に */
     top: 300px;
-    left: 40px;
+    left: -20px;
     width: 80px;
     height: 65px;
     transform: none;
