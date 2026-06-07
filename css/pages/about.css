@@ -1275,7 +1275,8 @@
 
   /* ===== Outlook ===== */
   .outlook {
-    padding: 64px 0 56px;
+    /* deco-text (NEXT / ACTION 2 行 ≈ 200px) を避けて title 以降を下に */
+    padding: 250px 0 56px;
   }
 
   .outlook__deco-text {
