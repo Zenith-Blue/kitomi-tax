@@ -425,10 +425,10 @@
   /* MV blobs: Figma SP配置（楕円） */
   /* 白(blob--1) と 緑(blob--3) の位置を入れ替え */
   .req-mv__blob--1 {
-    /* 白: 旧 blob--3 の位置 */
+    /* 白: 旧 blob--3 の位置 + 30px右 + 15px下 */
     top: auto;
-    bottom: 4px;
-    left: 48px;
+    bottom: -11px;
+    left: 78px;
     right: auto;
     width: 68px;
     height: 56px;
