@@ -1139,8 +1139,12 @@
 
   .greeting__bg {
     position: absolute;
-    inset: 0;
-    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* 本（約108px高）の縦中央付近で背景が終わるよう、section bottom から 110px 上で止める
+       内訳: padding-bottom 64px + books の上半分 ~46px ≈ 110px */
+    bottom: 110px;
   }
 
   .greeting__title { order: 1; margin-bottom: 20px; }
