@@ -217,6 +217,8 @@
 .greeting__person {
   font-size: 24px;
   letter-spacing: 0.48px;
+  position: relative;
+  top: 2px;
 }
 
 .greeting__bio {
@@ -1106,6 +1108,8 @@
   .about-lead__text {
     font-size: 14px;
     line-height: 26px;
+    text-align: left;
+    align-self: stretch;
   }
 
   /* ===== 共通: SPセクションタイトル中央寄せ ===== */
