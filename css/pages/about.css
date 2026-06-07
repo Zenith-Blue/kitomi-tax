@@ -1435,8 +1435,8 @@
 
   .summary__body p {
     font-size: 14px;
-    line-height: 22px;
-    letter-spacing: -0.02em;
+    line-height: 26px;
+    letter-spacing: -0.04em;
   }
 
   /* 段落間に 24px の空白 */
