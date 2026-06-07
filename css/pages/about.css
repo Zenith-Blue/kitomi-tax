@@ -137,7 +137,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  height: 1227px;
+  height: 1630px;
   width: 1200px;
   background-color: var(--color-gray-200);
   border-top-left-radius: var(--radius-xl);
@@ -1110,6 +1110,7 @@
     line-height: 26px;
     text-align: left;
     align-self: stretch;
+    letter-spacing: 0.08em;
   }
 
   /* ===== 共通: SPセクションタイトル中央寄せ ===== */
