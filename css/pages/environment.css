@@ -784,6 +784,7 @@
   /* ===== Evaluation ===== */
   .evaluation {
     padding: 56px 0 64px;
+    margin-bottom: 30px;
   }
 
   .evaluation__title {
