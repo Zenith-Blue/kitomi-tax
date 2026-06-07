@@ -1316,6 +1316,13 @@
     line-height: 26px;
   }
 
+  /* SP: outlook__diagram img の左右に 30px の余白 */
+  .outlook__diagram img {
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+
   /* ===== I/O cards (Figma SP 95:2364 / 95:2374) ===== */
   .io-card {
     padding: 0 0 48px !important;
