@@ -681,8 +681,9 @@
     z-index: 2;
   }
 
-  /* beige 項目（魅力1, 魅力3）の下余白を 100px に */
-  .adv-item--beige {
+  /* beige 項目（魅力1, 魅力3）と魅力2（white）の下余白を 100px に */
+  .adv-item--beige,
+  .adv-item--white {
     padding-bottom: 100px;
   }
 
