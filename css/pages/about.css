@@ -407,6 +407,7 @@
   line-height: 1;
   color: var(--color-gray-200);
   letter-spacing: -2px;
+  margin-right: 80px;
 }
 
 @keyframes outlookMarquee {
@@ -1298,6 +1299,7 @@
   .outlook__deco-item {
     font-size: inherit;
     letter-spacing: -2px;
+    margin-right: 0;
   }
 
   /* 2 つ目の NEXT ACTION は重複なので非表示 */
