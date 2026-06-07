@@ -649,9 +649,9 @@
   }
 
   .advantage__blob--1 {
-    /* グレー: ADVANTAGES タイトル下の左寄り (80x65 / top:120 / left:80) */
+    /* グレー: ADVANTAGES タイトル下の左寄り (80x65 / top:120 / left:30) */
     top: 120px;
-    left: 80px;
+    left: 30px;
     width: 80px;
     height: 65px;
     transform: none;
