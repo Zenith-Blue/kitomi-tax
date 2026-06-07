@@ -1331,6 +1331,11 @@
     gap: 30px !important;
   }
 
+  /* SP でも緑背景を 900px に */
+  .io-card--input {
+    height: 900px;
+  }
+
   .io-card__img {
     max-width: none;
     width: 100%;
