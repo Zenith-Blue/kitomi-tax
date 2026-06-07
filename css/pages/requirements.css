@@ -390,6 +390,7 @@
   .req-mv {
     min-height: 280px;
     padding: 130px 20px 32px;
+    overflow: visible;
   }
 
   .req-mv__logo {
