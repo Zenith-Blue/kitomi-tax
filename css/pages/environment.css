@@ -650,12 +650,12 @@
   }
 
   .advantage__blob--1 {
-    /* グレー: ADVANTAGES タイトル下の左寄り (80x65 / top:120 / left:-20) */
-    top: 120px;
-    left: -20px;
+    /* グレー: ADVANTAGES タイトル下の左寄り (80x65 / top:130 / left:-10) + 右に30度回転 */
+    top: 130px;
+    left: -10px;
     width: 80px;
     height: 65px;
-    transform: none;
+    transform: rotate(30deg);
     z-index: 0;
   }
 
