@@ -1395,17 +1395,17 @@
 
   /* 日本地図はタイトル＋本文の背景として配置 */
   .summary__deco {
+    display: block;
     position: absolute;
     top: auto;
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    max-width: 360px;
-    height: auto;
-    /* SVG が width=100%/height=100% で内在寸法を持たないため、aspect-ratio で高さを確保 */
-    aspect-ratio: 460 / 520;
-    opacity: 0.3;
+    /* 内在寸法を持たない SVG のため幅と高さを明示 */
+    width: 320px;
+    height: 360px;
+    max-width: 90%;
+    opacity: 0.4;
     z-index: 0;
     pointer-events: none;
   }
