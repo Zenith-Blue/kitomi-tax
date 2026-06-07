@@ -1252,9 +1252,8 @@
     padding: 0 20px;
   }
 
-  /* Figma SP: 01/02 数字、line-height 34/font-size 32 ≈ 1.06 */
   .strength-item__num {
-    font-size: 32px;
+    font-size: 48px;
     line-height: 1.06;
   }
 
