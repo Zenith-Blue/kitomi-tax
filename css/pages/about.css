@@ -1255,6 +1255,8 @@
   .strength-item__num {
     font-size: 48px;
     line-height: 1.06;
+    display: block;
+    margin-bottom: 10px;
   }
 
   /* Figma SP: 各 strength の小見出しも Sec-Title--JP に揃える */
