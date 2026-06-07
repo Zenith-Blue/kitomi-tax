@@ -658,18 +658,13 @@
     z-index: 0;
   }
 
-  /* Adv item: SPは背景なし・縦積み・中央寄せ */
+  /* Adv item: SPも背景色は維持（beige / white 交互）、縦積み・中央寄せ */
   .adv-item {
     flex-direction: column;
     align-items: center;
     gap: 24px;
     padding: 40px 20px;
     border-radius: 0;
-  }
-
-  .adv-item--beige,
-  .adv-item--white {
-    background-color: transparent;
   }
 
   .adv-item__img {
