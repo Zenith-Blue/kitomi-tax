@@ -1444,9 +1444,9 @@
     align-items: flex-start;
   }
 
-  /* 右の写真（--2）を 30px 下に */
+  /* 右の写真（--2）を 50px 下に */
   .summary__photo--2 {
-    margin-top: 30px;
+    margin-top: 50px;
   }
 
   /* ===== Company ===== */
