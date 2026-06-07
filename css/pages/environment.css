@@ -674,6 +674,11 @@
     z-index: 1;
   }
 
+  /* beige 項目（魅力1, 魅力3）の下余白を 100px に */
+  .adv-item--beige {
+    padding-bottom: 100px;
+  }
+
   .adv-item__img {
     flex: 0 0 auto;
     width: 100%;
