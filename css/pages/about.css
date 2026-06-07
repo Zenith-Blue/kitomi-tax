@@ -1113,7 +1113,7 @@
     letter-spacing: 0.08em;
   }
 
-  /* ===== 共通: SPセクションタイトル中央寄せ + EN/JP の gap 削除 ===== */
+  /* ===== 共通: SPセクションタイトル中央寄せ + EN/JP の gap 削除 + 下に 30px ===== */
   .greeting__title,
   .strength__title,
   .outlook__title {
@@ -1122,6 +1122,7 @@
     padding-left: 20px;
     padding-right: 20px;
     gap: 0;
+    margin-bottom: 30px;
   }
 
   .greeting__title .section-title__jp,
@@ -1149,7 +1150,7 @@
     bottom: 110px;
   }
 
-  .greeting__title { order: 1; margin-bottom: 20px; }
+  .greeting__title { order: 1; margin-bottom: 30px; }
   .greeting__body { order: 2; margin-bottom: 28px; }
   .greeting__photo { order: 3; }
   .greeting__profile { order: 4; }
