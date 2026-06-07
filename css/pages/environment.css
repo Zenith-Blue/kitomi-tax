@@ -667,6 +667,13 @@
     border-radius: 0;
   }
 
+  /* 魅力2（白）を魅力1の下に 30px 重ねて表示 */
+  .adv-item--white {
+    margin-top: -30px;
+    position: relative;
+    z-index: 1;
+  }
+
   .adv-item__img {
     flex: 0 0 auto;
     width: 100%;
