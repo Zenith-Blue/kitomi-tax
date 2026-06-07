@@ -1061,9 +1061,9 @@
   }
 
   .about-mv__blob--3 {
-    /* オレンジ: 一番左に、180度回転 */
+    /* オレンジ: 一番左寄り、180度回転 */
     top: 230px;
-    left: -20px;
+    left: 0;
     width: 80px;
     height: 65px;
     transform: rotate(180deg);
