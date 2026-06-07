@@ -679,6 +679,12 @@
     padding-bottom: 100px;
   }
 
+  /* 魅力1（最初の beige）と 魅力2（white）の左上だけ 60px 角丸 */
+  .adv-item--beige:first-of-type,
+  .adv-item--white {
+    border-top-left-radius: 60px;
+  }
+
   .adv-item__img {
     flex: 0 0 auto;
     width: 100%;
