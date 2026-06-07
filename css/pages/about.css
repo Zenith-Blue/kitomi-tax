@@ -1399,7 +1399,7 @@
     display: block;
     position: absolute;
     top: auto;
-    bottom: 40px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     /* 内在寸法を持たない SVG のため幅と高さを明示 */
