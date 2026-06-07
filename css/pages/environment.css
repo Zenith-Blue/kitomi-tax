@@ -615,6 +615,7 @@
     width: 60px;
     height: 49px;
     transform: rotate(195deg);
+    z-index: 2;
   }
 
   /* ===== Advantage ===== */
