@@ -1414,7 +1414,7 @@
   }
 
   .summary__txt {
-    padding: 0 20px;
+    padding: 0 12px;
     text-align: center;
     order: 2;
     margin-top: 32px;
@@ -1434,8 +1434,9 @@
   }
 
   .summary__body p {
-    font-size: 14px;
-    line-height: 26px;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
   }
 
   /* 段落間に 24px の空白 */
