@@ -1414,6 +1414,11 @@
     line-height: 26px;
   }
 
+  /* 「この2つを目標に〜」の上に余白を */
+  .summary__body p:nth-child(4) {
+    margin-top: 24px;
+  }
+
   .summary__photos {
     margin: 0 20px;
     gap: 16px;
