@@ -598,21 +598,21 @@
   }
 
   .env-mv__blob--1 {
-    /* orange ellipse: 上端〜ENVIRONMENT上部に重なる中央やや右、右に230度回転 */
-    top: -6px;
-    left: 148px;
-    width: 124px;
-    height: 140px;
+    /* orange ellipse: Figma SP 値（120x98） + 既存ユーザー回転を維持 */
+    top: 70px;
+    left: 150px;
+    width: 120px;
+    height: 98px;
     transform: rotate(230deg);
   }
 
   .env-mv__blob--2 {
-    /* red ellipse: 働く環境の右下・右端寄り、右に195度回転 */
-    top: 183px;
+    /* red ellipse: Figma SP 値（60x49 / top:269 / right:-30）+ 既存ユーザー回転を維持 */
+    top: 269px;
     left: auto;
-    right: 18px;
+    right: -30px;
     width: 60px;
-    height: 52px;
+    height: 49px;
     transform: rotate(195deg);
   }
 
@@ -637,22 +637,24 @@
     text-align: center;
   }
 
-  /* SP: 緑（右上）と白/グレー（左中央）の玉を画面端から半分はみ出るように配置 */
+  /* SP: Figma SP 値に合わせて配置 */
   .advantage__blob--2 {
+    /* 緑: 右上から半分はみ出し (200x164 / left:280 → 390-280-200=-90) */
     top: -80px;
     left: auto;
     right: -90px;
-    width: 240px;
-    height: 196px;
+    width: 200px;
+    height: 164px;
     z-index: 2;
   }
 
   .advantage__blob--1 {
-    top: 240px;
-    left: -60px;
-    width: 130px;
-    height: 106px;
-    transform: scaleX(-1);
+    /* グレー: ADVANTAGES タイトル下の左寄り (80x65 / top:120 / left:80) */
+    top: 120px;
+    left: 80px;
+    width: 80px;
+    height: 65px;
+    transform: none;
     z-index: 0;
   }
 
@@ -747,8 +749,8 @@
   }
 
   .benefit__icon {
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
   }
 
   .benefit__text {
