@@ -1208,9 +1208,24 @@
   .strength__lead {
     font-size: 14px;
     line-height: 26px;
+    letter-spacing: 0;
     text-align: left;
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  /* Figma SP: STRENGTH タイトル EN は 13px / Outfit Medium / line-height 100% */
+  .strength__title .section-title__en {
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  /* Figma SP: STRENGTH タイトル JP は Noto Sans JP Bold 24 / 40 / 2 */
+  .strength__title .section-title__jp {
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 2px;
   }
 
   .strength-item {
@@ -1236,17 +1251,23 @@
     padding: 0 20px;
   }
 
+  /* Figma SP: 01/02 数字、line-height 34/font-size 32 ≈ 1.06 */
   .strength-item__num {
-    font-size: 28px;
+    font-size: 32px;
+    line-height: 1.06;
   }
 
+  /* Figma SP: 各 strength の小見出しも Sec-Title--JP に揃える */
   .strength-item__title {
-    font-size: 22px;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 2px;
   }
 
   .strength-item__body p {
     font-size: 14px;
     line-height: 26px;
+    letter-spacing: 0;
   }
 
   /* ===== Outlook ===== */
