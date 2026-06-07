@@ -1316,10 +1316,11 @@
     line-height: 26px;
   }
 
-  /* ===== I/O cards ===== */
+  /* ===== I/O cards (Figma SP 95:2364 / 95:2374) ===== */
   .io-card {
     padding: 0 0 48px !important;
-    gap: 20px;
+    /* img(350) → 30px gap → txt block */
+    gap: 30px !important;
   }
 
   .io-card__img {
@@ -1334,14 +1335,21 @@
     padding: 0 20px;
     align-items: center;
     text-align: center;
+    /* title-block(77px) → 20px gap → body */
+    gap: 20px;
   }
 
   .io-card__title-block {
     align-items: center;
+    /* label(27px) → 10px gap → main title */
+    gap: 10px;
   }
 
+  /* Figma SP Sec-Title--JP: 24/40/letter-spacing 2 */
   .io-card__title {
-    font-size: 22px;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 2px;
   }
 
   .io-card__body {
@@ -1351,6 +1359,7 @@
   .io-card__body p {
     font-size: 14px;
     line-height: 26px;
+    letter-spacing: 0;
   }
 
   /* ===== Summary ===== */
