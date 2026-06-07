@@ -1331,9 +1331,16 @@
     gap: 30px !important;
   }
 
-  /* SP でも緑背景を 900px に */
+  /* SP の緑背景は 1000px に固定 */
   .io-card--input {
-    height: 900px;
+    height: 1000px;
+  }
+
+  /* 出力（オレンジ）を緑の上に 30px 重ねて表示 */
+  .io-card--output {
+    margin-top: -30px;
+    position: relative;
+    z-index: 1;
   }
 
   .io-card__img {
