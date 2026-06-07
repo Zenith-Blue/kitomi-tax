@@ -1061,12 +1061,12 @@
   }
 
   .about-mv__blob--3 {
-    /* オレンジ: 一番左に */
-    top: 260px;
+    /* オレンジ: 一番左に、180度回転 */
+    top: 230px;
     left: -20px;
     width: 80px;
     height: 65px;
-    transform: none;
+    transform: rotate(180deg);
   }
 
   .about-mv__blob--4 {
