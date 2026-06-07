@@ -607,13 +607,13 @@
   }
 
   .env-mv__blob--2 {
-    /* red ellipse: 働く環境の右下・右端寄り、右に75度回転 */
-    top: 148px;
+    /* red ellipse: 働く環境の右下・右端寄り、右に105度回転 */
+    top: 168px;
     left: auto;
-    right: 28px;
+    right: 18px;
     width: 60px;
     height: 52px;
-    transform: rotate(75deg);
+    transform: rotate(105deg);
   }
 
   /* ===== Advantage ===== */
