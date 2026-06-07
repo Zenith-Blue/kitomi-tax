@@ -1278,6 +1278,7 @@
   .outlook {
     /* deco-text (NEXT / ACTION 2 行 ≈ 200px) を避けて title 以降を下に */
     padding: 250px 0 56px;
+    margin-top: 20px;
   }
 
   .outlook__deco-text {
@@ -1405,7 +1406,9 @@
     width: 320px;
     height: 360px;
     max-width: 90%;
-    opacity: 0.4;
+    /* SVG 自体が #F0F3F6（薄いグレー）なので opacity は外す。
+       不可視になっていた原因は opacity 0.4 + 薄いグレーで透明寄りになっていた。 */
+    opacity: 1;
     z-index: 0;
     pointer-events: none;
   }
