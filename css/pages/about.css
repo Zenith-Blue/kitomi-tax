@@ -1390,6 +1390,22 @@
     padding: 56px 0 64px;
     display: flex;
     flex-direction: column;
+    position: relative;
+  }
+
+  /* 日本地図はタイトル＋本文の背景として配置 */
+  .summary__deco {
+    position: absolute;
+    top: auto;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: auto;
+    max-width: 360px;
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;
   }
 
   .summary__txt {
@@ -1397,6 +1413,8 @@
     text-align: center;
     order: 2;
     margin-top: 32px;
+    position: relative;
+    z-index: 1;
   }
 
   .summary__catch {
