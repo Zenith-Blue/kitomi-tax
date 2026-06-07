@@ -590,6 +590,7 @@ main {
     display: block;
     padding: 0;
     border-bottom: none;
+    font-feature-settings: normal;
   }
 
   /* PC用の赤エントリーボックスはメニュー内で非表示 */
