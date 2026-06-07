@@ -608,10 +608,10 @@
   }
 
   .env-mv__blob--2 {
-    /* red ellipse: Figma SP 値（60x49 / top:269 / right:-30）+ 既存ユーザー回転を維持 */
-    top: 269px;
+    /* red ellipse: top:169 / right:20、既存ユーザー回転を維持 */
+    top: 169px;
     left: auto;
-    right: -30px;
+    right: 20px;
     width: 60px;
     height: 49px;
     transform: rotate(195deg);
