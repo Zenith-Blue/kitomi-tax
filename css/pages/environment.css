@@ -725,7 +725,7 @@
   }
 
   .adv-item__body p {
-    margin-bottom: 24px;
+    margin-bottom: 0;
   }
 
   .adv-item__list {
