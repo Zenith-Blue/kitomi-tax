@@ -667,11 +667,18 @@
     border-radius: 0;
   }
 
-  /* 魅力2（白）を魅力1の下に 30px 重ねて表示 */
+  /* 魅力2（白）を魅力1 の下に 30px 重ねて表示 */
   .adv-item--white {
     margin-top: -30px;
     position: relative;
     z-index: 1;
+  }
+
+  /* 魅力3（最後の beige）を魅力2 の下に 30px 重ねて表示 */
+  .adv-item--beige:last-of-type {
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
   }
 
   /* beige 項目（魅力1, 魅力3）の下余白を 100px に */
@@ -679,9 +686,8 @@
     padding-bottom: 100px;
   }
 
-  /* 魅力1（最初の beige）と 魅力2（white）の左上だけ 60px 角丸 */
-  .adv-item--beige:first-of-type,
-  .adv-item--white {
+  /* 全ての魅力項目の左上を 60px 角丸 */
+  .adv-item {
     border-top-left-radius: 60px;
   }
 
