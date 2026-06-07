@@ -1279,7 +1279,29 @@
   }
 
   .outlook__deco-text {
-    font-size: 52px;
+    font-size: 96px;
+    position: absolute;
+    text-align: center;
+  }
+
+  /* SP: マーキー停止 + NEXT / ACTION で 2 行に */
+  .outlook__deco-track {
+    animation: none;
+    white-space: normal;
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 0.95;
+  }
+
+  .outlook__deco-item {
+    font-size: inherit;
+    letter-spacing: -2px;
+  }
+
+  /* 2 つ目の NEXT ACTION は重複なので非表示 */
+  .outlook__deco-item + .outlook__deco-item {
+    display: none;
   }
 
   .outlook__intro {
