@@ -113,6 +113,12 @@
   color: var(--color-black);
 }
 
+/* キーワード強調（赤字） */
+.em-red {
+  color: var(--color-red);
+  font-weight: 700;
+}
+
 .about-lead__symbol {
   position: absolute;
   top: 20px;
