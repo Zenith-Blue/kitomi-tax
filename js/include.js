@@ -16,5 +16,7 @@
     loadPartial("footer-placeholder", "partials/footer.html"),
   ]);
 
+  // パーシャル読み込み完了をフラグでも記録（script の読み込み順に依存しないように）
+  window.__partialsLoaded = true;
   document.dispatchEvent(new Event("partials:loaded"));
 })();

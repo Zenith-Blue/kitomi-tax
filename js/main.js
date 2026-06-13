@@ -1,4 +1,4 @@
-document.addEventListener("partials:loaded", () => {
+function initAfterPartials() {
   const pagetop = document.querySelector(".footer__pagetop");
   if (pagetop) {
     pagetop.addEventListener("click", (e) => {
@@ -122,4 +122,11 @@ document.addEventListener("partials:loaded", () => {
       if (blobs) document.querySelectorAll(blobs).forEach((b) => b.classList.add("is-revealed"));
     });
   }
-});
+}
+
+// partials:loaded が main.js のリスナー登録より先に発火していても確実に初期化する
+if (window.__partialsLoaded) {
+  initAfterPartials();
+} else {
+  document.addEventListener("partials:loaded", initAfterPartials);
+}
