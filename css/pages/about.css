@@ -241,7 +241,7 @@
 
 .greeting__books {
   position: absolute;
-  top: 1130px;
+  top: 1140px;
   left: 50%;
   transform: translateX(calc(-50% - 40px));
   display: flex;
