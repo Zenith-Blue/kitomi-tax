@@ -721,7 +721,7 @@
 .interview-card__overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: transparent;
 }
 
 .interview-card__gradient {
@@ -730,7 +730,7 @@
   left: 0;
   right: 0;
   height: 260px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: none;
 }
 
 .interview-card__txt {
@@ -753,25 +753,41 @@
 
 .interview-card__label {
   display: inline-block;
-  background-color: var(--color-white);
-  padding: 5px;
+  background-color: transparent;
+  padding: 0;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 22px;
+  line-height: 1.45;
   letter-spacing: 0.4px;
-  color: var(--color-black);
-}
-
-.interview-card__name {
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.28px;
   color: var(--color-white);
 }
 
 .interview-card__role {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: var(--color-white);
+  padding: 4px 12px;
+  border-radius: 999px;
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 0.24px;
+}
+
+.interview-card__name {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.44px;
+  color: var(--color-white);
+}
+
+.interview-card__name-en {
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.5px;
   color: var(--color-white);
 }
 
