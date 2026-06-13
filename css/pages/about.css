@@ -241,7 +241,7 @@
 
 .greeting__books {
   position: absolute;
-  top: 1120px;
+  top: 1140px;
   left: 50%;
   transform: translateX(calc(-50% - 40px));
   display: flex;
@@ -376,6 +376,12 @@
 .strength-item--02 .strength-item__img {
   border-top-right-radius: var(--radius-md);
   border-bottom-right-radius: var(--radius-md);
+}
+
+.strength-item__img picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .strength-item__img img {
