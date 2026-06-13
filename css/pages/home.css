@@ -60,6 +60,16 @@
   animation: mvReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
 }
 
+.mv__lead-em {
+  color: var(--color-red);
+  font-weight: 700;
+}
+
+/* キャッチコピーの「タメ」 */
+.mv__title-dots {
+  letter-spacing: 0.1em;
+}
+
 .mv__scroll {
   position: absolute;
   bottom: 100px;
@@ -134,6 +144,13 @@
   background-color: var(--color-orange);
 }
 
+/* 屋号変更の周知（赤字・強調） */
+.information__text--notice {
+  color: var(--color-red);
+  font-weight: 700;
+  font-size: 16px;
+}
+
 /* ==========================================================================
    Message
    ========================================================================== */
@@ -192,7 +209,11 @@
   font-size: 32px;
   line-height: 48px;
   letter-spacing: 1.28px;
-  color: var(--color-black);
+  color: var(--color-red);
+}
+
+.message__card-title-em {
+  color: var(--color-red);
 }
 
 .message__card-body p {
