@@ -177,9 +177,14 @@
   z-index: 2;
 }
 
+.greeting__title .section-title__jp {
+  font-size: 32px;
+  line-height: 50px;
+}
+
 .greeting__body {
   position: absolute;
-  top: 440px;
+  top: 385px;
   left: 760px;
   width: 480px;
   display: flex;
@@ -190,7 +195,7 @@
 
 .greeting__body p {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 20px;
   letter-spacing: 0.32px;
   color: var(--color-black);
   margin: 0;
