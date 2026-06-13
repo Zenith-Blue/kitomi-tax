@@ -1486,10 +1486,12 @@ body.is-popup-open {
   }
 
   .mv__title-line {
-    font-size: 36px;
-    letter-spacing: 0.72px;
+    font-size: 32px;
+    letter-spacing: 0.4px;
     padding: 5px;
     line-height: 1.2;
+    white-space: nowrap;
+    font-feature-settings: "palt" 1;
   }
 
   .mv__lead {
