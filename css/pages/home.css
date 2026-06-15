@@ -688,7 +688,8 @@
 }
 
 .interview-slider__dots {
-  display: flex;
+  /* PCは3枚すべて表示しスライドしないためドット非表示。SP(1023px以下)で表示 */
+  display: none;
   justify-content: center;
   gap: 15px;
   margin-top: 50px;
@@ -1447,6 +1448,10 @@ body.is-popup-open {
 
   .interview-slider {
     padding: 10px 0 0;
+  }
+
+  .interview-slider__dots {
+    display: flex;
   }
 
   .interview__list {
