@@ -1976,11 +1976,12 @@ body.is-popup-open {
     left: auto;
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 3;
+    /* 人物全体が写るよう元画像の比率(680:800)に合わせる */
+    aspect-ratio: 680 / 800;
   }
 
   .recruit__photo img {
-    object-position: center 20%;
+    object-position: center top;
   }
 
   /* グレー背景は absolute では制御しづらいので SP では非表示にし、
