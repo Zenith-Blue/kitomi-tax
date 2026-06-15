@@ -940,7 +940,8 @@
     padding: 100px 0 80px;
   }
 
-  .outlook__deco-text {
+  /* font-size は実際にサイズが効く deco-item に指定（deco-textだと縮小されず被る） */
+  .outlook__deco-item {
     font-size: 80px;
   }
 
@@ -1399,9 +1400,13 @@
   }
 
   .outlook__deco-text {
-    font-size: 96px;
     position: absolute;
     text-align: center;
+  }
+
+  /* font-size は deco-item に指定（実サイズが効く要素） */
+  .outlook__deco-item {
+    font-size: 96px;
   }
 
   /* SP: マーキー停止 + NEXT / ACTION で 2 行に */
