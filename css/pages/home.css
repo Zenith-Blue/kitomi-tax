@@ -699,9 +699,13 @@
 
 .interview-card {
   position: relative;
-  flex: 0 0 360px;
-  width: 360px;
-  height: 520px;
+  /* 画面幅が狭まっても3枚が収まるよう流動化（最大360px・縦横比固定） */
+  flex: 1 1 0;
+  width: auto;
+  min-width: 0;
+  max-width: 360px;
+  height: auto;
+  aspect-ratio: 360 / 520;
   border-radius: var(--radius-md);
   overflow: hidden;
 }
@@ -1119,7 +1123,8 @@ body.is-popup-open {
   position: absolute;
   top: 60px;
   left: 0;
-  width: 680px;
+  /* 画像は幅40%（画面が狭まっても文章列が潰れないように） */
+  width: 40%;
   height: 800px;
   overflow: hidden;
   z-index: 1;
@@ -1137,7 +1142,8 @@ body.is-popup-open {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding: 120px 120px 0 760px;
+  /* 左paddingは画像幅40%＋余白。右paddingは可変 */
+  padding: 120px clamp(40px, 5vw, 120px) 0 calc(40% + clamp(40px, 4vw, 80px));
   min-height: 800px;
 }
 
@@ -1147,8 +1153,8 @@ body.is-popup-open {
 
 .recruit__lead {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: clamp(14px, 1.25vw, 16px);
+  line-height: 1.875;
   letter-spacing: 0.32px;
   color: var(--color-black);
   margin-top: -20px;
@@ -1157,7 +1163,8 @@ body.is-popup-open {
 .recruit__list {
   display: flex;
   flex-direction: column;
-  width: 480px;
+  width: 100%;
+  max-width: 480px;
 }
 
 .recruit__item {
