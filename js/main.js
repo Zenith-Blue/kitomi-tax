@@ -126,6 +126,8 @@ function initAfterPartials() {
     { section: ".job-card", blobs: null },
     // entry.html
     { section: ".entry", blobs: null },
+    // privacy.html
+    { section: ".policy", blobs: null },
   ];
 
   if ("IntersectionObserver" in window) {
