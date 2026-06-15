@@ -592,9 +592,10 @@
 .environment__pickup {
   position: relative;
   z-index: 2;
-  display: flex;
-  gap: 50px;
-  justify-content: center;
+  /* 3カラムのグリッド（PC）。タブレット2列・SP1列はメディアクエリで切替 */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 50px);
   padding: 0 var(--section-padding-x);
   margin-bottom: 60px;
 }
@@ -604,8 +605,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  flex: 0 0 340px;
-  width: 340px;
+  width: 100%;
   text-align: center;
 }
 
@@ -625,7 +625,7 @@
 
 .env-card__title {
   font-weight: 700;
-  font-size: 24px;
+  font-size: clamp(20px, 2vw, 24px);
   line-height: 1.4;
   letter-spacing: 0.48px;
   color: var(--color-black);
@@ -633,8 +633,8 @@
 
 .env-card__body {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 1.875;
   letter-spacing: 0.32px;
   color: var(--color-black);
   text-align: left;
@@ -1425,16 +1425,12 @@ body.is-popup-open {
     max-width: 100%;
   }
 
+  /* タブレット（768〜1023px）は2カラム */
   .environment__pickup {
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
     padding: 0 32px;
     margin-bottom: 60px;
-  }
-
-  .env-card {
-    flex: 0 0 100%;
-    width: 100%;
   }
 
   /* Interview */
@@ -1833,7 +1829,9 @@ body.is-popup-open {
     margin-bottom: 40px;
   }
 
+  /* スマホ（767px以下）は1カラム */
   .environment__pickup {
+    grid-template-columns: 1fr;
     padding: 0 20px;
     gap: 30px;
     margin-bottom: 40px;
