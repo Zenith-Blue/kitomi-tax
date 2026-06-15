@@ -1,0 +1,158 @@
+/* =========================================================
+   Privacy Policy（プライバシーポリシー）ページ
+   ========================================================= */
+
+/* ============ MV ============ */
+.policy-mv {
+  position: relative;
+  padding: 100px 24px 24px;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+.policy-mv__logo {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 3;
+}
+.policy-mv__title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.policy-mv__title-en {
+  font-family: var(--font-en);
+  font-weight: 500;
+  font-size: 36px;
+  letter-spacing: 1.4px;
+  line-height: 1;
+  color: var(--color-black);
+}
+.policy-mv__title-jp {
+  font-family: var(--font-jp);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  color: var(--color-black);
+}
+
+/* ============ 本文 ============ */
+.policy {
+  padding: 48px 24px 80px;
+}
+.policy__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.policy__intro {
+  font-family: var(--font-jp);
+  font-size: 15px;
+  line-height: 2;
+  color: var(--color-text);
+}
+.policy__section {
+  margin-top: 40px;
+}
+.policy__heading {
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+.policy__text {
+  font-family: var(--font-jp);
+  font-size: 15px;
+  line-height: 2;
+  color: var(--color-text);
+}
+.policy__ol {
+  margin: 16px 0;
+  padding-left: 1.6em;
+  list-style: decimal;
+}
+.policy__ol li {
+  font-family: var(--font-jp);
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+.policy__ol li::marker {
+  color: var(--color-text);
+}
+
+/* 続きあり（⋮）の装飾 */
+.policy__more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 48px 0 8px;
+}
+.policy__more span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-gray-300);
+}
+
+/* スクロール表示アニメーション（軽め） */
+.policy__intro,
+.policy__section,
+.policy__more {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.policy.is-revealed .policy__intro {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+.policy.is-revealed .policy__section {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+.policy.is-revealed .policy__more {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+/* ============ Tablet / PC ============ */
+@media (min-width: 768px) {
+  .policy-mv {
+    height: 425px;
+    padding: 130px 50px 0;
+  }
+  .policy-mv__logo {
+    top: 50px;
+    left: 50px;
+  }
+  .policy-mv__title {
+    position: absolute;
+    top: 180px;
+    left: 120px;
+    gap: 20px;
+  }
+  .policy-mv__title-en {
+    font-size: 64px;
+    letter-spacing: 2.56px;
+  }
+  .policy-mv__title-jp {
+    font-size: 20px;
+  }
+
+  .policy {
+    padding: 80px 120px 120px;
+  }
+  .policy__intro,
+  .policy__text,
+  .policy__ol li {
+    font-size: 16px;
+  }
+  .policy__heading {
+    font-size: 20px;
+  }
+  .policy__section {
+    margin-top: 60px;
+  }
+}
