@@ -1516,10 +1516,38 @@ body.is-popup-open {
   .recruit__content {
     padding: 40px 32px;
     min-height: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .recruit__title {
+    align-items: center;
+  }
+
+  .recruit__title .section-title__jp {
+    text-align: center;
+  }
+
+  .recruit__lead {
+    text-align: center;
   }
 
   .recruit__list {
     width: 100%;
+    max-width: 600px;
+  }
+
+  .recruit__cta {
+    align-self: center;
+  }
+}
+
+/* タブレット(768-1023px)では装飾の丸が空きスペースに浮くため非表示 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .recruit__blob--1,
+  .recruit__blob--2,
+  .recruit__blob--3 {
+    display: none;
   }
 }
 
