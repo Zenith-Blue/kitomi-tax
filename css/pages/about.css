@@ -491,11 +491,11 @@
 }
 
 .io-card--input {
-  background-color: #ecf1d8;
+  background-color: var(--color-tint-green);
 }
 
 .io-card--output {
-  background-color: #fff5ea;
+  background-color: var(--color-tint-orange);
 }
 
 .io-card__img {
