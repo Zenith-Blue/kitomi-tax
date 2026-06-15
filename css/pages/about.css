@@ -95,6 +95,15 @@
   max-width: var(--content-inner);
   margin: 0 auto;
   padding: 0 var(--section-padding-x);
+  /* テキスト左・シンボル右の2カラム（タブレットまで維持、767px以下で縦積み） */
+  display: flex;
+  align-items: center;
+  gap: clamp(32px, 5vw, 80px);
+}
+
+.about-lead__body {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .about-lead__catch {
@@ -120,11 +129,9 @@
 }
 
 .about-lead__symbol {
-  position: absolute;
-  top: 20px;
-  right: 200px;
-  width: 300px;
-  height: 234px;
+  flex: 0 0 auto;
+  width: clamp(180px, 22vw, 300px);
+  height: auto;
   pointer-events: none;
 }
 
@@ -771,14 +778,7 @@
     letter-spacing: 1px;
   }
 
-  .about-lead__symbol {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin: 32px auto 0;
-    display: block;
-    max-width: 240px;
-  }
+  /* タブレットは2カラム維持（シンボル右）。縦積みは767px以下のみ */
 
   /* Greeting */
   .greeting {
@@ -795,10 +795,13 @@
     position: relative;
     top: auto;
     left: auto;
+    /* 横長になり顔が拡大・崩れるのを防ぐため正方形・中央寄せに */
     width: 100%;
-    height: 400px;
-    border-radius: 0;
-    margin-bottom: 32px;
+    max-width: 480px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius-md);
+    margin: 0 auto 32px;
   }
 
   .greeting__title,
