@@ -919,7 +919,7 @@
 
   /* Strength */
   .strength {
-    padding: 80px 0 0;
+    padding: 80px 0 120px;
   }
 
   .strength__title,
@@ -929,7 +929,7 @@
 
   .strength__bg {
     width: 100%;
-    top: 200px;
+    top: 0;
     border-radius: 0;
   }
 
@@ -1316,7 +1316,7 @@
 
   /* ===== Strength ===== */
   .strength {
-    padding: 56px 0 0;
+    padding: 56px 0 80px;
   }
 
   .strength__bg {
