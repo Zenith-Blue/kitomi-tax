@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>エントリー | きとみ税理士法人 採用サイト</title>
+  <meta name="description" content="きとみ税理士法人 採用サイトのエントリーフォーム。必要事項をご記入のうえご送信ください。担当者より近日中にご連絡いたします。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/pages/entry.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <!-- MV -->
+    <section class="entry-mv" aria-label="ページタイトル">
+      <a href="index.html" class="site-logo entry-mv__logo" aria-label="きとみ税理士法人 トップへ">
+        <img src="images/common/logo.png" alt="きとみ税理士法人" class="site-logo__img" width="254" height="40">
+        <span class="site-logo__sub">Recruiting Site</span>
+      </a>
+
+      <div class="entry-mv__title">
+        <p class="entry-mv__title-en">ENTRY</p>
+        <p class="entry-mv__title-jp">エントリー</p>
+      </div>
+    </section>
+
+    <!-- Form -->
+    <section class="entry" aria-label="エントリーフォーム">
+      <p class="entry__intro">
+        以下のフォームに情報をご記入の上、ご送信ください。<br>
+        担当者より近日中にご連絡を差し上げます。
+      </p>
+
+      <!-- ※ 送信処理は WordPress 側で実装予定。action は仮 -->
+      <form class="entry-form" action="#" method="post">
+        <!-- お名前（漢字） -->
+        <div class="entry-form__row">
+          <label class="entry-form__label" for="name-kanji">
+            お名前（漢字）<span class="entry-form__badge entry-form__badge--required">必須</span>
+          </label>
+          <div class="entry-form__field">
+            <input type="text" id="name-kanji" name="name_kanji" class="entry-form__input" placeholder="田中太郎" autocomplete="name" required>
+          </div>
+        </div>
+
+        <!-- お名前（フリガナ） -->
+        <div class="entry-form__row">
+          <label class="entry-form__label" for="name-kana">
+            お名前（フリガナ）<span class="entry-form__badge entry-form__badge--required">必須</span>
+          </label>
+          <div class="entry-form__field">
+            <input type="text" id="name-kana" name="name_kana" class="entry-form__input" placeholder="タナカ タロウ" required>
+          </div>
+        </div>
+
+        <!-- 性別 -->
+        <div class="entry-form__row entry-form__row--radio">
+          <span class="entry-form__label" id="label-gender">
+            性別<span class="entry-form__badge entry-form__badge--required">必須</span>
+          </span>
+          <div class="entry-form__field">
+            <div class="entry-form__radios" role="radiogroup" aria-labelledby="label-gender">
+              <label class="entry-form__radio">
+                <input type="radio" name="gender" value="男性" required>
+                <span>男性</span>
+              </label>
+              <label class="entry-form__radio">
+                <input type="radio" name="gender" value="女性">
+                <span>女性</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 生年月日 -->
+        <div class="entry-form__row entry-form__row--date">
+          <span class="entry-form__label" id="label-birth">
+            生年月日<span class="entry-form__badge entry-form__badge--required">必須</span>
+          </span>
+          <div class="entry-form__field" role="group" aria-labelledby="label-birth">
+            <div class="entry-form__date">
+              <span class="entry-form__date-group">
+                <select id="birth-year" name="birth_year" class="entry-form__select" required aria-label="生まれ年">
+                  <option value="" selected disabled hidden></option>
+                </select>
+                <span class="entry-form__date-unit">年</span>
+              </span>
+              <span class="entry-form__date-group">
+                <select id="birth-month" name="birth_month" class="entry-form__select" required aria-label="生まれ月">
+                  <option value="" selected disabled hidden></option>
+                </select>
+                <span class="entry-form__date-unit">月</span>
+              </span>
+              <span class="entry-form__date-group">
+                <select id="birth-day" name="birth_day" class="entry-form__select" required aria-label="生まれ日">
+                  <option value="" selected disabled hidden></option>
+                </select>
+                <span class="entry-form__date-unit">日</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- メールアドレス -->
+        <div class="entry-form__row">
+          <label class="entry-form__label" for="email">
+            メールアドレス<span class="entry-form__badge entry-form__badge--required">必須</span>
+          </label>
+          <div class="entry-form__field">
+            <input type="email" id="email" name="email" class="entry-form__input" placeholder="example@sample.com" autocomplete="email" required>
+          </div>
+        </div>
+
+        <!-- 電話番号 -->
+        <div class="entry-form__row">
+          <label class="entry-form__label" for="tel">
+            電話番号<span class="entry-form__badge entry-form__badge--optional">任意</span>
+          </label>
+          <div class="entry-form__field">
+            <input type="tel" id="tel" name="tel" class="entry-form__input" placeholder="01234567890（ハイフンなし）" inputmode="numeric" autocomplete="tel">
+          </div>
+        </div>
+
+        <!-- 最終学歴 -->
+        <div class="entry-form__row">
+          <label class="entry-form__label" for="education">
+            最終学歴<span class="entry-form__badge entry-form__badge--optional">任意</span>
+          </label>
+          <div class="entry-form__field">
+            <input type="text" id="education" name="education" class="entry-form__input" placeholder="税理士法人◯◯◯ ○○年勤務">
+          </div>
+        </div>
+
+        <!-- 志望動機 -->
+        <div class="entry-form__row entry-form__row--textarea">
+          <label class="entry-form__label" for="motivation">
+            志望動機<span class="entry-form__badge entry-form__badge--required">必須</span>
+          </label>
+          <div class="entry-form__field">
+            <textarea id="motivation" name="motivation" class="entry-form__textarea" placeholder="志望動機を入力してください" required></textarea>
+          </div>
+        </div>
+
+        <!-- プライバシーポリシー -->
+        <div class="entry-form__privacy">
+          <p class="entry-form__privacy-text">
+            <a href="#" class="entry-form__privacy-link">プライバシーポリシー</a>をお読みいただき、同意の上送信してください。
+          </p>
+          <label class="entry-form__agree">
+            <input type="checkbox" name="agree" value="1" required>
+            <span>同意する</span>
+          </label>
+        </div>
+
+        <button type="submit" class="entry-form__submit">入力確認画面へ</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer-placeholder"></footer>
+
+  <script src="js/include.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/entry.js" defer></script>
+</body>
+</html>

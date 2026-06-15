@@ -574,3 +574,60 @@
     line-height: 26px;
   }
 }
+
+/* =========================================================
+   スクロール表示アニメーション（IntersectionObserver で .is-revealed 付与）
+   ========================================================= */
+
+/* req-lead: フェードイン */
+.req-lead p {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.req-lead.is-revealed p {
+  opacity: 1;
+}
+.req-lead.is-revealed p:nth-child(1) { transition-delay: 0.1s; }
+.req-lead.is-revealed p:nth-child(2) { transition-delay: 0.4s; }
+
+/* recruit-anchor: 右からフェードイン（行ごとに0.5秒差） */
+.recruit-anchor__link {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.recruit-anchor.is-revealed .recruit-anchor__link {
+  opacity: 1;
+  transform: none;
+}
+.recruit-anchor.is-revealed .recruit-anchor__link:nth-child(1) { transition-delay: 0.1s; }
+.recruit-anchor.is-revealed .recruit-anchor__link:nth-child(2) { transition-delay: 0.4s; }
+.recruit-anchor.is-revealed .recruit-anchor__link:nth-child(3) { transition-delay: 0.7s; }
+.recruit-anchor.is-revealed .recruit-anchor__link:nth-child(4) { transition-delay: 1s; }
+
+/* job-card: 右からフェードイン（タイトル→行ごとに0.3秒差）。カード単位で発火 */
+.job-card__title,
+.job-row {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.job-card.is-revealed .job-card__title {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.1s;
+}
+.job-card.is-revealed .job-row {
+  opacity: 1;
+  transform: none;
+}
+.job-card.is-revealed .job-row:nth-child(1) { transition-delay: 0.3s; }
+.job-card.is-revealed .job-row:nth-child(2) { transition-delay: 0.6s; }
+.job-card.is-revealed .job-row:nth-child(3) { transition-delay: 0.9s; }
+.job-card.is-revealed .job-row:nth-child(4) { transition-delay: 1.2s; }
+.job-card.is-revealed .job-row:nth-child(5) { transition-delay: 1.5s; }
+.job-card.is-revealed .job-row:nth-child(6) { transition-delay: 1.8s; }
+.job-card.is-revealed .job-row:nth-child(7) { transition-delay: 2.1s; }
+.job-card.is-revealed .job-row:nth-child(8) { transition-delay: 2.4s; }
+.job-card.is-revealed .job-row:nth-child(9) { transition-delay: 2.7s; }
+.job-card.is-revealed .job-row:nth-child(10) { transition-delay: 3s; }

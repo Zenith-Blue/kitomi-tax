@@ -1,0 +1,294 @@
+/* =========================================================
+   Entry（エントリーフォーム）ページ
+   ========================================================= */
+
+/* ============ MV ============ */
+.entry-mv {
+  position: relative;
+  padding: 100px 24px 24px;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+.entry-mv__logo {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 3;
+}
+.entry-mv__title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.entry-mv__title-en {
+  font-family: var(--font-en);
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: 1.6px;
+  line-height: 1;
+  color: var(--color-black);
+}
+.entry-mv__title-jp {
+  font-family: var(--font-jp);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  color: var(--color-black);
+}
+
+/* ============ Form section ============ */
+.entry {
+  padding: 48px 24px 80px;
+}
+.entry__intro {
+  font-family: var(--font-jp);
+  font-size: 15px;
+  line-height: 2;
+  color: var(--color-text);
+  margin-bottom: 40px;
+}
+
+.entry-form {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.entry-form__row {
+  margin-bottom: 28px;
+}
+
+/* ラベル＋バッジ */
+.entry-form__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-family: var(--font-jp);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-text);
+}
+.entry-form__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+}
+.entry-form__badge--required {
+  background: var(--color-red);
+  color: var(--color-white);
+}
+.entry-form__badge--optional {
+  background: var(--color-gray-300);
+  color: #555;
+}
+
+/* 入力欄共通 */
+.entry-form__input,
+.entry-form__select,
+.entry-form__textarea {
+  width: 100%;
+  font-family: var(--font-jp);
+  font-size: 16px;
+  color: var(--color-text);
+  background-color: var(--color-gray-200);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.entry-form__input {
+  height: 60px;
+  padding: 0 16px;
+}
+.entry-form__textarea {
+  min-height: 220px;
+  padding: 16px;
+  line-height: 1.9;
+  resize: vertical;
+}
+.entry-form__input:focus,
+.entry-form__select:focus,
+.entry-form__textarea:focus {
+  outline: none;
+  background-color: var(--color-white);
+  border-color: var(--color-orange);
+}
+.entry-form__input::placeholder,
+.entry-form__textarea::placeholder {
+  color: #9aa0a6;
+}
+
+/* セレクト（生年月日） */
+.entry-form__select {
+  height: 60px;
+  padding: 0 38px 0 16px;
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23555' d='M6 8 0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+.entry-form__date {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.entry-form__date-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.entry-form__date-group .entry-form__select {
+  width: 96px;
+}
+.entry-form__date-unit {
+  font-family: var(--font-jp);
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+/* ラジオ（性別） */
+.entry-form__radios {
+  display: flex;
+  gap: 32px;
+  min-height: 60px;
+  align-items: center;
+}
+.entry-form__radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-jp);
+  font-size: 16px;
+  cursor: pointer;
+}
+.entry-form__radio input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-red);
+}
+
+/* プライバシーポリシー */
+.entry-form__privacy {
+  margin-top: 48px;
+  text-align: center;
+}
+.entry-form__privacy-text {
+  font-family: var(--font-jp);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+.entry-form__privacy-link {
+  color: var(--color-red);
+  text-decoration: underline;
+}
+.entry-form__agree {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-jp);
+  font-size: 16px;
+  cursor: pointer;
+}
+.entry-form__agree input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-red);
+}
+
+/* 送信ボタン */
+.entry-form__submit {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: 64px;
+  margin: 36px auto 0;
+  background: var(--color-red);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-jp);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.entry-form__submit:hover {
+  opacity: 0.88;
+}
+
+/* スクロール表示アニメーション（軽め） */
+.entry__intro,
+.entry-form {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.entry.is-revealed .entry__intro {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+.entry.is-revealed .entry-form {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+/* ============ Tablet / PC ============ */
+@media (min-width: 768px) {
+  .entry-mv {
+    height: 425px;
+    padding: 130px 50px 0;
+  }
+  .entry-mv__logo {
+    top: 50px;
+    left: 50px;
+  }
+  .entry-mv__title {
+    position: absolute;
+    top: 180px;
+    left: 120px;
+    gap: 20px;
+  }
+  .entry-mv__title-en {
+    font-size: 64px;
+    letter-spacing: 2.56px;
+  }
+  .entry-mv__title-jp {
+    font-size: 20px;
+  }
+
+  .entry {
+    padding: 80px 120px 120px;
+  }
+  .entry__intro {
+    font-size: 16px;
+    line-height: 1.875;
+    margin-bottom: 60px;
+  }
+
+  /* ラベル列 + 入力列の2カラム */
+  .entry-form__row {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .entry-form__label {
+    margin-bottom: 0;
+  }
+  .entry-form__row--textarea {
+    align-items: start;
+  }
+  .entry-form__row--textarea .entry-form__label {
+    padding-top: 16px;
+  }
+  .entry-form__date-group .entry-form__select {
+    width: 140px;
+  }
+}

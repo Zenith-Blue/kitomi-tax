@@ -1499,3 +1499,176 @@
     font-size: 12px;
   }
 }
+
+/* =========================================================
+   スクロール表示アニメーション（IntersectionObserver で .is-revealed 付与）
+   ========================================================= */
+
+/* about-lead: ふわっと（動きなしフェードインのみ） */
+.about-lead__catch,
+.about-lead__text,
+.about-lead__symbol {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.about-lead.is-revealed .about-lead__catch {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+.about-lead.is-revealed .about-lead__text {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+.about-lead.is-revealed .about-lead__symbol {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+/* greeting: 右から行ごとに順番にスライドイン */
+.greeting__photo,
+.greeting__title,
+.greeting__body p,
+.greeting__profile {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+/* books は中央寄せの transform を持つため、transform は触らずフェードインのみ */
+.greeting__books {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.greeting.is-revealed .greeting__photo {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.2s;
+}
+.greeting.is-revealed .greeting__title {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.1s;
+}
+.greeting.is-revealed .greeting__body p {
+  opacity: 1;
+  transform: none;
+}
+.greeting.is-revealed .greeting__body p:nth-child(1) { transition-delay: 0.35s; }
+.greeting.is-revealed .greeting__body p:nth-child(2) { transition-delay: 0.55s; }
+.greeting.is-revealed .greeting__body p:nth-child(3) { transition-delay: 0.75s; }
+.greeting.is-revealed .greeting__body p:nth-child(4) { transition-delay: 0.95s; }
+.greeting.is-revealed .greeting__body p:nth-child(5) { transition-delay: 1.15s; }
+.greeting.is-revealed .greeting__body p:nth-child(6) { transition-delay: 1.35s; }
+.greeting.is-revealed .greeting__profile {
+  opacity: 1;
+  transform: none;
+  transition-delay: 1.55s;
+}
+.greeting.is-revealed .greeting__books {
+  opacity: 1;
+  transition-delay: 1.7s;
+}
+
+/* strength タイトル・リード: ふわっと（動きなしフェードインのみ） */
+.strength__title,
+.strength__lead {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.strength.is-revealed .strength__title {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+.strength.is-revealed .strength__lead {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+/* strength-item 01: 文章＋画像まとめて右からスライド */
+.strength-item--01 {
+  opacity: 0;
+  transform: translateX(90px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.strength-item--01.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* strength-item 02: 文章＋画像まとめて左からスライド */
+.strength-item--02 {
+  opacity: 0;
+  transform: translateX(-90px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.strength-item--02.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* outlook: ふわっと（動きなしフェードインのみ） */
+.outlook__title,
+.outlook__diagram,
+.outlook__intro {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.outlook.is-revealed .outlook__title {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+.outlook.is-revealed .outlook__diagram {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+.outlook.is-revealed .outlook__intro {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+/* io-card（入力／出力）: 全体を左からスライドイン */
+.io-card--input,
+.io-card--output {
+  opacity: 0;
+  transform: translateX(-90px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.io-card--input.is-revealed,
+.io-card--output.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* summary 写真: 左から0.5秒間隔でフェードイン（動きなし） */
+.summary__photo {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.summary.is-revealed .summary__photo--1 {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+.summary.is-revealed .summary__photo--2 {
+  opacity: 1;
+  transition-delay: 0.6s;
+}
+
+/* 会社概要・沿革: 行ごとに右から0.5秒差でスライドイン（ブロック単位） */
+.company__heading,
+.company__row {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.company__block.is-revealed .company__heading {
+  opacity: 1;
+  transform: none;
+}
+.company__block.is-revealed .company__row {
+  opacity: 1;
+  transform: none;
+}
+.company__block.is-revealed .company__row:nth-child(1) { transition-delay: 0.3s; }
+.company__block.is-revealed .company__row:nth-child(2) { transition-delay: 0.6s; }
+.company__block.is-revealed .company__row:nth-child(3) { transition-delay: 0.9s; }
+.company__block.is-revealed .company__row:nth-child(4) { transition-delay: 1.2s; }
+.company__block.is-revealed .company__row:nth-child(5) { transition-delay: 1.5s; }
