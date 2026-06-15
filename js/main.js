@@ -122,6 +122,25 @@ function initAfterPartials() {
       if (blobs) document.querySelectorAll(blobs).forEach((b) => b.classList.add("is-revealed"));
     });
   }
+
+  // サイト全体: すべての .blob（きとみの丸）をスクロール到達でふわっと表示
+  const allBlobs = document.querySelectorAll(".blob");
+  if ("IntersectionObserver" in window) {
+    const blobIO = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-revealed");
+            blobIO.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    allBlobs.forEach((b) => blobIO.observe(b));
+  } else {
+    allBlobs.forEach((b) => b.classList.add("is-revealed"));
+  }
 }
 
 // partials:loaded が main.js のリスナー登録より先に発火していても確実に初期化する

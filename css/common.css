@@ -440,6 +440,12 @@ main {
   position: absolute;
   pointer-events: none;
   z-index: 0;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.blob.is-revealed {
+  opacity: 1;
 }
 
 .deco-bg-text {
