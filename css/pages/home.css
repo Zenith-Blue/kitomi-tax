@@ -740,12 +740,12 @@
 
 .interview-card__txt {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
-  right: 30px;
+  bottom: clamp(16px, 2vw, 30px);
+  left: clamp(16px, 2vw, 30px);
+  right: clamp(16px, 2vw, 30px);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: clamp(8px, 1.2vw, 15px);
   z-index: 2;
 }
 
@@ -761,7 +761,7 @@
   background-color: transparent;
   padding: 0;
   font-weight: 700;
-  font-size: 22px;
+  font-size: clamp(15px, 1.7vw, 22px);
   line-height: 1.45;
   letter-spacing: 0.4px;
   color: var(--color-white);
@@ -785,7 +785,7 @@
   align-items: baseline;
   gap: 8px;
   font-weight: 700;
-  font-size: 22px;
+  font-size: clamp(15px, 1.7vw, 22px);
   letter-spacing: 0.44px;
   color: var(--color-white);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
@@ -1141,7 +1141,7 @@ body.is-popup-open {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: clamp(24px, 4vw, 50px);
   /* 左paddingは画像幅40%＋余白。右paddingは可変 */
   padding: 120px clamp(40px, 5vw, 120px) 0 calc(40% + clamp(40px, 4vw, 80px));
   min-height: 800px;
@@ -1149,6 +1149,12 @@ body.is-popup-open {
 
 .recruit__title {
   align-items: flex-start;
+}
+
+/* タイトルも画面幅に応じて縮小（画像と一緒に比例縮小させる） */
+.recruit__title .section-title__jp {
+  font-size: clamp(28px, 3.3vw, 40px);
+  line-height: 1.4;
 }
 
 .recruit__lead {
@@ -1189,7 +1195,7 @@ body.is-popup-open {
 
 .recruit__job {
   font-weight: 700;
-  font-size: 20px;
+  font-size: clamp(15px, 1.5vw, 20px);
   letter-spacing: 0.4px;
   color: var(--color-black);
 }
@@ -1449,28 +1455,23 @@ body.is-popup-open {
     margin-bottom: 40px;
   }
 
+  /* タブレット（768〜1023px）は2カラム（スライダーにしない） */
   .interview-slider {
-    padding: 10px 0 0;
-  }
-
-  .interview-slider__dots {
-    display: flex;
+    padding: 10px 32px;
   }
 
   .interview__list {
-    flex-direction: row;
-    gap: 16px;
-    padding: 0 0 0 24px;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 0;
     align-items: stretch;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .interview-card {
-    flex: 0 0 calc(100vw - 80px);
-    width: calc(100vw - 80px);
-    max-width: 320px;
-    height: auto;
-    aspect-ratio: 360 / 520;
+    flex: 0 0 calc(50% - 12px);
+    width: auto;
+    max-width: none;
   }
 
   /* Recruit */
@@ -1911,6 +1912,7 @@ body.is-popup-open {
   }
 
   .interview-slider__dots {
+    display: flex;
     margin-top: 40px;
   }
 
