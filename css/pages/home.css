@@ -1494,17 +1494,17 @@ body.is-popup-open {
     padding: 40px 0 60px;
   }
 
+  /* SP版と同じく人物全体が写る比率に */
   .recruit__photo {
     position: relative;
     top: auto;
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 680 / 800;
   }
 
-  /* 顔が切れないよう上寄りで表示 */
   .recruit__photo img {
-    object-position: center 20%;
+    object-position: center top;
   }
 
   .recruit__bg {
