@@ -1,15 +1,15 @@
 // 応募フォーム送信（EmailJS REST API / ライブラリ不要）
-// 送信時に「応募者への自動返信」と「管理者2アドレスへの通知」を送る。
+// 1テンプレートで「管理者2アドレスへの通知」と「応募者への自動返信」を送る。
+//  - 管理者通知 … テンプレートの To Email に管理者2アドレスをカンマ区切りで設定
+//  - 応募者返信 … テンプレートの「Auto-Reply」タブ（To Email に {{email}}）で送信
 // ※宛先メールアドレスはコードに直書きせず、EmailJS のテンプレート側に設定する。
 (() => {
   // ===== EmailJS 設定（ダッシュボードで取得した値に置き換える）=====
   // Public Key は公開して問題ない値（クライアント用）。
   const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
   const SERVICE_ID = "YOUR_SERVICE_ID";
-  // 管理者通知用テンプレート（To Email にカンマ区切りで管理者2アドレスを設定）
-  const TEMPLATE_ADMIN = "YOUR_ADMIN_TEMPLATE_ID";
-  // 応募者への自動返信用テンプレート（To Email に {{email}} を設定）
-  const TEMPLATE_AUTOREPLY = "YOUR_AUTOREPLY_TEMPLATE_ID";
+  // 管理者通知テンプレート（Auto-Reply タブで応募者への自動返信も同時に送られる）
+  const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
   // ============================================================
 
   const ENDPOINT = "https://api.emailjs.com/api/v1.0/email/send";
@@ -27,13 +27,13 @@
     statusEl.hidden = false;
   };
 
-  const send = (templateId, params) =>
+  const send = (params) =>
     fetch(ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         service_id: SERVICE_ID,
-        template_id: templateId,
+        template_id: TEMPLATE_ID,
         user_id: PUBLIC_KEY,
         template_params: params,
       }),
@@ -71,9 +71,8 @@
     showStatus("送信しています…", "loading");
 
     try {
-      // 管理者2アドレスへ通知 → 応募者へ自動返信 の順で送信
-      await send(TEMPLATE_ADMIN, params);
-      await send(TEMPLATE_AUTOREPLY, params);
+      // 1回の送信で管理者通知＋（Auto-Replyにより）応募者への自動返信が飛ぶ
+      await send(params);
       form.reset();
       showStatus(
         "ご応募ありがとうございます。確認メールをお送りしました。担当者より近日中にご連絡いたします。",
