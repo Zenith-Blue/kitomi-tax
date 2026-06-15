@@ -10,6 +10,11 @@
   --color-gray-200: #f0f3f6;
   --color-gray-300: #e0e0e0;
   --color-text: #1a1a1a;
+  --color-text-muted: #555555;   /* 補足テキスト・任意バッジの文字 */
+  --color-placeholder: #9aa0a6;  /* フォーム入力欄のプレースホルダー */
+  --color-success: #2e7d32;      /* フォーム送信成功メッセージ */
+  --color-tint-green: #ecf1d8;   /* I/Oカード「入力」背景（薄緑） */
+  --color-tint-orange: #fff5ea;  /* I/Oカード「出力」背景（薄橙） */
 
   /* グラデーション */
   --gradient-cta: linear-gradient(90deg, #ffa431 0%, #ac322a 100%);

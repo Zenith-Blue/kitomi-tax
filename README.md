@@ -114,6 +114,84 @@ kitomi-tax/
 
 詳細・各ページの内容は [REQUIREMENTS.md](./REQUIREMENTS.md) を参照してください。
 
+## 編集ガイド（どこを直せば何が変わるか）
+
+「よく変更する値」をどのファイルで直すかの早見表です。**ビルドツールを使わない素のHTML/CSS/JS** のため、本文テキストは各HTMLに直接書かれています。
+
+### 1. 本文テキストを変えたい
+
+そのページのHTMLを直接編集します。
+
+| 変えたい場所 | 編集ファイル |
+| :-- | :-- |
+| トップの各セクション文言 | `index.html` |
+| 事務所案内（代表挨拶・強みなど） | `about.html` |
+| 働く環境 | `environment.html` |
+| 募集要項・FAQ | `requirements.html` |
+| 応募フォームの項目ラベル等 | `entry.html` |
+| プライバシーポリシー本文 | `privacy.html` |
+| 全ページ共通のヘッダー | `partials/header.html` |
+| 全ページ共通のフッター | `partials/footer.html` |
+
+### 2. 画像を差し替えたい
+
+- 各ページの画像：`images/pages/<ページ名>/` に同名で上書き、またはHTMLの `src` / `srcset` を変更
+- ロゴなど共通画像：`images/common/`
+- **SP/PCで画像を出し分けている箇所**は `<picture>` 内に2つ指定があります。両方（PC用 `srcset` と SP用 `src`/`source`）を確認して差し替えてください。
+- 画像は JPEG（写真は200KB目安）/ PNG・SVG（ロゴ・アイコン・装飾）。`width`/`height` 属性は残す（レイアウトずれ防止）。
+
+### 3. リンク先・メニューを変えたい
+
+| 変えたい場所 | 編集ファイル |
+| :-- | :-- |
+| グローバルナビ（ホーム/事業所案内/働く環境/募集要項/エントリー） | `partials/header.html` |
+| フッターのリンク・プライバシーポリシーリンク | `partials/footer.html` |
+| 応募フォーム内のプライバシーポリシーリンク | `entry.html` |
+
+### 4. 色・余白・フォントサイズを一括で変えたい
+
+**`css/variables.css`** に集約しています。ここを変えると全ページに反映されます。
+
+- 色：`--color-orange` `--color-red` `--color-text` など
+- 余白：`--space-*`
+- 角丸：`--radius-*`
+- 影：`--shadow-cta`
+- グラデーション（CTAボタン）：`--gradient-cta`
+
+各ページCSSはこの変数を参照しています。新しいスタイルを足すときも、直接 `#色コード` や固定pxを書かず、できるだけ変数を使ってください。
+
+### 5. 事業者情報（電話番号・住所・事務所名）を変えたい ⚠️ 複数箇所
+
+同じ情報が複数ファイルに出てきます。更新時は**下記すべて**を直してください（静的サイトのため自動同期されません）。
+
+| 項目 | 出現ファイル |
+| :-- | :-- |
+| 電話番号 `049-277-5541` | `partials/footer.html` / `partials/header.html` / `about.html` / `privacy.html` / `js/form.js`（送信失敗時メッセージ） |
+| 住所・郵便番号 `〒350-0041 …六軒町…` | `partials/footer.html` / `about.html` / `privacy.html` / `requirements.html` |
+| 事務所名・代表者名 | 各HTML（`partials/footer.html`、`about.html`、`privacy.html` ほか） |
+
+※ヘッダー・フッターは `partials/` の1ファイルで全ページ共通管理（ここを直せば全ページに反映）。
+
+### 6. 応募フォームの送信設定（EmailJS）
+
+`js/form.js` 冒頭の定数を編集します。
+
+- `PUBLIC_KEY` / `SERVICE_ID` / `TEMPLATE_ID`：EmailJSダッシュボードの値
+- 送信先メールアドレスは**コードに書かず、EmailJSテンプレートの To Email / 自動返信側**で設定します。
+
+### 7. スクロールアニメーションの対象・速度を変えたい
+
+- 表示対象セクションの登録：`js/main.js` の `revealTargets` 配列
+- 「スクロール到達後に開始」する閾値：`js/main.js` の `REVEAL_ROOT_MARGIN`
+- 各要素の出る速さ・間隔：各ページCSSの `transition` / `transition-delay`
+
+### 8. 共通部品（コピペを避ける仕組み）
+
+- **ヘッダー・フッター**：`partials/header.html` / `partials/footer.html` を全ページがJSで読み込み（単一管理）
+- **見出し**：`.section-title`（`section-title__en` / `section-title__jp`）を全ページで共通利用
+- **ボタン**：`.button`（`button--orange` など）を共通利用
+- **レスポンシブの定番パターン**：[RESPONSIVE.md](./RESPONSIVE.md) の「15. 実装済みレスポンシブパターン」を参照
+
 ## 開発の進め方
 
 ### 全体フロー
