@@ -304,8 +304,8 @@
 .strength-item {
   position: relative;
   display: flex;
-  /* 画像と文章を縦中央で揃える（画像40%で高さが変わってもズレない） */
-  align-items: center;
+  /* 画像と文章を上揃え（中央揃えだと高さ差で余白が不自然になるため） */
+  align-items: flex-start;
   z-index: 2;
 }
 
@@ -884,23 +884,50 @@
   /* I/O Cards は 768px まで横並び維持（縦積みは max-width:768px で実施） */
 
   /* Summary */
+  /* タブレットもSP同様: 写真を上(交互)→見出し中央→本文、日本地図は背景 */
   .summary {
     padding: 60px 0 80px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
   .summary__deco {
-    width: 60%;
-    height: auto;
+    display: block;
+    position: absolute;
+    top: auto;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 420px;
+    height: 470px;
+    max-width: 90%;
+    opacity: 1;
+    z-index: 0;
+    pointer-events: none;
   }
 
   .summary__txt {
     padding: 0 32px;
     width: 100%;
+    max-width: none;
+    text-align: center;
+    order: 2;
+    margin-top: 32px;
+    position: relative;
+    z-index: 1;
   }
 
   .summary__catch {
     font-size: 32px;
     line-height: 1.4;
+    white-space: normal;
+  }
+
+  .summary__body {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
   }
 
   .summary__photos {
@@ -908,8 +935,11 @@
     right: auto;
     top: auto;
     flex-direction: row;
-    margin: 40px 32px 0;
+    margin: 0 32px;
     height: auto;
+    gap: 16px;
+    order: 1;
+    align-items: flex-start;
     justify-content: center;
   }
 
@@ -922,6 +952,10 @@
 
   .summary__photo--1 {
     margin-bottom: 0;
+  }
+
+  .summary__photo--2 {
+    margin-top: 50px;
   }
 
   /* Company */
