@@ -1218,6 +1218,27 @@ body.is-popup-open {
   margin-top: 20px;
 }
 
+/* REQUIREMENTS: スクロール到達で 見出しは上から / リストは右から順番にスライドイン */
+.recruit__title,
+.recruit__lead {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.recruit__item,
+.recruit__cta {
+  opacity: 0;
+  transform: translateX(48px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.recruit.is-revealed .recruit__title { opacity: 1; transform: translateY(0); }
+.recruit.is-revealed .recruit__lead { opacity: 1; transform: translateY(0); transition-delay: 0.15s; }
+.recruit.is-revealed .recruit__item { opacity: 1; transform: translateX(0); }
+.recruit.is-revealed .recruit__item:nth-child(1) { transition-delay: 0.3s; }
+.recruit.is-revealed .recruit__item:nth-child(2) { transition-delay: 0.45s; }
+.recruit.is-revealed .recruit__item:nth-child(3) { transition-delay: 0.6s; }
+.recruit.is-revealed .recruit__cta { opacity: 1; transform: translateX(0); transition-delay: 0.75s; }
+
 .recruit__blob--1 {
   top: 970px;
   left: 50%;

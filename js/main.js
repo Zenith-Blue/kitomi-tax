@@ -94,6 +94,7 @@ function initAfterPartials() {
     { section: ".message", blobs: ".message__blob" },
     { section: ".about", blobs: null },
     { section: ".environment", blobs: null },
+    { section: ".recruit", blobs: null },
   ];
 
   if ("IntersectionObserver" in window) {
