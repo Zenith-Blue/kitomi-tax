@@ -294,7 +294,8 @@
   top: 360px;
   left: 0;
   width: 1200px;
-  height: 2050px;
+  /* 内容の高さに追従させ、画像がベージュ背景からはみ出さないように */
+  bottom: 80px;
   background-color: var(--color-beige);
   border-top-right-radius: var(--radius-xl);
   border-bottom-right-radius: var(--radius-xl);
@@ -736,6 +737,68 @@
 }
 
 /* ==========================================================================
+   Greeting: PC絶対配置は十分広い時のみ。1340px以下は縦積みに切替
+   （固定left:760/width:480が中間幅で右にはみ出し overflow:hidden で切れるため）
+   ========================================================================== */
+
+@media (max-width: 1340px) {
+  .greeting {
+    padding: 80px 0;
+    min-height: auto;
+  }
+  .greeting__bg {
+    width: 100%;
+    border-radius: 0;
+  }
+  .greeting__photo {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius-md);
+    margin: 0 auto 32px;
+  }
+  .greeting__title,
+  .greeting__body,
+  .greeting__profile,
+  .greeting__books {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: auto;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 clamp(32px, 6vw, 120px);
+  }
+  .greeting__title {
+    margin-bottom: 24px;
+  }
+  /* 強制改行を解除し幅に応じて自然に折り返す（約2行に） */
+  .greeting__title .section-title__jp br {
+    display: none;
+  }
+  .greeting__body {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .greeting__profile {
+    margin-bottom: 40px;
+  }
+  .greeting__books {
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
    Responsive: Tablet (max 1023px)
    ========================================================================== */
 
@@ -818,6 +881,11 @@
 
   .greeting__title {
     margin-bottom: 24px;
+  }
+
+  /* SP/タブレットでは強制改行を解除し、幅に応じて自然に折り返す（約2行に） */
+  .greeting__title .section-title__jp br {
+    display: none;
   }
 
   .greeting__body {
