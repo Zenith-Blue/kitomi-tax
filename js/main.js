@@ -89,37 +89,69 @@ function initAfterPartials() {
     }, 100);
   });
 
+  // 【ルール】アニメーションは原則「スクロールして要素に到達してから」開始する。
+  // そのため IntersectionObserver の rootMargin 下端をマイナスにし、要素がビュー
+  // ポートの下から十分に入ってから（＝実際にスクロールで到達してから）発火させる。
+  const REVEAL_ROOT_MARGIN = "0px 0px -12% 0px";
+
   // スクロール時のふわっと表示: 指定セクションが画面に入ったら is-revealed を付ける
   const revealTargets = [
     { section: ".message", blobs: ".message__blob" },
     { section: ".about", blobs: null },
     { section: ".environment", blobs: null },
+    { section: ".environment__pickup", blobs: null },
+    { section: ".interview", blobs: null },
     { section: ".recruit", blobs: null },
+    // about.html
+    { section: ".about-lead", blobs: null },
+    { section: ".greeting", blobs: null },
+    { section: ".strength", blobs: null },
+    { section: ".strength-item--01", blobs: null },
+    { section: ".strength-item--02", blobs: null },
+    { section: ".outlook", blobs: null },
+    { section: ".io-card--input", blobs: null },
+    { section: ".io-card--output", blobs: null },
+    { section: ".summary", blobs: null },
+    { section: ".company__block", blobs: null },
+    // environment.html
+    { section: ".advantage", blobs: null },
+    { section: ".adv-item", blobs: null },
+    { section: ".benefit", blobs: null },
+    { section: ".evaluation", blobs: null },
+    { section: ".eval-wide", blobs: null },
+    { section: ".eval-card", blobs: null },
+    // requirements.html
+    { section: ".req-lead", blobs: null },
+    { section: ".recruit-anchor", blobs: null },
+    { section: ".job-card", blobs: null },
+    // entry.html
+    { section: ".entry", blobs: null },
   ];
 
   if ("IntersectionObserver" in window) {
     revealTargets.forEach(({ section, blobs }) => {
-      const sec = document.querySelector(section);
-      if (!sec) return;
+      const secs = document.querySelectorAll(section);
+      if (!secs.length) return;
       const blobEls = blobs ? document.querySelectorAll(blobs) : null;
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              sec.classList.add("is-revealed");
-              if (blobEls) blobEls.forEach((b) => b.classList.add("is-revealed"));
-              io.disconnect();
-            }
-          });
-        },
-        { threshold: 0.15 }
-      );
-      io.observe(sec);
+      secs.forEach((sec) => {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                sec.classList.add("is-revealed");
+                if (blobEls) blobEls.forEach((b) => b.classList.add("is-revealed"));
+                io.disconnect();
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: REVEAL_ROOT_MARGIN }
+        );
+        io.observe(sec);
+      });
     });
   } else {
     revealTargets.forEach(({ section, blobs }) => {
-      const sec = document.querySelector(section);
-      if (sec) sec.classList.add("is-revealed");
+      document.querySelectorAll(section).forEach((sec) => sec.classList.add("is-revealed"));
       if (blobs) document.querySelectorAll(blobs).forEach((b) => b.classList.add("is-revealed"));
     });
   }
@@ -139,7 +171,7 @@ function initAfterPartials() {
           blobIO.unobserve(entry.target);
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15, rootMargin: REVEAL_ROOT_MARGIN }
     );
     allBlobs.forEach((b) => blobIO.observe(b));
   } else {

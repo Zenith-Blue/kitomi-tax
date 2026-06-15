@@ -861,3 +861,78 @@
     line-height: 26px;
   }
 }
+
+/* =========================================================
+   スクロール表示アニメーション（IntersectionObserver で .is-revealed 付与）
+   ========================================================= */
+
+/* advantage タイトル・リード: フェードイン */
+.advantage__title,
+.advantage__lead {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.advantage.is-revealed .advantage__title {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+.advantage.is-revealed .advantage__lead {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+/* adv-item: beige=右から / white=左から スライドイン */
+.adv-item {
+  opacity: 0;
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.adv-item--beige {
+  transform: translateX(90px);
+}
+.adv-item--white {
+  transform: translateX(-90px);
+}
+.adv-item.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* 福利厚生: 見出し→アイコンを左から順にフェードイン */
+.benefit__title {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.benefit.is-revealed .benefit__title {
+  opacity: 1;
+}
+.benefit__item {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.benefit.is-revealed .benefit__item {
+  opacity: 1;
+}
+.benefit.is-revealed .benefit__item:nth-child(1) { transition-delay: 0.15s; }
+.benefit.is-revealed .benefit__item:nth-child(2) { transition-delay: 0.3s; }
+.benefit.is-revealed .benefit__item:nth-child(3) { transition-delay: 0.45s; }
+.benefit.is-revealed .benefit__item:nth-child(4) { transition-delay: 0.6s; }
+.benefit.is-revealed .benefit__item:nth-child(5) { transition-delay: 0.75s; }
+.benefit.is-revealed .benefit__item:nth-child(6) { transition-delay: 0.9s; }
+
+/* 公平な評価制度: 全てフェードイン */
+.evaluation__title,
+.eval-wide,
+.eval-card {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.evaluation.is-revealed .evaluation__title {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+.eval-wide.is-revealed {
+  opacity: 1;
+}
+.eval-card.is-revealed {
+  opacity: 1;
+}

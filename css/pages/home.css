@@ -1231,13 +1231,13 @@ body.is-popup-open {
   transform: translateX(48px);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
-.recruit.is-revealed .recruit__title { opacity: 1; transform: translateY(0); }
-.recruit.is-revealed .recruit__lead { opacity: 1; transform: translateY(0); transition-delay: 0.15s; }
+.recruit.is-revealed .recruit__title { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+.recruit.is-revealed .recruit__lead { opacity: 1; transform: translateY(0); transition-delay: 0.55s; }
 .recruit.is-revealed .recruit__item { opacity: 1; transform: translateX(0); }
-.recruit.is-revealed .recruit__item:nth-child(1) { transition-delay: 0.3s; }
-.recruit.is-revealed .recruit__item:nth-child(2) { transition-delay: 0.45s; }
-.recruit.is-revealed .recruit__item:nth-child(3) { transition-delay: 0.6s; }
-.recruit.is-revealed .recruit__cta { opacity: 1; transform: translateX(0); transition-delay: 0.75s; }
+.recruit.is-revealed .recruit__item:nth-child(1) { transition-delay: 0.7s; }
+.recruit.is-revealed .recruit__item:nth-child(2) { transition-delay: 1.2s; }
+.recruit.is-revealed .recruit__item:nth-child(3) { transition-delay: 1.7s; }
+.recruit.is-revealed .recruit__cta { opacity: 1; transform: translateX(0); transition-delay: 2.2s; }
 
 .recruit__blob--1 {
   top: 970px;
@@ -2145,3 +2145,41 @@ body.is-popup-open {
     font-size: 14px;
   }
 }
+
+/* =========================================================
+   追加スクロールアニメーション
+   ========================================================= */
+
+/* environment リード: フェードイン */
+.environment__lead {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.environment.is-revealed .environment__lead {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+/* environment 3カード: 左から順にフェードイン */
+.env-card {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.environment__pickup.is-revealed .env-card {
+  opacity: 1;
+}
+.environment__pickup.is-revealed .env-card:nth-child(1) { transition-delay: 0.1s; }
+.environment__pickup.is-revealed .env-card:nth-child(2) { transition-delay: 0.35s; }
+.environment__pickup.is-revealed .env-card:nth-child(3) { transition-delay: 0.6s; }
+
+/* interview 3カード: 左から順にフェードイン */
+.interview-card {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.interview.is-revealed .interview-card {
+  opacity: 1;
+}
+.interview.is-revealed .interview-card:nth-child(1) { transition-delay: 0.1s; }
+.interview.is-revealed .interview-card:nth-child(2) { transition-delay: 0.35s; }
+.interview.is-revealed .interview-card:nth-child(3) { transition-delay: 0.6s; }
