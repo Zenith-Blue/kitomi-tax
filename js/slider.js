@@ -14,7 +14,18 @@
     const total = items.length;
     let current = 0;
 
+    // data-slider-mobile-only: 767px以下のみスライダー動作（PC/タブレットはグリッド表示）
+    const mobileOnly = slider.hasAttribute("data-slider-mobile-only");
+    const isActive = () =>
+      !mobileOnly || window.matchMedia("(max-width: 767px)").matches;
+
     const update = () => {
+      if (!isActive()) {
+        // スライダー無効時は transform をリセット（グリッドを崩さない）
+        track.style.transform = "";
+        current = 0;
+        return;
+      }
       const itemWidth = items[0].getBoundingClientRect().width;
       const gap = parseFloat(getComputedStyle(track).gap) || 30;
       const offset = current * (itemWidth + gap);
@@ -26,11 +37,13 @@
     };
 
     const next = () => {
+      if (!isActive()) return;
       if (current >= total - 1) return;
       current++;
       update();
     };
     const prev = () => {
+      if (!isActive()) return;
       if (current <= 0) return;
       current--;
       update();

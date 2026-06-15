@@ -297,27 +297,20 @@
 .strength-item {
   position: relative;
   display: flex;
-  align-items: flex-start;
+  /* 画像と文章を縦中央で揃える（画像40%で高さが変わってもズレない） */
+  align-items: center;
   z-index: 2;
 }
 
 .strength-item--01 {
   padding-top: 24px;
-  padding-left: 120px;
-  gap: 100px;
-}
-
-.strength-item--01 .strength-item__txt {
-  margin-top: 150px;
+  padding-left: clamp(32px, 8vw, 120px);
+  gap: clamp(32px, 6vw, 100px);
 }
 
 .strength-item--02 {
   padding-top: 60px;
-  gap: 120px;
-}
-
-.strength-item--02 .strength-item__txt {
-  margin-top: 150px;
+  gap: clamp(32px, 7vw, 120px);
 }
 
 .strength-item__txt {
@@ -593,19 +586,20 @@
 
 .summary__txt {
   position: relative;
-  padding-left: 180px;
-  width: 720px;
+  padding-left: clamp(32px, 12vw, 180px);
+  /* 右側の写真2枚に文章がかぶらないよう幅を制限 */
+  width: auto;
+  max-width: 50%;
   z-index: 2;
 }
 
 .summary__catch {
   font-weight: 700;
-  font-size: 48px;
-  line-height: 70px;
+  font-size: clamp(28px, 3.4vw, 48px);
+  line-height: 1.45;
   letter-spacing: 1.92px;
   color: var(--color-black);
   margin-bottom: 30px;
-  white-space: nowrap;
 }
 
 .summary__body {
@@ -627,7 +621,7 @@
 .summary__photos {
   position: absolute;
   top: -20px;
-  right: 100px;
+  right: clamp(24px, 5vw, 100px);
   display: flex;
   gap: 10px;
   align-items: flex-end;
@@ -636,8 +630,8 @@
 }
 
 .summary__photo {
-  width: 240px;
-  height: 400px;
+  width: clamp(150px, 17vw, 240px);
+  height: clamp(260px, 28vw, 400px);
   border-radius: var(--radius-md);
   overflow: hidden;
 }
