@@ -133,7 +133,7 @@ function initAfterPartials() {
         if (!shown.length) return;
         shown.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
         shown.forEach((entry, i) => {
-          entry.target.style.transitionDelay = (i * 0.15).toFixed(2) + "s";
+          entry.target.style.transitionDelay = (0.4 + i * 0.15).toFixed(2) + "s";
           entry.target.classList.add("is-revealed");
           blobIO.unobserve(entry.target);
         });
