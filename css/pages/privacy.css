@@ -82,25 +82,56 @@
   color: var(--color-text);
 }
 
-/* 続きあり（⋮）の装飾 */
-.policy__more {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  margin: 48px 0 8px;
+/* 箇条書き（取得情報・利用目的など） */
+.policy__ul {
+  margin: 16px 0;
+  padding-left: 1.4em;
+  list-style: disc;
 }
-.policy__more span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--color-gray-300);
+.policy__ul li {
+  font-family: var(--font-jp);
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+/* 事業者情報 */
+.policy__info {
+  margin-top: 16px;
+}
+.policy__info-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-bottom: 8px;
+  font-family: var(--font-jp);
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--color-text);
+}
+.policy__info-row dt {
+  flex: 0 0 6em;
+  font-weight: 700;
+}
+.policy__info-row dd {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* 制定日・改定日 */
+.policy__dates {
+  margin-top: 40px;
+  font-family: var(--font-jp);
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--color-text);
 }
 
 /* スクロール表示アニメーション（軽め） */
 .policy__intro,
 .policy__section,
-.policy__more {
+.policy__dates {
   opacity: 0;
   transition: opacity 0.9s ease;
 }
@@ -112,7 +143,7 @@
   opacity: 1;
   transition-delay: 0.3s;
 }
-.policy.is-revealed .policy__more {
+.policy.is-revealed .policy__dates {
   opacity: 1;
   transition-delay: 0.5s;
 }
@@ -146,7 +177,9 @@
   }
   .policy__intro,
   .policy__text,
-  .policy__ol li {
+  .policy__ol li,
+  .policy__ul li,
+  .policy__info-row {
     font-size: 16px;
   }
   .policy__heading {
