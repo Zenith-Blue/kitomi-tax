@@ -223,6 +223,29 @@
 .entry-form__submit:hover {
   opacity: 0.88;
 }
+.entry-form__submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* 送信ステータス */
+.entry-form__status {
+  margin: 20px auto 0;
+  max-width: 600px;
+  text-align: center;
+  font-family: var(--font-jp);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.entry-form__status[data-type="success"] {
+  color: #2e7d32;
+}
+.entry-form__status[data-type="error"] {
+  color: var(--color-red);
+}
+.entry-form__status[data-type="loading"] {
+  color: #555;
+}
 
 /* スクロール表示アニメーション（軽め） */
 .entry__intro,
