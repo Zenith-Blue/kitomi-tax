@@ -6,10 +6,10 @@
 (() => {
   // ===== EmailJS 設定（ダッシュボードで取得した値に置き換える）=====
   // Public Key は公開して問題ない値（クライアント用）。
-  const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
-  const SERVICE_ID = "YOUR_SERVICE_ID";
+  const PUBLIC_KEY = "gmoolppPUgc7Hzg0e";
+  const SERVICE_ID = "service_xu21e0w";
   // 管理者通知テンプレート（Auto-Reply タブで応募者への自動返信も同時に送られる）
-  const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+  const TEMPLATE_ID = "template_i1ndpv9";
   // ============================================================
 
   const ENDPOINT = "https://api.emailjs.com/api/v1.0/email/send";
