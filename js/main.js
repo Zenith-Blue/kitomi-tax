@@ -92,7 +92,7 @@ function initAfterPartials() {
   // スクロール時のふわっと表示: 指定セクションが画面に入ったら is-revealed を付ける
   const revealTargets = [
     { section: ".message", blobs: ".message__blob" },
-    { section: ".about", blobs: ".about__blob" },
+    { section: ".about", blobs: null },
     { section: ".environment", blobs: null },
   ];
 
@@ -123,16 +123,19 @@ function initAfterPartials() {
     });
   }
 
-  // サイト全体: すべての .blob（きとみの丸）をスクロール到達でふわっと表示
+  // サイト全体: すべての .blob（きとみの丸）をスクロール到達でふわっと表示。
+  // 同時に画面へ入った丸は、上にあるものから順番に（段階ディレイで）表示する。
   const allBlobs = document.querySelectorAll(".blob");
   if ("IntersectionObserver" in window) {
     const blobIO = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-revealed");
-            blobIO.unobserve(entry.target);
-          }
+        const shown = entries.filter((e) => e.isIntersecting);
+        if (!shown.length) return;
+        shown.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        shown.forEach((entry, i) => {
+          entry.target.style.transitionDelay = (i * 0.15).toFixed(2) + "s";
+          entry.target.classList.add("is-revealed");
+          blobIO.unobserve(entry.target);
         });
       },
       { threshold: 0.15 }
