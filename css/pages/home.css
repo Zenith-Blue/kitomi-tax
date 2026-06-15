@@ -1455,21 +1455,26 @@ body.is-popup-open {
     margin-bottom: 40px;
   }
 
-  /* タブレット（768〜1023px）は2カラム（スライダーにしない） */
+  /* タブレット（768〜1023px）は2枚表示のスライダー（SP同様スワイプ＋ドット） */
   .interview-slider {
     padding: 10px 32px;
+    overflow: hidden;
+  }
+
+  .interview-slider__dots {
+    display: flex;
   }
 
   .interview__list {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 24px;
     padding: 0;
     align-items: stretch;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .interview-card {
-    flex: 0 0 calc(50% - 12px);
+    flex: 0 0 calc((100% - 24px) / 2);
     width: auto;
     max-width: none;
   }
