@@ -268,7 +268,7 @@
 
 .strength {
   position: relative;
-  padding: 80px 0 0;
+  padding: 80px 0 120px;
   overflow: hidden;
 }
 
@@ -291,7 +291,8 @@
 
 .strength__bg {
   position: absolute;
-  top: 360px;
+  /* タイトルもベージュ背景の上にのせる */
+  top: 0;
   left: 0;
   width: 1200px;
   /* 内容の高さに追従させ、画像がベージュ背景からはみ出さないように */
@@ -364,9 +365,10 @@
 }
 
 .strength-item__img {
-  /* 画像は幅40%。高さは縦横比で追従 */
+  /* 画像は幅40%。広い画面で縦に伸びすぎないよう最大560pxで制限 */
   flex: 0 0 40%;
   width: 40%;
+  max-width: 560px;
   height: auto;
   aspect-ratio: 560 / 720;
   overflow: hidden;
@@ -742,15 +744,23 @@
    ========================================================================== */
 
 @media (max-width: 1340px) {
+  /* SP/タブレット: タイトル→本文→写真→所長→書籍 の流れ（縦積み） */
   .greeting {
     padding: 80px 0;
     min-height: auto;
+    display: flex;
+    flex-direction: column;
   }
   .greeting__bg {
     width: 100%;
     border-radius: 0;
+    height: auto;
+    top: 0;
+    /* 本画像の中央あたりまでグレー背景をかける（途中で切れないように） */
+    bottom: 160px;
   }
   .greeting__photo {
+    order: 3;
     position: relative;
     top: auto;
     left: auto;
@@ -775,8 +785,13 @@
     margin-right: auto;
     padding: 0 clamp(32px, 6vw, 120px);
   }
+  .greeting__title { order: 1; }
+  .greeting__body { order: 2; }
+  .greeting__profile { order: 4; }
+  .greeting__books { order: 5; }
   .greeting__title {
     margin-bottom: 24px;
+    text-align: center;
   }
   /* 強制改行を解除し幅に応じて自然に折り返す（約2行に） */
   .greeting__title .section-title__jp br {
