@@ -14,10 +14,19 @@
     const total = items.length;
     let current = 0;
 
-    // data-slider-mobile-only: 767px以下のみスライダー動作（PC/タブレットはグリッド表示）
-    const mobileOnly = slider.hasAttribute("data-slider-mobile-only");
+    // data-slider-max: その幅以下のみスライダー動作（超えるとグリッド表示）
+    const maxAttr = slider.getAttribute("data-slider-max");
     const isActive = () =>
-      !mobileOnly || window.matchMedia("(max-width: 767px)").matches;
+      !maxAttr || window.matchMedia(`(max-width: ${maxAttr}px)`).matches;
+
+    // 表示枚数に応じた最大インデックス（端で余白が出ないように）
+    const maxIndex = () => {
+      const viewW = slider.getBoundingClientRect().width;
+      const itemW = items[0].getBoundingClientRect().width;
+      const gap = parseFloat(getComputedStyle(track).gap) || 0;
+      const per = Math.max(1, Math.round((viewW + gap) / (itemW + gap)));
+      return Math.max(0, total - per);
+    };
 
     const update = () => {
       if (!isActive()) {
@@ -26,6 +35,7 @@
         current = 0;
         return;
       }
+      if (current > maxIndex()) current = maxIndex();
       const itemWidth = items[0].getBoundingClientRect().width;
       const gap = parseFloat(getComputedStyle(track).gap) || 30;
       const offset = current * (itemWidth + gap);
@@ -38,7 +48,7 @@
 
     const next = () => {
       if (!isActive()) return;
-      if (current >= total - 1) return;
+      if (current >= maxIndex()) return;
       current++;
       update();
     };
@@ -54,7 +64,7 @@
 
     dots.forEach((dot, i) => {
       dot.addEventListener("click", () => {
-        current = i;
+        current = Math.min(i, maxIndex());
         update();
       });
     });
