@@ -322,8 +322,9 @@
 
 .strength-item__txt {
   position: relative;
-  flex: 0 0 560px;
-  width: 560px;
+  /* 文章は残り幅（画像40%・文章60%）。min-width:0 で潰れすぎ防止 */
+  flex: 1 1 0;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -340,7 +341,7 @@
 
 .strength-item__title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: clamp(24px, 2.6vw, 36px);
   line-height: 1.4;
   letter-spacing: 0.72px;
   color: var(--color-black);
@@ -354,17 +355,19 @@
 }
 
 .strength-item__body p {
-  font-size: 16px;
-  line-height: 30px;
+  font-size: clamp(14px, 1.25vw, 16px);
+  line-height: 1.875;
   letter-spacing: 0.32px;
   color: var(--color-black);
   margin: 0;
 }
 
 .strength-item__img {
-  flex: 0 0 560px;
-  width: 560px;
-  height: 720px;
+  /* 画像は幅40%。高さは縦横比で追従 */
+  flex: 0 0 40%;
+  width: 40%;
+  height: auto;
+  aspect-ratio: 560 / 720;
   overflow: hidden;
 }
 
@@ -479,17 +482,15 @@
 
 .io-card {
   position: relative;
-  height: 720px;
   display: flex;
   align-items: center;
-  gap: 80px;
-  padding: 0 var(--section-padding-x);
+  gap: clamp(32px, 5vw, 80px);
+  padding: clamp(60px, 8vw, 100px) var(--section-padding-x);
   border-top-left-radius: var(--radius-xl);
   overflow: hidden;
 }
 
 .io-card--input {
-  height: 900px;
   background-color: #ecf1d8;
 }
 
@@ -498,9 +499,11 @@
 }
 
 .io-card__img {
-  flex: 0 0 520px;
-  width: 520px;
-  height: 520px;
+  /* 画像は幅40%・正方形 */
+  flex: 0 0 40%;
+  width: 40%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius-md);
   overflow: hidden;
 }
@@ -512,8 +515,8 @@
 }
 
 .io-card__txt {
-  flex: 0 0 520px;
-  width: 520px;
+  flex: 1 1 0;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -548,7 +551,7 @@
 
 .io-card__title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: clamp(24px, 2.6vw, 36px);
   line-height: 1.4;
   letter-spacing: 0.72px;
   color: var(--color-black);
@@ -561,8 +564,8 @@
 }
 
 .io-card__body p {
-  font-size: 16px;
-  line-height: 30px;
+  font-size: clamp(14px, 1.25vw, 16px);
+  line-height: 1.875;
   letter-spacing: 0.32px;
   color: var(--color-black);
   margin: 0;
@@ -850,34 +853,7 @@
     border-radius: 0;
   }
 
-  .strength-item {
-    flex-direction: column !important;
-    padding: 60px 32px !important;
-    gap: 32px !important;
-  }
-
-  .strength-item--01 .strength-item__txt,
-  .strength-item--02 .strength-item__txt {
-    margin-top: 0;
-  }
-
-  .strength-item__txt,
-  .strength-item__img {
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .strength-item__img {
-    height: auto;
-    aspect-ratio: 560/720;
-    border-radius: 20px !important;
-  }
-
-  .strength-item__title {
-    font-size: 26px;
-  }
+  /* strength-item は 768px まで横並び維持（縦積みは max-width:768px で実施） */
 
   /* Outlook */
   .outlook {
@@ -908,34 +884,7 @@
     width: 100%;
   }
 
-  /* I/O Cards */
-  .io-card {
-    height: auto;
-    flex-direction: column;
-    padding: 60px 32px;
-    gap: 32px;
-  }
-
-  .io-card--input {
-    height: auto;
-  }
-
-  .io-card__img,
-  .io-card__txt {
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: 520px;
-    margin: 0 auto;
-  }
-
-  .io-card__img {
-    height: auto;
-    aspect-ratio: 1/1;
-  }
-
-  .io-card__title {
-    font-size: 26px;
-  }
+  /* I/O Cards は 768px まで横並び維持（縦積みは max-width:768px で実施） */
 
   /* Summary */
   .summary {
@@ -1013,6 +962,45 @@
   .company__row dd {
     flex: 0 0 auto;
     width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Responsive: 横並び→縦積み切替（768px以下）
+   画像＋文章のセクションは 768px 以下で画像上・文章下の縦積みにする
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .strength-item {
+    flex-direction: column;
+  }
+  .strength-item--01,
+  .strength-item--02 {
+    gap: 32px;
+  }
+  .strength-item--01 .strength-item__txt,
+  .strength-item--02 .strength-item__txt {
+    margin-top: 0;
+  }
+  .strength-item__img,
+  .strength-item__txt {
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
+  }
+  .strength-item__img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .io-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .io-card__img,
+  .io-card__txt {
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
   }
 }
 
