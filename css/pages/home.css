@@ -1549,6 +1549,12 @@ body.is-popup-open {
   .recruit__blob--3 {
     display: none;
   }
+
+  /* SP(390px)相当の画像サイズに抑える（全幅だと巨大になるため） */
+  .recruit__photo {
+    max-width: 420px;
+    margin: 0 auto;
+  }
 }
 
 /* ==========================================================================
