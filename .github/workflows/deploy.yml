@@ -1,0 +1,36 @@
+name: Deploy to Xserver
+
+# main に push されたら自動で Xserver(FTPS) へアップロードする
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}   # 手動実行も可能（Actionsタブの "Run workflow"）
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: FTP Deploy to Xserver
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}        # 例: svXXXX.xserver.jp（FTPホスト名）
+          username: ${{ secrets.FTP_USERNAME }}     # FTPアカウントのユーザー名
+          password: ${{ secrets.FTP_PASSWORD }}     # FTPアカウントのパスワード
+          server-dir: ${{ secrets.FTP_SERVER_DIR }} # 例: /ドメイン名/public_html/
+          protocol: ftps                            # XserverはFTPS(明示的TLS)対応
+          # 配信に不要な開発用ファイルは除外
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.claude/**
+            **/node_modules/**
+            CLAUDE.md
+            README.md
+            REQUIREMENTS.md
+            RESPONSIVE.md
+            .gitignore
+            .nojekyll
