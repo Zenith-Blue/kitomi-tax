@@ -251,7 +251,7 @@
             </div>
           </button>
 
-          <article class="interview-card interview-card--static" data-slider-item>
+          <button type="button" class="interview-card" data-slider-item data-popup-open="interview-popup-03" aria-label="鈴木かをりさんのインタビューを読む">
             <div class="interview-card__img-wrap">
               <img src="images/pages/home/interview-01.jpg" alt="" class="interview-card__img" width="360" height="520">
               <div class="interview-card__overlay"></div>
@@ -265,7 +265,7 @@
               <span class="interview-card__role">パートタイマー</span>
               <p class="interview-card__name">鈴木かをり<span class="interview-card__name-en">KAORI SUZUKI</span></p>
             </div>
-          </article>
+          </button>
         </div>
 
         <div class="interview-slider__dots">
@@ -476,6 +476,72 @@
         <aside class="interview-popup__message">
           <h3 class="interview-popup__message-title">これから入る方へ一言</h3>
           <p class="interview-popup__message-txt">私どもの事務所には、知識豊富なベテラン職員が大勢勤務しています。はじめは緊張すると思いますが、働きやすい事務所です。ぜひお待ちしております。</p>
+        </aside>
+
+        <div class="interview-popup__footer">
+          <button type="button" class="interview-popup__close-btn" data-popup-close>ページを閉じる</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interview Popup 03 (パートタイマー) -->
+  <div class="interview-popup" id="interview-popup-03" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="interview-popup-03-title">
+    <div class="interview-popup__overlay" data-popup-close></div>
+
+    <div class="interview-popup__container" role="document">
+      <header class="interview-popup__header">
+        <a href="index.html" class="site-logo interview-popup__logo" aria-label="きとみ税理士法人 トップへ">
+          <img src="images/common/logo.png" alt="きとみ税理士法人" class="site-logo__img" width="160" height="26">
+          <span class="site-logo__sub">Recruiting Site</span>
+        </a>
+        <button type="button" class="interview-popup__close" data-popup-close aria-label="閉じる">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </header>
+
+      <div class="interview-popup__body">
+        <div class="interview-popup__intro">
+          <figure class="interview-popup__intro-img">
+            <img src="images/pages/home/interview-01.jpg" alt="鈴木かをりさん" width="380" height="380">
+          </figure>
+          <div class="interview-popup__intro-txt">
+            <h2 class="interview-popup__title" id="interview-popup-03-title">
+              <span class="interview-popup__title-en">INTERVIEW03</span>
+              <span class="interview-popup__title-jp">社員インタビュー03</span>
+            </h2>
+            <span class="interview-popup__tag">パートタイマー</span>
+            <p class="interview-popup__name">
+              鈴木 かをり
+              <span class="interview-popup__name-en">KAORI SUZUKI</span>
+            </p>
+            <p class="interview-popup__lead">30年ぶりに会計事務所の世界へ。<br>データ入力と顧客訪問を担当中。</p>
+          </div>
+        </div>
+
+        <article class="interview-popup__qa">
+          <p class="interview-popup__q-label">Question 01</p>
+          <h3 class="interview-popup__q-title">入社を決めた理由はなんでしたか？</h3>
+          <p class="interview-popup__a">前職での業務内容が自分に合わず、転職を考えていた時に求人サイトのIndeedを開いたところ、トップにこの事務所が表示されていました。ページを開くと見覚えのあるお顔——長岡先生——があり、30年前にご一緒させていただいた先生のもとで、もう一度会計事務所の仕事がしたい！と強く思ったことが決め手です。</p>
+        </article>
+
+        <article class="interview-popup__qa">
+          <p class="interview-popup__q-label">Question 02</p>
+          <h3 class="interview-popup__q-title">現在、どんなお仕事をしていますか？</h3>
+          <p class="interview-popup__a">パート社員として、週5日・9:00〜17:00で勤務しています。メインは社員さんが担当する関与先（顧客）のデータ入力で、加えて数件の顧客を自分でも持たせていただき、ご訪問も行っています。人とのコミュニケーションをとることが好きなので、関与先へご訪問させていただく時間がいちばんのやりがい。多分、営業向きなのだと思います（笑）。働く時間も日数も自由にさせていただけるので、家のこともきちんとこなしながら、無理なくバランスをとって働けています。</p>
+        </article>
+
+        <article class="interview-popup__qa">
+          <p class="interview-popup__q-label">Question 03</p>
+          <h3 class="interview-popup__q-title">どんな雰囲気の事務所ですか？</h3>
+          <p class="interview-popup__a">女性が多いと賑やかになりがちですが、細かく神経を使う業務が多いため、話し声も少なく、静かで落ち着いた雰囲気です。女性特有のドロドロした感じもないので、私はとても快適に過ごしています。</p>
+        </article>
+
+        <aside class="interview-popup__message">
+          <h3 class="interview-popup__message-title">これから入る方へ一言</h3>
+          <p class="interview-popup__message-txt">私も入社してまだ半年。30年ぶりの会計事務所の仕事を覚えながら、最初は不安でいっぱいでした。それでも毎日一歩ずつ業務を覚え、温かいスタッフに囲まれて楽しく働いています。新しい環境は緊張すると思いますが、一緒に頑張りましょう！</p>
         </aside>
 
         <div class="interview-popup__footer">
