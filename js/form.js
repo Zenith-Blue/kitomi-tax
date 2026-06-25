@@ -6,7 +6,7 @@
 (() => {
   // ===== EmailJS 設定（ダッシュボードで取得した値に置き換える）=====
   // Public Key は公開して問題ない値（クライアント用）。
-  const PUBLIC_KEY = "gmoolppPUgc7Hzg0e";
+  const PUBLIC_KEY = "3uFccFVLiEbh0m-VS";
   const SERVICE_ID = "service_xu21e0w";
   // 管理者通知テンプレート（Auto-Reply タブで応募者への自動返信も同時に送られる）
   const TEMPLATE_ID = "template_i1ndpv9";
