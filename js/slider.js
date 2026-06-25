@@ -95,8 +95,9 @@
       const dx = x - startX;
       const dy = y - startY;
       if (Math.abs(dx) >= SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy)) {
-        if (dx > 0) next();
-        else prev();
+        // 右スワイプ＝前へ / 左スワイプ＝次へ（自然な方向）
+        if (dx > 0) prev();
+        else next();
       }
     };
 
