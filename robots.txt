@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://recruit.kitomi-tax.com/sitemap.xml

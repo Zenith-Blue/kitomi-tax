@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://recruit.kitomi-tax.com/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://recruit.kitomi-tax.com/about.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://recruit.kitomi-tax.com/requirements.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://recruit.kitomi-tax.com/environment.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://recruit.kitomi-tax.com/entry.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://recruit.kitomi-tax.com/privacy.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <priority>0.3</priority>
+  </url>
+</urlset>
