@@ -21,7 +21,10 @@ jobs:
           REMOTE_USER: ${{ secrets.SSH_USER }}     # xs966178
           REMOTE_PORT: "10022"                     # XserverのSSHポート
           SOURCE: "./"
-          TARGET: ${{ secrets.SSH_TARGET }}        # /home/xs966178/kitomi-tax.com/public_html/
+          TARGET: ${{ secrets.SSH_TARGET }}        # /home/xs966178/kitomi-tax.com/public_html/recruit.kitomi-tax.com/
+          # ※採用サイトの docroot はメインドメインの public_html/ の「内側」にある。
+          #   TARGET を public_html/ にすると --delete でメインドメイン側のリダイレクト
+          #   （.htaccess / index.html）を消してしまうので、必ず recruit.kitomi-tax.com/ まで含めること。
           ARGS: "-rltgoDzv --delete"
           # 配信に不要な開発用ファイルは除外
           EXCLUDE: ".git*, .git/, .github/, .claude/, node_modules/, CLAUDE.md, README.md, REQUIREMENTS.md, RESPONSIVE.md, .nojekyll, .gitignore"
