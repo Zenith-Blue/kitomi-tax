@@ -8,7 +8,7 @@
 - **目的**: 税理士有資格者および会計スタッフの採用強化
 - **対象**: 税理士資格保有者を中心とした求職者
 - **デザイン**: [Figma](https://www.figma.com/design/UDUB99WpRvTsVylYgvhc55/260511_Kitomi?m=dev)
-- **公開URL**: 未定
+- **公開URL**: <https://recruit.kitomi-tax.com/>
 
 ## 技術スタック
 
@@ -20,7 +20,42 @@
 | ビルドツール | なし（プレーンファイルのみ） |
 | 共通パーツ | JSによる動的読み込み（fetch + innerHTML） |
 | 応募フォーム | WordPress 併用（別途構築） |
-| デプロイ | 未定 |
+| デプロイ | Xserver（GitHub Actions で `main` push 時に rsync 自動デプロイ） |
+
+## ドメイン構成
+
+| ドメイン | 役割 |
+| :-- | :-- |
+| `recruit.kitomi-tax.com` | **採用サイト（このリポジトリ）** |
+| `kitomi-tax.com` | コーポレートサイト未制作のため、**一旦 採用サイトへ 301 リダイレクト** |
+
+### デプロイ
+
+`main` に push すると `.github/workflows/deploy.yml` が rsync over SSH で Xserver へ自動デプロイします。
+
+- サーバー: Xserver（ユーザー `xs966178` / SSHポート `10022`）
+- デプロイ先: `/home/xs966178/kitomi-tax.com/public_html/recruit.kitomi-tax.com/`
+- Secrets: `SSH_PRIVATE_KEY` / `SSH_HOST` / `SSH_USER` / `SSH_TARGET`
+
+> **⚠️ 注意**
+> 採用サイトの docroot は、メインドメインの docroot（`public_html/`）の **内側** にあります。
+> `SSH_TARGET` を `public_html/` にすると `--delete` でメインドメイン側のリダイレクトを消してしまうため、
+> 必ず `recruit.kitomi-tax.com/` まで含めてください。
+
+### メインドメイン（kitomi-tax.com）のリダイレクトについて
+
+リダイレクトはサーバー上の `public_html/.htaccess` で直接管理しています（**専用リポジトリは持ちません**）。
+中身は以下のみです。
+
+```apache
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^ https://recruit.kitomi-tax.com/ [R=301,L]
+</IfModule>
+```
+
+将来コーポレートサイトを公開するときは、このブロックを削除してサイト本体を `public_html/` に配置します
+（その際、採用サイトの `recruit.kitomi-tax.com/` ディレクトリを消さないよう注意）。
 
 ## セットアップ
 

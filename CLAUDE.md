@@ -12,8 +12,8 @@
 | ターゲット | 税理士資格保有者を中心とした求職者 |
 | トーン | 信頼感・誠実さ・親しみやすさ。士業らしい落ち着きを保ちつつ堅すぎない |
 | デザイン | Figma: <https://www.figma.com/design/UDUB99WpRvTsVylYgvhc55/260511_Kitomi?m=dev> |
-| 公開先 | 未定 |
-| 公開URL | 未定 |
+| 公開先 | Xserver（`main` push で GitHub Actions が自動デプロイ） |
+| 公開URL | <https://recruit.kitomi-tax.com/>（メインドメイン `kitomi-tax.com` は一旦ここへ301リダイレクト） |
 | 開発体制 | 1名（自分）で作成・運用 |
 
 ## 2. 技術スタック
@@ -26,7 +26,7 @@
 | ビルドツール | なし | プレーンファイルのみ。npm/yarnは原則不要 |
 | 共通パーツ | JSによる動的読み込み | header.html / footer.html を fetch で読み込み |
 | 応募フォーム | WordPress 併用 | 別ドメインまたはサブディレクトリのWordPressで送受信 |
-| デプロイ | 未定 | デプロイ先決定後に追記 |
+| デプロイ | Xserver（rsync over SSH） | `main` push で GitHub Actions が自動実行。詳細は [README.md](./README.md) の「ドメイン構成」を参照 |
 
 ## 3. ディレクトリ構成ルール
 
